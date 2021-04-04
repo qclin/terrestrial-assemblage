@@ -1,0 +1,19 @@
+@import "../styles/typography.css";
+
+body {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: "StretchTrial", sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "CharonTrial", serif;
+}
