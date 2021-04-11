@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 import Layout from "../components/layout";
-import { Trans } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
-import Hero from "../components/logo";
+import Hero from "../components/hero";
 import AboutSection from "../components/about";
 
 const IndexPage = () => {

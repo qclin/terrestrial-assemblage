@@ -15,10 +15,11 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -32,6 +33,14 @@ module.exports = {
       options: {
         path: `${__dirname}/config/locales`,
         name: `locale`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
     {

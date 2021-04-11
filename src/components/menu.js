@@ -33,7 +33,7 @@ function Menu() {
           <StaticImage
             style={{ gridArea: "1/1" }}
             layout="fullWidth"
-            src={"../images/background/3-BUBBLES.jpg"}
+            src={"../assets/images/background/3-BUBBLES.jpg"}
           />
           <nav
             style={{
