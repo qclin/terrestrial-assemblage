@@ -5,7 +5,7 @@ const SITE_NAME = "terrestrial assemblage";
 
 function Hero() {
   return (
-    <div className="grid fixed" style={{ zIndex: -20 }}>
+    <div className="grid fixed top-0" style={{ zIndex: -20 }}>
       <StaticImage
         style={{ gridArea: "1/1" }}
         layout="fullWidth"
@@ -25,6 +25,12 @@ function Hero() {
           </h1>
         </marquee>
       </div>
+      <StaticImage
+        style={{ gridArea: "1/1" }}
+        layout="fullWidth"
+        alt="Reflections of the Rain pavillion on Algea debris"
+        src={"../images/background/algea_cropped.png"}
+      />
     </div>
   );
 }

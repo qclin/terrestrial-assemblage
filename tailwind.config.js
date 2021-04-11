@@ -22,7 +22,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      padding: ["odd", "even"],
+      margin: ["odd", "even"],
+      textAlign: ["odd", "even"],
+    },
   },
   plugins: [],
 };

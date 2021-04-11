@@ -18,7 +18,7 @@ function Menu() {
 
   const [visible, setVisible] = React.useState(false);
   return (
-    <>
+    <div className="fixed inset-0">
       <div className="flex flex-row">
         <button
           className="bg-white m-5 px-2 py-1 rounded-full z-10 shadow-md shadow-white focus:outline-none"
@@ -29,7 +29,7 @@ function Menu() {
         <LanguageToggle />
       </div>
       {visible && (
-        <section className="grid fixed inset-0 overflow-y-scroll">
+        <section className="grid ">
           <StaticImage
             style={{ gridArea: "1/1" }}
             layout="fullWidth"
@@ -56,7 +56,7 @@ function Menu() {
           </nav>
         </section>
       )}
-    </>
+    </div>
   );
 }
 

@@ -33,7 +33,7 @@ const AboutSection = () => {
       <title>
         <Trans>About</Trans>
       </title>
-      <div className="text-white">
+      <div className="text-white m-10" style={{ marginTop: "80vh" }}>
         <h1 className="text-9xl">07.05 - 06.06.2021</h1>
         <h4 className="text-6xl">
           <Trans>16.00-22.00 / Opening 06.May</Trans>
@@ -47,7 +47,8 @@ const AboutSection = () => {
       </div>
 
       <div class="grid grid-cols-3 gap-4">
-        <div class="col-start-2">
+        <div></div>
+        <div>
           <div class="grid grid-cols-6">
             <div class="col-span-4">
               <span className={textStyles.sectionHeader}>
@@ -58,37 +59,33 @@ const AboutSection = () => {
               {participantName("Pauline Doutreluingne")}
             </div>
             <div class="col-start-2 col-span-4">
-              <Trans>and</Trans> {participantName("Keumhwa Kim")}
+              <Trans>and</Trans>
+              {participantName("Keumhwa Kim")}
             </div>
           </div>
         </div>
-        <div class="col-start-3">
-          <div class="grid grid-cols-3">
-            <div class="col-span-4">
-              <p
-                className={textStyles.sectionHeader}
-                style={localStyles.fitContent}
-              >
-                <Trans>Featuring</Trans>
-              </p>
+        <div className="mt-20">
+          <p
+            className={textStyles.sectionHeader}
+            style={localStyles.fitContent}
+          >
+            <Trans>Featuring</Trans>
+          </p>
+
+          {ARTISTS.map((artist, index) => (
+            <div className="mx-20 w-2/4 odd:text-left even:text-right odd:pl-10">
+              {participantName(artist)}
             </div>
-
-            {ARTISTS.map((artist, index) => (
-              <div class={clsx(`col-start-${index}`)}>
-                {participantName(artist)}
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
-      </div>
-
-      <div className="grid grid-cols-3 gap-4">
-        <p className="bg-white col-span-2 m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
-          <h1 className="text-8xl">
-            <Trans>About</Trans>
-          </h1>
-          <Trans>curatoritorial statement</Trans>
-        </p>
+        <div className="col-span-2">
+          <p className="bg-white m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
+            <h1 className="text-8xl">
+              <Trans>About</Trans>
+            </h1>
+            <Trans>curatoritorial statement</Trans>
+          </p>
+        </div>
       </div>
     </section>
   );

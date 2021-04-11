@@ -1,9 +1,24 @@
 @font-face {
-  font-family: "CharonTrial";
-  src: url("../fonts/CharonTrial-Regular.otf");
+  font-family: "Charon-Regular";
+  src: url("../fonts/Charon-Regular.otf");
 }
 
 @font-face {
-  font-family: "StretchTrial";
-  src: url("../fonts/StretchTrial-Medium.otf");
+  font-family: "Stretch-Medium";
+  src: url("../fonts/Stretch-Medium.otf");
+}
+
+@font-face {
+  font-family: "Whyte-Bold";
+  src: url("../fonts/Whyte-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Whyte-Medium";
+  src: url("../fonts/Whyte-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Whyte-Regular";
+  src: url("../fonts/Whyte-Regular.ttf");
 }

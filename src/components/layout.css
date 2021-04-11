@@ -2,7 +2,7 @@
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: "StretchTrial", sans-serif;
+  font-family: "Whyte-Regular", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -14,6 +14,10 @@ h3,
 h4,
 h5,
 h6,
+nav a {
+  font-family: "Charon-Regular", serif;
+}
+
 a {
-  font-family: "CharonTrial", serif;
+  font-family: "Stretch-Medium", serif;
 }
