@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "terrestrial-assemblage",
+    siteUrl: "terrestrialassemblage.com",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -49,10 +50,7 @@ module.exports = {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `de`],
         defaultLanguage: `en`,
-        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: `https://example.com/`,
-        // you can pass any i18next options
-        // pass following options to allow message content as a key
+        siteUrl: `https://terrestrialassemblage.com`,
         i18nextOptions: {
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
