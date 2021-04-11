@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, useTranslation, Trans } from "gatsby-plugin-react-i18next";
 import LanguageToggle from "./languageToggle";
+import { StaticImage } from "gatsby-plugin-image";
 
 function Menu() {
   const { t } = useTranslation();
@@ -28,16 +29,28 @@ function Menu() {
         <LanguageToggle />
       </div>
       {visible && (
-        <section className="fixed inset-0 overflow-y-scroll bg-blue">
-          <nav>
+        <section className="grid fixed inset-0 overflow-y-scroll">
+          <StaticImage
+            style={{ gridArea: "1/1" }}
+            layout="fullWidth"
+            src={"../images/background/3-BUBBLES.jpg"}
+          />
+          <nav
+            style={{
+              gridArea: "1/1",
+            }}
+            className="grid relative place-items-center"
+          >
             {pages.map((page) => (
               <Link
                 key={page}
                 to={`/${page.path}`}
                 onClick={() => setVisible(false)}
-                className="text-white text-9xl no-underline text-center block"
+                className="block rounded-full px-5 hover:shadow-md hover:shadow-algea hover:bg-algea backdrop-opacity-50 mix-blend-difference"
               >
-                {page.label}
+                <span className="text-white text-9xl no-underline text-center">
+                  {page.label}
+                </span>
               </Link>
             ))}
           </nav>
