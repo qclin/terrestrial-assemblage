@@ -39,16 +39,16 @@ const AboutSection = () => {
       </title>
 
       <div
-        className="grid lg:grid-cols-10 md:grid-cols-2 gap-4"
+        className="md:grid md:grid-cols-10 gap-4"
         style={{ marginTop: "75vh" }}
       >
         {isGerman ? (
-          <DEOpeningHoursText className="lg:mx-10 sm:mb-5 lg:col-span-7" />
+          <DEOpeningHoursText className="lg:mx-10 sm:mb-5 md:col-span-7" />
         ) : (
-          <OpeningHoursText className="lg:mx-10 sm:mb-5 lg:col-span-7" />
+          <OpeningHoursText className="lg:mx-10 sm:mb-5 md:col-span-7" />
         )}
-        <div className="lg:col-span-3 grid space-between">
-          <div className="mt-24">
+        <div className="col-span-3 grid space-between sm:grid-cols-2 md:grid-cols-1 m-10">
+          <div className="md:mt-24">
             <span className={textStyles.highlight}>
               <Trans>Curators</Trans>:
             </span>
@@ -61,7 +61,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="self-end">
+          <div className="self-end mt-10">
             <span className={textStyles.highlight}>
               <Trans>Artists</Trans>:
             </span>
@@ -100,7 +100,7 @@ const AboutSection = () => {
             {renderParagraphs(<Trans>curatoritorial statement 5</Trans>)}
           </div>
         </div>
-        <div className="self-end lg:col-span-4">
+        <div className="self-end md:col-span-4 m-10">
           <span className={textStyles.highlight}>
             <Trans>Symposium Particiants</Trans>:
           </span>
