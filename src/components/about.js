@@ -6,33 +6,17 @@ import ExhibitionText from "../assets/svgs/headers/en/exhibition.svg";
 import DEOpeningHoursText from "../assets/svgs/headers/de/opening-hours.svg";
 import DEAboutText from "../assets/svgs/headers/de/about.svg";
 import DEExhibitionText from "../assets/svgs/headers/de/exhibition.svg";
+import { ARTISTS, PARTICIPANTS } from "./constants";
 
 const textStyles = {
   details: "text-4xl opacity-70",
-  names: "uppercase bg-white bg-opacity-50 px-2",
-  sectionHeader: "text-xl uppercase bg-white bg-opacity-50 px-1",
+  highlight:
+    "text-xl uppercase bg-white bg-opacity-50 px-1 justify-center my-1 pt-2",
 };
 
-const localStyles = {
-  fitContent: { width: "fit-content" },
-};
-
-const participantName = (name) => (
-  <span className={textStyles.names}>{name}</span>
+const renderName = (name) => (
+  <span className={textStyles.highlight}>{name}</span>
 );
-
-const ARTISTS = [
-  "Ana Alenso",
-  "Marco Barotti",
-  "Ines Doujak",
-  "Anne Duk Hee Jordan",
-  "Han Seok Hyun",
-  "Folke Köbberling",
-  "Mischa Leinkauf",
-  "Santiago Sierra",
-  "Shira Wachsmann",
-  "Clemens Wilhelm",
-];
 
 const renderParagraphs = (text) => (
   <p
@@ -53,72 +37,92 @@ const AboutSection = () => {
       <title>
         <Trans>About</Trans>
       </title>
-      {isGerman ? (
-        <DEOpeningHoursText
-          className="lg:m-10 sm:my-5"
-          style={{ marginTop: "75vh" }}
-        />
-      ) : (
-        <OpeningHoursText
-          className="lg:m-10 sm:my-5"
-          style={{ marginTop: "75vh" }}
-        />
-      )}
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
-        <div className="lg:col-start-2">
-          <div className="grid lg:grid-cols-6 ml-5">
-            <div className="col-span-4 ">
-              <span className={textStyles.sectionHeader}>
-                <Trans>Curated By</Trans>
-              </span>
+      <div
+        className="grid lg:grid-cols-10 md:grid-cols-2 gap-4"
+        style={{ marginTop: "75vh" }}
+      >
+        {isGerman ? (
+          <DEOpeningHoursText className="lg:mx-10 sm:mb-5 lg:col-span-7" />
+        ) : (
+          <OpeningHoursText className="lg:mx-10 sm:mb-5 lg:col-span-7" />
+        )}
+        <div className="lg:col-span-3 grid space-between">
+          <div className="mt-24">
+            <span className={textStyles.highlight}>
+              <Trans>Curators</Trans>:
+            </span>
+
+            <div className="text-right mr-10">
+              {renderName("Pauline Doutreluingne")}
             </div>
-            <div className="lg:col-end-6  col-span-3">
-              {participantName("Pauline Doutreluingne")}
+            <div className="text-left ml-10 ">
+              {renderName("& Keumhwa Kim")}
             </div>
-            <div className="lg:col-start-2 col-span-4">
-              <Trans>and</Trans>
-              {participantName("Keumhwa Kim")}
+          </div>
+
+          <div className="self-end">
+            <span className={textStyles.highlight}>
+              <Trans>Artists</Trans>:
+            </span>
+            <div className="flex flex-wrap">
+              {ARTISTS.map((artist, index) => (
+                <div
+                  className={`lg:mx-auto lg:w-3/4 lg:odd:text-left lg:even:text-right lg:odd:pl-${
+                    index * 3 - 6
+                  } sm:even:ml-5 sm:odd:mr-4 `}
+                  key={`artist-${index}`}
+                >
+                  {renderName(artist)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="mt-20">
-          <p
-            className={textStyles.sectionHeader}
-            style={localStyles.fitContent}
-          >
-            <Trans>Artists</Trans>
-          </p>
-          <div className="flex flex-wrap">
-            {ARTISTS.map((artist, index) => (
-              <div
-                className={`lg:mx-20 lg:w-2/4 lg:odd:text-left lg:even:text-right lg:odd:pl-${
-                  index * 3
-                } sm:even:ml-5 sm:odd:mr-4 `}
-                key={`artist-${index}`}
-              >
-                {participantName(artist)}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="md:col-span-2">
+
+        <div className="md:col-span-6">
           <div className="bg-white m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
             {isGerman ? (
-              <DEAboutText className="sm:max-w-full max-h-36 mb-5" />
+              <DEAboutText
+                className="sm:max-w-full max-h-36 mb-5"
+                style={{ width: "max-content" }}
+              />
             ) : (
-              <AboutText className="sm:max-w-full max-h-36 mb-5" />
+              <AboutText
+                className="sm:max-w-full max-h-36 mb-5"
+                style={{ width: "max-content" }}
+              />
             )}
             {renderParagraphs(<Trans>curatoritorial statement 1</Trans>)}
             {renderParagraphs(<Trans>curatoritorial statement 2</Trans>)}
             {renderParagraphs(<Trans>curatoritorial statement 3</Trans>)}
             {renderParagraphs(<Trans>curatoritorial statement 4</Trans>)}
             {renderParagraphs(<Trans>curatoritorial statement 5</Trans>)}
-
+          </div>
+        </div>
+        <div className="self-end lg:col-span-4">
+          <span className={textStyles.highlight}>
+            <Trans>Symposium Particiants</Trans>:
+          </span>
+          <div className="flex flex-wrap">
+            {PARTICIPANTS.map((participant, index) => (
+              <div
+                className={`lg:mx-auto lg:w-3/4 lg:odd:text-left lg:even:text-right lg:odd:pl-${
+                  index * 3 - 6
+                } sm:even:ml-5 sm:odd:mr-4 `}
+                key={`participants-${index}`}
+              >
+                {renderName(participant)}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="md:col-span-6">
+          <div className="bg-white m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
             {isGerman ? (
-              <DEExhibitionText className="max-h-24 mb-5 mt-8 md:max-w-full" />
+              <DEExhibitionText className="max-h-36 mb-5 max-w-full mr-auto" />
             ) : (
-              <ExhibitionText className="max-h-24 mb-5 mt-8 md:max-w-full" />
+              <ExhibitionText className="max-h-36 mb-5 max-w-full mr-auto" />
             )}
             {renderParagraphs(<Trans>exhibition content</Trans>)}
           </div>

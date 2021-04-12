@@ -14,15 +14,15 @@ function Partners() {
       </span>
       <div className="grid md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-y-10">
         <SenatKulturLogo
-          className="w-2/4 md:w-full lg:w-3/4 md:col-start-2 mx-auto"
+          className="lg:w-2/4 md:w-3/4 md:col-start-2 mx-auto"
           alt={t("Berlin Senate Department for Culture and Europe")}
         />
         <KoreanCenterLogo
-          className="w-2/4 md:w-full lg:w-3/4 md:mt-5 mx-auto"
+          className="lg:w-2/4 md:w-3/4 md:mt-5 mx-auto"
           alt={t("Korean Cultural Centre Berlin")}
         />
         <GreenBeltLogo
-          className="w-2/4 md:w-full lg:w-3/4 mx-auto"
+          className="lg:w-2/4 md:w-3/4 mx-auto"
           alt={t("Green Belt Europe")}
         />
       </div>
