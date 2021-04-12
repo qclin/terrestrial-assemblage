@@ -21,11 +21,11 @@ function Hero() {
   return (
     <div className="grid fixed top-0" style={{ zIndex: -20 }}>
       <StaticImage
-        style={{ gridArea: "1/1" }}
-        layout="fullWidth"
-        height={"100%"}
+        style={{ gridArea: "1/1", height: "100vh" }}
+        layout="constrained"
         alt="Floating University pond with micro-ecoloogies"
         src={"../assets/images/background/1-WORM-LT.jpg"}
+        placeholder="blurred"
       />
       <div
         className="grid relative place-items-center"
@@ -43,10 +43,11 @@ function Hero() {
         </marquee>
       </div>
       <StaticImage
-        style={{ gridArea: "1/1" }}
-        layout="fullWidth"
+        style={{ gridArea: "1/1", height: "100vh" }}
+        layout="constrained"
         alt="Reflections of the Rain pavillion on Algea debris"
         src={"../assets/images/background/algea_cropped.png"}
+        placeholder="blurred"
       />
     </div>
   );

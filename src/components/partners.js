@@ -9,22 +9,22 @@ function Partners() {
 
   return (
     <footer className="my-10">
-      <span className="text-xl ml-10 uppercase bg-white bg-opacity-30 ">
+      <span className="text-xl ml-10 uppercase bg-white bg-opacity-30">
         <Trans>Supported by </Trans>
       </span>
-      <div className="grid grid-cols-6 gap-4">
-        <div></div>
+      <div className="grid md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-y-10">
         <SenatKulturLogo
-          className="w-3/4"
+          className="w-2/4 md:w-full lg:w-3/4 md:col-start-2 mx-auto"
           alt={t("Berlin Senate Department for Culture and Europe")}
         />
         <KoreanCenterLogo
-          className="w-3/4 mt-5"
+          className="w-2/4 md:w-full lg:w-3/4 md:mt-5 mx-auto"
           alt={t("Korean Cultural Centre Berlin")}
         />
-        <GreenBeltLogo className="w-3/4 mb-5" alt={t("Green Belt Europe")} />
-
-        <div></div>
+        <GreenBeltLogo
+          className="w-2/4 md:w-full lg:w-3/4 mx-auto"
+          alt={t("Green Belt Europe")}
+        />
       </div>
     </footer>
   );

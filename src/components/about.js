@@ -44,29 +44,28 @@ const AboutSection = () => {
       </title>
       {isGerman ? (
         <DEOpeningHoursText
-          className="text-white m-10"
+          className="lg:m-10 sm:my-5"
           style={{ marginTop: "75vh" }}
         />
       ) : (
         <OpeningHoursText
-          className="text-white m-10"
+          className="lg:m-10 sm:my-5"
           style={{ marginTop: "75vh" }}
         />
       )}
 
-      <div className="grid lg:grid-cols-3 gap-4">
-        <div></div>
-        <div>
-          <div className="grid lg:grid-cols-6">
-            <div className="col-span-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+        <div className="lg:col-start-2">
+          <div className="grid lg:grid-cols-6 ml-5">
+            <div className="col-span-4 ">
               <span className={textStyles.sectionHeader}>
                 <Trans>Curated By</Trans>
               </span>
             </div>
-            <div className="col-end-6  col-span-3">
+            <div className="lg:col-end-6  col-span-3">
               {participantName("Pauline Doutreluingne")}
             </div>
-            <div className="col-start-2 col-span-4">
+            <div className="lg:col-start-2 col-span-4">
               <Trans>and</Trans>
               {participantName("Keumhwa Kim")}
             </div>
@@ -79,22 +78,25 @@ const AboutSection = () => {
           >
             <Trans>Artists</Trans>
           </p>
-
-          {ARTISTS.map((artist, index) => (
-            <div
-              className="mx-20 w-2/4 odd:text-left even:text-right odd:pl-10"
-              key={`artist-${index}`}
-            >
-              {participantName(artist)}
-            </div>
-          ))}
+          <div className="flex flex-wrap">
+            {ARTISTS.map((artist, index) => (
+              <div
+                className={`lg:mx-20 lg:w-2/4 lg:odd:text-left lg:even:text-right lg:odd:pl-${
+                  index * 3
+                } sm:even:ml-5 sm:odd:mr-4 `}
+                key={`artist-${index}`}
+              >
+                {participantName(artist)}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <div className="bg-white m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
             {isGerman ? (
-              <DEAboutText className="h-36 mb-5" />
+              <DEAboutText className="sm:max-w-full max-h-36 mb-5" />
             ) : (
-              <AboutText className="h-36 mb-5" />
+              <AboutText className="sm:max-w-full max-h-36 mb-5" />
             )}
 
             <p className="mb-5">
@@ -114,9 +116,9 @@ const AboutSection = () => {
             </p>
 
             {isGerman ? (
-              <DEExhibitionText className="h-24 mb-5 mt-8" />
+              <DEExhibitionText className="max-h-24 mb-5 mt-8 md:max-w-full" />
             ) : (
-              <ExhibitionText className="h-24 mb-5 mt-8" />
+              <ExhibitionText className="max-h-24 mb-5 mt-8 md:max-w-full" />
             )}
             <p className="mb-5">
               <Trans>exhibition content</Trans>
