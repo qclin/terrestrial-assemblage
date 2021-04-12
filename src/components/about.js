@@ -33,6 +33,17 @@ const ARTISTS = [
   "Shira Wachsmann",
   "Clemens Wilhelm",
 ];
+
+const renderParagraphs = (text) => (
+  <p
+    className="mb-5"
+    data-sal="slide-up"
+    data-sal-delay="300"
+    data-sal-easing="ease"
+  >
+    {text}
+  </p>
+);
 const AboutSection = () => {
   const { language } = useI18next();
   const isGerman = language === "de";
@@ -98,31 +109,18 @@ const AboutSection = () => {
             ) : (
               <AboutText className="sm:max-w-full max-h-36 mb-5" />
             )}
-
-            <p className="mb-5">
-              <Trans>curatoritorial statement 1</Trans>
-            </p>
-            <p className="mb-5">
-              <Trans>curatoritorial statement 2</Trans>
-            </p>
-            <p className="mb-5">
-              <Trans>curatoritorial statement 3</Trans>
-            </p>
-            <p className="mb-5">
-              <Trans>curatoritorial statement 4</Trans>
-            </p>
-            <p className="mb-5">
-              <Trans>curatoritorial statement 5</Trans>
-            </p>
+            {renderParagraphs(<Trans>curatoritorial statement 1</Trans>)}
+            {renderParagraphs(<Trans>curatoritorial statement 2</Trans>)}
+            {renderParagraphs(<Trans>curatoritorial statement 3</Trans>)}
+            {renderParagraphs(<Trans>curatoritorial statement 4</Trans>)}
+            {renderParagraphs(<Trans>curatoritorial statement 5</Trans>)}
 
             {isGerman ? (
               <DEExhibitionText className="max-h-24 mb-5 mt-8 md:max-w-full" />
             ) : (
               <ExhibitionText className="max-h-24 mb-5 mt-8 md:max-w-full" />
             )}
-            <p className="mb-5">
-              <Trans>exhibition content</Trans>
-            </p>
+            {renderParagraphs(<Trans>exhibition content</Trans>)}
           </div>
         </div>
       </div>
