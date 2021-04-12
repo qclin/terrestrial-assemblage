@@ -11,19 +11,21 @@ import { ARTISTS, PARTICIPANTS } from "./constants";
 const textStyles = {
   details: "text-4xl opacity-70",
   highlight:
-    "text-xl uppercase bg-white bg-opacity-50 px-1 justify-center my-1 pt-2",
+    "text-xl uppercase bg-white bg-opacity-50 px-1 justify-center pt-2 my-2",
 };
 
 const renderName = (name) => (
-  <span className={textStyles.highlight}>{name}</span>
+  <span className={textStyles.highlight} style={{ margin: "0.25rem" }}>
+    {name}
+  </span>
 );
 
 const renderParagraphs = (text) => (
   <p
     className="mb-5"
-    data-sal="slide-up"
-    data-sal-delay="300"
-    data-sal-easing="ease"
+    // data-sal="slide-up"
+    // data-sal-delay="300"
+    // data-sal-easing="ease"
   >
     {text}
   </p>
@@ -81,17 +83,11 @@ const AboutSection = () => {
         </div>
 
         <div className="md:col-span-6">
-          <div className="bg-white m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
+          <div className="bg-white m-10 p-5 md:py-10 rounded-xl shadow-md shadow-white">
             {isGerman ? (
-              <DEAboutText
-                className="sm:max-w-full max-h-36 mb-5"
-                style={{ width: "max-content" }}
-              />
+              <DEAboutText className="max-w-full max-h-36 mb-5" />
             ) : (
-              <AboutText
-                className="sm:max-w-full max-h-36 mb-5"
-                style={{ width: "max-content" }}
-              />
+              <AboutText className="max-w-full max-h-36 mb-5" />
             )}
             {renderParagraphs(<Trans>curatoritorial statement 1</Trans>)}
             {renderParagraphs(<Trans>curatoritorial statement 2</Trans>)}
@@ -117,7 +113,7 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
-        <div className="md:col-span-6">
+        <div className="md:col-span-6 md:py-10">
           <div className="bg-white m-10 px-5 py-10 rounded-xl shadow-md shadow-white">
             {isGerman ? (
               <DEExhibitionText className="max-h-36 mb-5 max-w-full mr-auto" />

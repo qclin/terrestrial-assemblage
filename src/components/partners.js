@@ -12,16 +12,16 @@ function Partners() {
       <span className="text-xl ml-10 uppercase bg-white bg-opacity-60 pt-2">
         <Trans>Supported by </Trans>
       </span>
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-y-10">
+      <div className="grid grid-cols-3 md:grid-cols-10 md:gap-4 gap-y-10 ml-10">
         <SenatKulturLogo
-          className="w-2/4 md:col-start-2 mx-auto"
+          className="mx-auto w-3/4"
           alt={t("Berlin Senate Department for Culture and Europe")}
         />
         <KoreanCenterLogo
-          className="w-2/4 md:mt-5 mx-auto"
+          className="md:mt-5 mx-auto w-3/4"
           alt={t("Korean Cultural Centre Berlin")}
         />
-        <GreenBeltLogo className="w-2/4 mx-auto" alt={t("Green Belt Europe")} />
+        <GreenBeltLogo className="mx-auto w-3/4" alt={t("Green Belt Europe")} />
       </div>
     </footer>
   );
