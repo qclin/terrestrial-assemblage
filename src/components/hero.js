@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import TerrestrialTextSvg from "../assets/svgs/headers/terrestrial.svg";
 
 const SITE_NAME = "terrestrial assemblage";
 
@@ -32,14 +33,13 @@ function Hero() {
           gridArea: "1/1",
         }}
       >
-        <title>{SITE_NAME}</title>
         <marquee width="100%" direction="left" scrollamount="1">
-          <h1
-            className="text-9xl text-white"
-            style={{ fontSize: 400, filter: `blur(${scrollY / 200}px)` }}
-          >
-            {SITE_NAME.toUpperCase()}
-          </h1>
+          <TerrestrialTextSvg
+            style={{
+              height: "50vh",
+              filter: `blur(${scrollY / 200}px)`,
+            }}
+          />
         </marquee>
       </div>
       <StaticImage
