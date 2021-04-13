@@ -21,7 +21,6 @@ const renderName = (name) => (
   <span className={textStyles.highlight}>{name}</span>
 );
 
-const renderParagraphs = (text) => <p className="mb-5">{text}</p>;
 const AboutSection = () => {
   const { language } = useI18next();
   const isGerman = language === "de";
