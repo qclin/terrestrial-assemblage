@@ -15,6 +15,7 @@ export const PARTICIPANTS = [
   "Grünes Band Europa",
   "DMZ Ecology Research Institute",
   "Hanns Seidel Stiftung Seoul Office",
+  "Anne Duk Hee Jordan",
   "Mischa Leinkauf",
   "Shira Wachsmann",
   "Santiago Sierra",

@@ -23,7 +23,7 @@ export default function Layout({ children }) {
       </div>
       {/* <Menu /> */}
       {children}
-      <MouseOverlay mousePosition={mousePosition} />
+      {/* <MouseOverlay mousePosition={mousePosition} /> */}
       <Partners />
     </div>
   );
