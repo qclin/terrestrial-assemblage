@@ -7,12 +7,13 @@ const overLayStyle = {
   backgroundImage: "radial-gradient(circle, #fff, #e3e6c0,  #fff, #fff)",
   transition: "3s",
   transitionTimingFunction: "ease-in-out",
+  pointerEvents: "none",
 };
 
 function MouseOverlay({ mousePosition }) {
   return (
     <div
-      className="fixed point-events-none blur-3xl"
+      className="fixed blur-3xl"
       style={{
         ...overLayStyle,
         top: `calc(${mousePosition.top}px - 50vw)`,
