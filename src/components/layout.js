@@ -18,7 +18,7 @@ export default function Layout({ children }) {
 
   return (
     <div onMouseMove={handleMoveMove}>
-      <div className="fixed mx-10 top-0 right-0 z-10">
+      <div className="fixed mx-10 top-0 right-0">
         <LanguageToggle />
       </div>
       {/* <Menu /> */}

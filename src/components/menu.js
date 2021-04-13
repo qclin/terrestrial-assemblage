@@ -21,7 +21,7 @@ function Menu() {
     <div className="fixed inset-0">
       <div className="flex flex-row">
         <button
-          className="bg-white m-5 px-2 py-1 rounded-full z-10 shadow-md shadow-white focus:outline-none"
+          className="bg-white m-5 px-2 py-1 rounded-full shadow-md shadow-white focus:outline-none"
           onClick={() => setVisible(!visible)}
         >
           {visible ? "X" : <Trans>menu</Trans>}
