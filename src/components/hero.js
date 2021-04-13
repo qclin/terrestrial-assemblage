@@ -7,7 +7,6 @@ const SITE_NAME = "terrestrial assemblage";
 function Hero() {
   const [scrollY, setScollY] = useState(0);
   const handlePageScroll = (event) => {
-    console.log("[handlePageScroll]scrollY  ", window.scrollY);
     setScollY(window.scrollY);
   };
 

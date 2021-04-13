@@ -7,6 +7,9 @@ import DEOpeningHoursText from "../assets/svgs/headers/de/opening-hours.svg";
 import DEAboutText from "../assets/svgs/headers/de/about.svg";
 import DEExhibitionText from "../assets/svgs/headers/de/exhibition.svg";
 import { ARTISTS, PARTICIPANTS } from "./constants";
+import * as styles from "./about-css-modules.module.css";
+
+import { useStaticQuery, graphql } from "gatsby";
 
 const textStyles = {
   details: "text-4xl opacity-70",
@@ -18,19 +21,25 @@ const renderName = (name) => (
   <span className={textStyles.highlight}>{name}</span>
 );
 
-const renderParagraphs = (text) => (
-  <p
-    className="mb-5"
-    // data-sal="slide-up"
-    // data-sal-delay="300"
-    // data-sal-easing="ease"
-  >
-    {text}
-  </p>
-);
+const renderParagraphs = (text) => <p className="mb-5">{text}</p>;
 const AboutSection = () => {
   const { language } = useI18next();
   const isGerman = language === "de";
+
+  const data = useStaticQuery(graphql`
+    query markdownQuery {
+      allMarkdownRemark {
+        nodes {
+          fileAbsolutePath
+          html
+        }
+      }
+    }
+  `);
+
+  const markdownNodes = data.allMarkdownRemark.nodes.filter((n) =>
+    n.fileAbsolutePath.includes(`/${language}/`)
+  );
 
   return (
     <section>
@@ -87,11 +96,7 @@ const AboutSection = () => {
             ) : (
               <AboutText className="max-w-full max-h-36 mb-5" />
             )}
-            {renderParagraphs(<Trans>curatoritorial statement 1</Trans>)}
-            {renderParagraphs(<Trans>curatoritorial statement 2</Trans>)}
-            {renderParagraphs(<Trans>curatoritorial statement 3</Trans>)}
-            {renderParagraphs(<Trans>curatoritorial statement 4</Trans>)}
-            {renderParagraphs(<Trans>curatoritorial statement 5</Trans>)}
+            <div dangerouslySetInnerHTML={{ __html: markdownNodes[0].html }} />
           </div>
         </div>
         <div className="self-end md:col-span-4 m-10">
@@ -118,7 +123,7 @@ const AboutSection = () => {
             ) : (
               <ExhibitionText className="max-h-36 mb-5 max-w-full mr-auto" />
             )}
-            {renderParagraphs(<Trans>exhibition content</Trans>)}
+            <div dangerouslySetInnerHTML={{ __html: markdownNodes[1].html }} />
           </div>
         </div>
       </div>
