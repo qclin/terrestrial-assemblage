@@ -36,8 +36,12 @@ const AboutSection = () => {
     }
   `);
 
-  const markdownNodes = data.allMarkdownRemark.nodes.filter((n) =>
-    n.fileAbsolutePath.includes(`/${language}/`)
+  const aboutMDNode = data.allMarkdownRemark.nodes.find((n) =>
+    n.fileAbsolutePath.includes(`/${language}/about`)
+  );
+
+  const exhibitionVenueMDNode = data.allMarkdownRemark.nodes.find((n) =>
+    n.fileAbsolutePath.includes(`/${language}/exhibitionVenue`)
   );
 
   return (
@@ -95,7 +99,7 @@ const AboutSection = () => {
             ) : (
               <AboutText className="max-w-full max-h-36 mb-5" />
             )}
-            <div dangerouslySetInnerHTML={{ __html: markdownNodes[0].html }} />
+            <div dangerouslySetInnerHTML={{ __html: aboutMDNode.html }} />
           </div>
         </div>
         <div className="self-end md:col-span-4 m-10">
@@ -122,7 +126,9 @@ const AboutSection = () => {
             ) : (
               <ExhibitionText className="max-h-36 mb-5 max-w-full mr-auto" />
             )}
-            <div dangerouslySetInnerHTML={{ __html: markdownNodes[1].html }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: exhibitionVenueMDNode.html }}
+            />
           </div>
         </div>
       </div>
