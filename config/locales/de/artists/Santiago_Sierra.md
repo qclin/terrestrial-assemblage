@@ -1,0 +1,9 @@
+**Santiago Sierra**
+
+_Position exchange for two distinct, 30-meter volumes of earth_ (2005)
+
+One Channel Video, 23,55 Min.
+
+Das Video dokumentiert Santiago Sierras Arbeit _Position exchange for two distinct, 30-meter volumes of earth_ von 2005. In der performativen Aktion in der demilitarisierten Zone (DMZ) zwischen Nord- und Südkorea ließ der Künstler unter Aufsicht von südkoreanischen Soldaten auf einem Grundstück zwei Löcher ( 6 Meter lang, 2,5 Meter breit, 2 Meter tief) ausheben. Die Erdblöcke wurden anschließend lediglich von dem einen in das andere Loch versetzt, so dass das betroffene Grundstück bis auf die Arbeitsspuren am Ende unverändert erscheint. Diese „leere&quot; Aktion des Austauschens von Erde, die ohne Zuschauer, aber unter strenger militärischer Bewachung stattfindet, führt die absurde Situation an der DMZ vor und stellt die militarisierten Grenzsysteme auf der koreanischen Halbinsel zur Disposition. Für Santiago Sierra sind Grenzen und das Grenzen-Setzen immer wiederkehrende Themen in seiner Arbeit. So 2003 in _Covered word_ im Spanischen Pavillon auf der 50. Venedig Biennale, oder 2018 in Nord- und Südpolen. Dort thematisierte er nationale Grenzen, den neoliberalen Nationalismus sowie den Kolonialismus des 21.Jahrhunderts.
+
+**Santiago Sierra** (Madrid) bildet, inspiriert von der Formensprache der Minimal- und Konzeptkunst der 1960er und 70er Jahre, schonungslos soziale Realitäten ab und entlarvt Missstände in gesellschaftlichen Strukturen. Seine provokativen und konfrontativen Aktionen, bei denen unterprivilegierte oder ausgegrenzte Personen gegen Geld angeheuert wurden, um sinnlose Aufgaben zu erfüllen, sowie seine spektakulären Interventionen im urbanem Raum thematisieren Machtstrukturen, Ausgrenzungsmechanismen sowie ausbeuterische Arbeitsverhältnisse.
