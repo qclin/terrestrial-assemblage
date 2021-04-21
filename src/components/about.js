@@ -27,7 +27,7 @@ const AboutSection = () => {
 
   const data = useStaticQuery(graphql`
     query markdownQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(main)/" } }) {
         nodes {
           fileAbsolutePath
           html
@@ -37,11 +37,11 @@ const AboutSection = () => {
   `);
 
   const aboutMDNode = data.allMarkdownRemark.nodes.find((n) =>
-    n.fileAbsolutePath.includes(`/${language}/about`)
+    n.fileAbsolutePath.includes(`/${language}/main/about`)
   );
 
   const exhibitionVenueMDNode = data.allMarkdownRemark.nodes.find((n) =>
-    n.fileAbsolutePath.includes(`/${language}/exhibitionVenue`)
+    n.fileAbsolutePath.includes(`/${language}/main/exhibitionVenue`)
   );
 
   return (

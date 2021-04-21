@@ -12,7 +12,7 @@ const CLASSES = {
 
 function ArtistsPage({ location }) {
   return (
-    <div className="fixed inset-0 ">
+    <div className="fixed inset-0">
       <section className="grid h-full overflow-y-scroll">
         <StaticImage
           style={{ gridArea: "1/1" }}

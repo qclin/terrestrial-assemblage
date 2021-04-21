@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, useTranslation, Trans } from "gatsby-plugin-react-i18next";
 import { StaticImage } from "gatsby-plugin-image";
+import clsx from "clsx";
 
 const CLASSES = {
   menuBtn:
@@ -26,7 +27,7 @@ function Menu() {
   const [visible, setVisible] = React.useState(false);
 
   return (
-    <div className="fixed inset-0">
+    <div className={clsx(visible && "inset-0", "fixed")}>
       <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
         {visible ? "X" : <Trans>menu</Trans>}
       </button>
