@@ -68,6 +68,10 @@ module.exports = {
             matchPath: "/preview",
             languages: ["en"],
           },
+          {
+            matchPath: "/artist/:lang/:uid",
+            getLanguageFromPath: true,
+          },
         ],
       },
     },

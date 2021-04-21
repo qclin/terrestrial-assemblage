@@ -1,12 +1,20 @@
 import * as React from "react";
 import { Link, useTranslation, Trans } from "gatsby-plugin-react-i18next";
-import LanguageToggle from "./languageToggle";
 import { StaticImage } from "gatsby-plugin-image";
+
+const CLASSES = {
+  menuBtn:
+    "bg-white m-5 px-2 py-1 rounded-full shadow-md shadow-white focus:outline-none z-10 absolute",
+  link: "block px-5 rounded-md",
+  linkOverlay:
+    "mix-blend-color w-full h-32 absolute filter blur-lg hover:bg-lightAlgea",
+  linkText: "text-white text-9xl no-underline text-center",
+};
 
 function Menu() {
   const { t } = useTranslation();
 
-  const pages = [
+  const PAGES = [
     { path: "about", label: t("about") },
     { path: "artists", label: t("artists") },
     { path: "livestream", label: t("livestream") },
@@ -15,25 +23,20 @@ function Menu() {
     { path: "announcement", label: t("announcement") },
     { path: "social", label: t("social") },
   ];
-
   const [visible, setVisible] = React.useState(false);
+
   return (
     <div className="fixed inset-0">
-      <div className="flex flex-row">
-        <button
-          className="bg-white m-5 px-2 py-1 rounded-full shadow-md shadow-white focus:outline-none"
-          onClick={() => setVisible(!visible)}
-        >
-          {visible ? "X" : <Trans>menu</Trans>}
-        </button>
-        <LanguageToggle />
-      </div>
+      <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
+        {visible ? "X" : <Trans>menu</Trans>}
+      </button>
       {visible && (
-        <section className="grid ">
+        <section className="grid h-full">
           <StaticImage
             style={{ gridArea: "1/1" }}
             layout="fullWidth"
             src={"../assets/images/background/3-BUBBLES.jpg"}
+            alt="pond"
           />
           <nav
             style={{
@@ -41,18 +44,19 @@ function Menu() {
             }}
             className="grid relative place-items-center"
           >
-            {pages.map((page) => (
-              <Link
-                key={page}
-                to={`/${page.path}`}
-                onClick={() => setVisible(false)}
-                className="block rounded-full px-5 hover:shadow-md hover:shadow-algea hover:bg-algea backdrop-opacity-50 mix-blend-difference"
-              >
-                <span className="text-white text-9xl no-underline text-center">
-                  {page.label}
-                </span>
-              </Link>
-            ))}
+            {PAGES.map((page) => [
+              <div className="relative" key={page.path}>
+                <Link
+                  key={page}
+                  to={`/${page.path}`}
+                  onClick={() => setVisible(false)}
+                  className={CLASSES.link}
+                >
+                  <div className={CLASSES.linkOverlay}></div>
+                </Link>
+                <span className={CLASSES.linkText}>{page.label}</span>
+              </div>,
+            ])}
           </nav>
         </section>
       )}

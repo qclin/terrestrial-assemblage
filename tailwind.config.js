@@ -2,6 +2,7 @@ const colors = {
   babyBlue: "#87A4CA",
   white: "#fff",
   algea: "#e3e6c0",
+  lightAlgea: "#c9c99e",
 };
 
 module.exports = {
@@ -13,11 +14,13 @@ module.exports = {
         blue: colors.babyBlue,
         shadow: colors.white,
         algea: colors.algea,
+        lightAlgea: colors.lightAlgea,
       },
       boxShadow: {
         white: "0 0 5px 10px #FFF",
-        algea: "0 0 5px 10px #e3e6c0",
+        algea: "0 0 50px -12px #e3e6c0",
       },
+      backgroundBlendMode: ["hover", "focus"],
       mixBlendMode: ["hover", "focus"],
     },
   },
