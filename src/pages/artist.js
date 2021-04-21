@@ -25,7 +25,10 @@ const ArtistPage = ({ location, data }) => {
   return (
     <Layout>
       <main className="mx-8">
-        <button className="mt-20" onClick={() => navigate(-1)}>
+        <button
+          className="mt-20 focus:outline-none"
+          onClick={() => navigate(-1)}
+        >
           Go Back
         </button>
         <h1 className="text-9xl">
@@ -46,7 +49,7 @@ const ArtistPage = ({ location, data }) => {
             ))}
           </div>
           <div className="">
-            <div dangerouslySetInnerHTML={{ __html: profileNode.html }} />
+            <div dangerouslySetInnerHTML={{ __html: profileNode?.html }} />
           </div>
         </div>
       </main>
