@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby-plugin-react-i18next";
 import { StaticImage } from "gatsby-plugin-image";
 import { ARTISTS } from "../constants/routes";
+import { graphql } from "gatsby";
 
 const CLASSES = {
   link: "block px-5 rounded-md",

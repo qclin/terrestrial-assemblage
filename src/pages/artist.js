@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import { graphql, navigate } from "gatsby";
