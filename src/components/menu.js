@@ -27,12 +27,12 @@ function Menu() {
   const [visible, setVisible] = React.useState(false);
 
   return (
-    <div className={clsx(visible && "inset-0", "fixed")}>
+    <div className={clsx(visible && "inset-0 h-full", "fixed")}>
       <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
         {visible ? "X" : <Trans>menu</Trans>}
       </button>
       {visible && (
-        <section className="grid h-full">
+        <section className="grid ">
           <StaticImage
             style={{ gridArea: "1/1" }}
             layout="fullWidth"

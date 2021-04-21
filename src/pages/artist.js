@@ -1,8 +1,8 @@
 import React from "react";
-import { Trans, useI18next } from "gatsby-plugin-react-i18next";
+import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import * as queryString from "query-string";
 
 const ArtistPage = ({ location, data }) => {
@@ -17,10 +17,16 @@ const ArtistPage = ({ location, data }) => {
 
   return (
     <Layout>
-      <main>
+      <main className="mx-8">
+        <button className="mt-20" onClick={() => navigate(-1)}>
+          Go Back
+        </button>
+        <h1 className="text-9xl">
+          <Trans>{id}</Trans>
+        </h1>
+
         <div className="md:grid md:grid-cols-3 gap-4">
           <div className="col-start-3">
-            <h1>{location.state.artist.name}</h1>
             <div dangerouslySetInnerHTML={{ __html: profileNode.html }} />
           </div>
         </div>
