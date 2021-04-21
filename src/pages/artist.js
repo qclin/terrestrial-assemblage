@@ -15,6 +15,10 @@ const ArtistPage = ({ location, data }) => {
     n.fileAbsolutePath.includes(`/${language}/artists/${id}`)
   );
 
+  const clImages = data.images.edges.filter((e) =>
+    e.node.public_id.includes(id)
+  );
+
   return (
     <Layout>
       <main className="mx-8">
@@ -26,7 +30,14 @@ const ArtistPage = ({ location, data }) => {
         </h1>
 
         <div className="md:grid md:grid-cols-3 gap-4">
-          <div className="col-start-3">
+          <div className="col-span-2 grid grid-flow-row gap-4">
+            {clImages.map((image, index) => (
+              <div key={`${index}-cl`} className="">
+                <img src={image.node.secure_url} />
+              </div>
+            ))}
+          </div>
+          <div className="">
             <div dangerouslySetInnerHTML={{ __html: profileNode.html }} />
           </div>
         </div>
@@ -54,6 +65,14 @@ export const query = graphql`
       nodes {
         html
         fileAbsolutePath
+      }
+    }
+    images: allCloudinaryMedia {
+      edges {
+        node {
+          secure_url
+          public_id
+        }
       }
     }
   }

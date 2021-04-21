@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "clsx": "^1.1.1",
+    "dotenv": "^8.2.0",
     "gatsby": "^3.2.1",
     "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-postcss": "^4.2.0",
@@ -26,6 +27,7 @@
     "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^3.2.1",
     "gatsby-plugin-sitemap": "^3.2.0",
+    "gatsby-source-cloudinary": "^0.1.14",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
