@@ -38,7 +38,10 @@ function ArtistsPage() {
                 className={CLASSES.link}
                 onMouseOver={() => setActive(artist.identifier)}
               >
-                <div className={CLASSES.linkOverlay}></div>
+                <div
+                  className={CLASSES.linkOverlay}
+                  style={{ mixBlendMode: "color" }}
+                ></div>
               </Link>
               <span className={CLASSES.linkText}>{artist.name}</span>
             </div>

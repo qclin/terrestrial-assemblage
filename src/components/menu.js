@@ -53,7 +53,10 @@ function Menu() {
                   onClick={() => setVisible(false)}
                   className={CLASSES.link}
                 >
-                  <div className={CLASSES.linkOverlay}></div>
+                  <div
+                    className={CLASSES.linkOverlay}
+                    style={{ mixBlendMode: "color" }}
+                  ></div>
                 </Link>
                 <span className={CLASSES.linkText}>{page.label}</span>
               </div>,
