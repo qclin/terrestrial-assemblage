@@ -110,6 +110,14 @@ module.exports = {
         name: `locale`,
       },
     },
+    "gatsby-transformer-json",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `program`,
+        path: `${__dirname}/config/program`,
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

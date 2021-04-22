@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  margin: 1.25rem 0;
+}
+
+main section div a:hover {
+  cursor: pointer;
+  background-color: #e3e6c0;
+}

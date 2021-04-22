@@ -2,14 +2,14 @@ import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import Hero from "../components/hero";
-import AboutSection from "../components/about";
+import Introduction from "../components/introduction";
 
 const IndexPage = () => {
   return (
     <Layout>
       <Hero />
       <main>
-        <AboutSection />
+        <Introduction />
       </main>
     </Layout>
   );

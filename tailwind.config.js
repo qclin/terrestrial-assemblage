@@ -22,6 +22,8 @@ module.exports = {
       },
       backgroundBlendMode: ["hover", "focus"],
       mixBlendMode: ["hover", "focus"],
+      border: ["hover"],
+      fontStyle: ["hover"],
     },
   },
   variants: {

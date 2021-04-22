@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { graphql, navigate } from "gatsby";
 import * as queryString from "query-string";
 import Video from "../components/video";
-import { ARTIST_MEDIA } from "../components/constants";
+import { ARTIST_MEDIA } from "../constants/constants";
 
 const ArtistPage = ({ location, data }) => {
   const { language } = useI18next();
