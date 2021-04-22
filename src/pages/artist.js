@@ -6,6 +6,7 @@ import { graphql, navigate } from "gatsby";
 import * as queryString from "query-string";
 import Video from "../components/video";
 import { ARTIST_MEDIA } from "../constants/constants";
+import clsx from "clsx";
 
 const ArtistPage = ({ location, data }) => {
   const { language } = useI18next();
@@ -24,14 +25,14 @@ const ArtistPage = ({ location, data }) => {
 
   return (
     <Layout>
-      <main className="mx-8">
+      <main className="m-8">
         <button
-          className="mt-20 focus:outline-none"
+          className="focus:outline-none fixed top-14"
           onClick={() => navigate(-1)}
         >
-          Go Back
+          <Trans>Go back</Trans>
         </button>
-        <h1 className="text-9xl">
+        <h1 className="text-9xl mt-24">
           <Trans>{id}</Trans>
         </h1>
         {video && (
@@ -41,9 +42,15 @@ const ArtistPage = ({ location, data }) => {
           />
         )}
         <div className="md:grid md:grid-cols-3 gap-4">
-          <div className="col-span-2 grid grid-flow-row gap-4">
+          <div className="col-span-2 grid grid-flow-row gap-2 md:grid-cols-6">
             {clImages.map((image, index) => (
-              <div key={`${index}-cl`} className="">
+              <div
+                key={`${index}-cl`}
+                className={clsx(
+                  index % 3 === 0 && "col-span-4",
+                  index % 2 === 0 && "col-span-2 col-end-6"
+                )}
+              >
                 <img src={image.node.secure_url} />
               </div>
             ))}
