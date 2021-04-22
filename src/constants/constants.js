@@ -25,8 +25,7 @@ export const PARTICIPANTS = [
 
 export const ARTIST_MEDIA = {
   Clemens_Wilhelm: {
-    video: "https://player.vimeo.com/video/155615273",
-    password: "preview",
+    video: "https://player.vimeo.com/video/260849191",
   },
   Ines_Doujak: {
     podcast:

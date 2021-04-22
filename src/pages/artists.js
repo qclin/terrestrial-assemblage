@@ -1,8 +1,9 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby-plugin-react-i18next";
 import { StaticImage } from "gatsby-plugin-image";
 import { ARTISTS } from "../constants/routes";
 import { graphql } from "gatsby";
+import PondMarkers from "../components/pondMarkers";
 
 const CLASSES = {
   link: "block px-5 rounded-md",
@@ -11,7 +12,8 @@ const CLASSES = {
   linkText: "text-white text-7xl no-underline text-center",
 };
 
-function ArtistsPage({ location }) {
+function ArtistsPage() {
+  const [active, setActive] = useState();
   return (
     <div className="fixed inset-0">
       <section className="grid h-full overflow-y-scroll">
@@ -20,6 +22,7 @@ function ArtistsPage({ location }) {
           layout="fullWidth"
           src={"../assets/images/background/3-BUBBLES.jpg"}
         />
+        <PondMarkers active={active} />
         <nav
           style={{
             gridArea: "1/1",
@@ -33,6 +36,7 @@ function ArtistsPage({ location }) {
                 to={`/artist?id=${artist.identifier}`}
                 state={{ artist }}
                 className={CLASSES.link}
+                onMouseOver={() => setActive(artist.identifier)}
               >
                 <div className={CLASSES.linkOverlay}></div>
               </Link>
