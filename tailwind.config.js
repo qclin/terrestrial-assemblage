@@ -37,7 +37,6 @@ module.exports = {
       backgroundBlendMode: ["hover", "focus"],
       mixBlendMode: ["hover", "focus"],
       border: ["hover"],
-      fontStyle: ["hover"],
     },
   },
   variants: {
@@ -45,7 +44,6 @@ module.exports = {
       padding: ["odd", "even"],
       margin: ["odd", "even"],
       textAlign: ["odd", "even"],
-      filter: ["hover"],
     },
   },
   plugins: [],
