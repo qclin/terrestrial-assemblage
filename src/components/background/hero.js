@@ -21,7 +21,7 @@ function Hero({ path }) {
         style={{ gridArea: "1/1", height: "100vh" }}
         layout="constrained"
         alt="Floating University pond with micro-ecoloogies"
-        src={"../assets/images/background/1-WORM-LT.jpg"}
+        src={"../../assets/images/background/1-WORM-LT.jpg"}
         placeholder="blurred"
       />
       <div
@@ -43,7 +43,7 @@ function Hero({ path }) {
         style={{ gridArea: "1/1", height: "100vh" }}
         layout="constrained"
         alt="Reflections of the Rain pavillion on Algea debris"
-        src={"../assets/images/algea/main.png"}
+        src={"../../assets/images/algea/main.png"}
         placeholder="blurred"
       />
     </div>

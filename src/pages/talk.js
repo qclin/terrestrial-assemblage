@@ -21,6 +21,7 @@ const TalkPage = ({ location, data }) => {
   const talkNode = data.allTalks.talks.find((t) => t.id === id);
   var md = new Remarkable();
 
+  if (!talkNode) return <div>Talk not found</div>;
   return (
     <Layout>
       <BackgroundImage />
