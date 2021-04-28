@@ -17,6 +17,8 @@
   "social": "Social",
   "symposium": "Symposium",
   "press": "Press",
+  "imprint": "Imprint",
+
   "Ana_Alenso": "Ana Alenso",
   "Anne_Duk_Hee_Jordan": "Anne Duk Hee Jordan",
   "Clemens_Wilhelm": "Clemens Wilhelm",
@@ -27,5 +29,11 @@
   "Mischa_Leinkauf": "Mischa Leinkauf",
   "Santiago_Sierra": "Santiago Sierra",
   "Shira_Wachsmann": "Shira Wachsmann",
-  "Go back": "Go back"
+  "Go back": "Go back",
+  "Imprint": "Imprint",
+  "Book Visit": "Book Visit",
+  "Press PDF": "Press PDF",
+  "TEAM": "TEAM",
+  "Program": "Symposium Program",
+  "BUND": "BUND - Friends of the Earth Germany"
 }

@@ -4,7 +4,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import TalkRow from "../components/talkRow";
 import * as styles from "../styles/program.css";
+import BackgroundImage from "../components/background/bgProgram";
+import clsx from "clsx";
 
+const CLASSES = {
+  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",
+  textColumn: "md:col-span-2 lg:col-span-5 lg:col-start-1 p-5 m-3",
+  textBlock: "bg-white rounded-md shadow-md shadow-white",
+};
 const ProgramPage = ({ data }) => {
   const { language } = useI18next();
   const markdownNode = data.allMarkdownRemark.nodes.find((n) =>
@@ -14,24 +21,31 @@ const ProgramPage = ({ data }) => {
 
   return (
     <Layout>
-      <title>
-        <Trans>Program</Trans>
-      </title>
-      <section className="m-10">
-        <h1 className="text-9xl">
-          <Trans>Program</Trans>
+      <BackgroundImage />
+      <section
+        className="grid relative mx-10 overflow-y-scroll"
+        style={{
+          gridArea: "1/1",
+          height: "100vh",
+        }}
+      >
+        <h1 className="text-7xl text-white mt-10">
+          <Trans>Symposium Program</Trans>
+          <br />
+          <Trans>Ecological Thinking in Border Zones</Trans>
+          <br />
+          <Trans>18 May 2021, 10am - 6pm</Trans>
+          <br />
         </h1>
-        <div className="md:grid md:grid-cols-3 gap-4">
-          <div className="md:col-span-2">
-            <div className="bg-white p-5 md:py-10 rounded-xl shadow-md shadow-white">
-              <div dangerouslySetInnerHTML={{ __html: markdownNode.html }} />
-            </div>
+        <div className={CLASSES.textGrid}>
+          <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
+            <div dangerouslySetInnerHTML={{ __html: markdownNode.html }} />
           </div>
-        </div>
-        <div>
-          {program.talks.map((talk) => (
-            <TalkRow talk={talk} />
-          ))}
+          <div className={CLASSES.textColumn}>
+            {program.talks.map((talk, index) => (
+              <TalkRow talk={talk} key={`talk.${index}`} />
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
@@ -63,10 +77,12 @@ export const query = graphql`
       nodes {
         language
         talks {
+          id
           description
           speaker
           time
           title
+          organization
         }
       }
     }

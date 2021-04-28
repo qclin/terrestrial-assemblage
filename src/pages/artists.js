@@ -1,54 +1,53 @@
 import React, { useState } from "react";
 import { Link } from "gatsby-plugin-react-i18next";
-import { StaticImage } from "gatsby-plugin-image";
 import { ARTISTS } from "../constants/routes";
 import { graphql } from "gatsby";
 import PondMarkers from "../components/pondMarkers";
+import Layout from "../components/layout";
+import BackgroundImage from "../components/background/bgArtists";
 
 const CLASSES = {
   link: "block px-5 rounded-md",
   linkOverlay:
-    "mix-blend-color w-full h-20 absolute filter blur-lg hover:bg-lightAlgea",
+    "mix-blend-color w-full h-20 absolute filter blur-lg hover:bg-algea-light",
   linkText: "text-white text-7xl no-underline text-center",
 };
 
-function ArtistsPage() {
+function ArtistsPage({ location }) {
   const [active, setActive] = useState();
   return (
-    <div className="fixed inset-0">
-      <section className="grid h-full overflow-y-scroll">
-        <StaticImage
-          style={{ gridArea: "1/1" }}
-          layout="fullWidth"
-          src={"../assets/images/background/3-BUBBLES.jpg"}
-        />
-        <PondMarkers active={active} />
-        <nav
-          style={{
-            gridArea: "1/1",
-          }}
-          className="grid m-24"
-        >
-          {ARTISTS.map((artist) => (
-            <div className="relative my-2" key={artist.identifier}>
-              <Link
-                key={artist.identifier}
-                to={`/artist?id=${artist.identifier}`}
-                state={{ artist }}
-                className={CLASSES.link}
-                onMouseOver={() => setActive(artist.identifier)}
-              >
-                <div
-                  className={CLASSES.linkOverlay}
-                  style={{ mixBlendMode: "color" }}
-                ></div>
-              </Link>
-              <span className={CLASSES.linkText}>{artist.name}</span>
-            </div>
-          ))}
-        </nav>
-      </section>
-    </div>
+    <Layout>
+      <BackgroundImage />
+      <div className="fixed inset-0">
+        <section className="grid h-full overflow-y-scroll">
+          <PondMarkers active={active} />
+          <nav
+            style={{
+              gridArea: "1/1",
+            }}
+            className="grid m-24"
+          >
+            {ARTISTS.map((artist) => (
+              <div className="relative my-2" key={artist.identifier}>
+                <Link
+                  key={artist.identifier}
+                  to={`/artist?id=${artist.identifier}`}
+                  state={{ artist }}
+                  className={CLASSES.link}
+                  onMouseOver={() => setActive(artist.identifier)}
+                >
+                  <div
+                    className={CLASSES.linkOverlay}
+                    style={{ mixBlendMode: "color" }}
+                  ></div>
+                </Link>
+                <span className={CLASSES.linkText}>{artist.name}</span>
+              </div>
+            ))}
+          </nav>
+        </section>
+      </div>
+    </Layout>
   );
 }
 

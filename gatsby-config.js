@@ -89,12 +89,19 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "background",
+        path: "./src/assets/images/background/",
+      },
+      __key: "background",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "images",
         path: "./src/assets/images/",
       },
       __key: "images",
     },
-
     {
       resolve: "gatsby-source-filesystem",
       options: {

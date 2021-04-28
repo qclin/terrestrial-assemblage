@@ -5,10 +5,10 @@ import clsx from "clsx";
 
 const CLASSES = {
   menuBtn:
-    "bg-white m-5 px-2 py-1 rounded-full shadow-md shadow-white focus:outline-none z-10 absolute",
+    "bg-algea-dark m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
   link: "block px-5 rounded-md",
   linkOverlay:
-    "mix-blend-color w-full h-32 absolute filter blur-lg hover:bg-lightAlgea",
+    "mix-blend-color w-full h-32 absolute filter blur-lg hover:bg-algea-light",
   linkText: "text-white text-9xl no-underline text-center",
 };
 
@@ -19,15 +19,13 @@ function Menu() {
     { path: "about", label: t("about") },
     { path: "artists", label: t("artists") },
     { path: "livestream", label: t("livestream") },
-    { path: "program", label: t("program") },
-    { path: "symposium", label: t("symposium") },
-    { path: "announcement", label: t("announcement") },
-    { path: "social", label: t("social") },
+    { path: "program", label: t("symposium program") },
+    { path: "imprint", label: t("imprint") },
   ];
   const [visible, setVisible] = React.useState(false);
 
   return (
-    <div className={clsx(visible && "inset-0 h-full", "fixed top-0")}>
+    <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
       <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
         {visible ? "X" : <Trans>menu</Trans>}
       </button>
@@ -42,6 +40,7 @@ function Menu() {
           <nav
             style={{
               gridArea: "1/1",
+              height: "100vh",
             }}
             className="grid relative place-items-center"
           >

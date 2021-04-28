@@ -1,8 +1,9 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import Hero from "../components/hero";
 import Introduction from "../components/introduction";
+import Footer from "../components/footer";
+import Hero from "../components/background/hero";
 
 const IndexPage = () => {
   return (
@@ -10,6 +11,7 @@ const IndexPage = () => {
       <Hero />
       <main>
         <Introduction />
+        <Footer />
       </main>
     </Layout>
   );

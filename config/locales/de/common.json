@@ -15,8 +15,9 @@
   "menu": "Karte",
   "program": "Programm",
   "social": "Sozial",
-  "symposium": "Symposium",
+  "symposium program": "Symposium Programm",
   "press": "Presse",
+  "imprint": "Impressum",
 
   "Ana_Alenso": "Ana Alenso",
   "Anne_Duk_Hee_Jordan": "Anne Duk Hee Jordan",
@@ -28,5 +29,13 @@
   "Mischa_Leinkauf": "Mischa Leinkauf",
   "Santiago_Sierra": "Santiago Sierra",
   "Shira_Wachsmann": "Shira Wachsmann",
-  "Go back": "Zurück"
+  "Go back": "Zurück",
+  "Imprint": "Impressum",
+  "Book Visit": "Besuch buchen",
+  "Press PDF": "Presse-PDF",
+  "TEAM": "TEAM",
+  "Symposium Program": "Symposium Programm",
+  "BUND": "BUND e.V. - Engagiert für Umwelt & Natur",
+  "Ecological Thinking in Border Zones": "Ökologisches Denken in Grenzzonen",
+  "18 May 2021, 10am - 6pm": "18 Mai 2021, 10-18 Uhr"
 }

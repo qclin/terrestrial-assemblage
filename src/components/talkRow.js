@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import clsx from "clsx";
 import { utcToZonedTime, format } from "date-fns-tz";
 import enGB from "date-fns/locale/en-GB";
 import { Remarkable } from "remarkable";
+import { Link } from "gatsby-plugin-react-i18next";
 
+const CLASSES = {
+  text: "text-white backdrop-filter backdrop-blur-sm ml-10",
+};
 const TalkRow = ({ talk }) => {
   const datetimeFormat = Intl.DateTimeFormat().resolvedOptions();
-  const [visible, setVisible] = useState(false);
-
   const localTime = utcToZonedTime(
     new Date(talk.time),
     datetimeFormat.timeZone
@@ -22,42 +24,33 @@ const TalkRow = ({ talk }) => {
 
   if (!talk.description) {
     return (
-      <div className="flex flex-row items-baseline mb-12">
-        <h3 className="text-left inline flex-1">
-          {talk.speaker && `${talk.speaker}: `}
-          {talk.title}
-        </h3>
-        <span className="text-base w-36">
-          {localTimeString} {"     "}
-        </span>
+      <div className={"items-baseline mb-12"}>
+        <span className="text-base w-36 text-white">{localTimeString}</span>
+        <span className={CLASSES.text}> {talk.title} </span>
       </div>
     );
   }
 
   return (
     <div className="my-2">
-      <div className="flex flex-row items-baseline">
-        <span className="text-base w-36">
-          {localTimeString} {"     "}
+      <div className={"items-baseline mb-12"}>
+        <span className="text-base w-36 text-white inline">
+          {localTimeString}
         </span>
-        <button
-          onClick={() => setVisible(!visible)}
-          className="text-left focus:outline-none inline max-w-5xl"
+        <Link
+          to={`/talk?id=${talk.id}&time=${localTimeString}`}
+          className={clsx([
+            "flex-auto text-left focus:outline-none inline max-w-xl",
+            CLASSES.text,
+          ])}
         >
-          <h3 className="text-left inline">
-            {talk.speaker && `${talk.speaker}: `}
-            <i>{talk.title}</i>
-          </h3>
-        </button>
-      </div>
-      <div className="md:grid md:grid-cols-3 gap-4">
-        <div className="md:col-span-2">
-          <p className={clsx(visible ? "block" : "hidden", "p-10 bg-red")}>
-            <div
-              dangerouslySetInnerHTML={{ __html: md.render(talk.description) }}
-            />
-          </p>
-        </div>
+          <h3 className="text-6xl">{talk.speaker && `${talk.speaker}`}</h3>
+          <div className="max-w-xl">
+            {talk.organization}
+            <br />
+            <span className="hover:underline">⟶ {talk.title}</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

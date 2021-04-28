@@ -7,13 +7,3 @@ h3 {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-
-a {
-  font-weight: bold;
-}
-
-a:hover {
-  font-style: italic;
-  color: white;
-  background-color: #c9c99e;
-}
