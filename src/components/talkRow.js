@@ -2,7 +2,6 @@ import React from "react";
 import clsx from "clsx";
 import { utcToZonedTime, format } from "date-fns-tz";
 import enGB from "date-fns/locale/en-GB";
-import { Remarkable } from "remarkable";
 import { Link } from "gatsby-plugin-react-i18next";
 
 const CLASSES = {
@@ -19,8 +18,6 @@ const TalkRow = ({ talk }) => {
     timeZone: datetimeFormat.timeZoneName,
     locale: enGB,
   });
-
-  var md = new Remarkable();
 
   if (!talk.description) {
     return (

@@ -60,7 +60,11 @@ const ArtistPage = ({ location, data }) => {
                   index % 2 === 0 && "col-span-2 col-end-6"
                 )}
               >
-                <img className={CLASSES.image} src={image.node.secure_url} />
+                <img
+                  className={CLASSES.image}
+                  src={image.node.secure_url}
+                  alt={image.key}
+                />
               </div>
             ))}
           </div>

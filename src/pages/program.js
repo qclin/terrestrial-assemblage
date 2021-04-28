@@ -3,7 +3,7 @@ import { Trans, useI18next } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import TalkRow from "../components/talkRow";
-import * as styles from "../styles/program.css";
+import * as styles from "../styles/program.css"; //eslint-disable-line no-unused-vars
 import BackgroundImage from "../components/background/bgProgram";
 import clsx from "clsx";
 

@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Partners from "../components/partners";
 import { StaticImage } from "gatsby-plugin-image";
 import { Trans, useI18next } from "gatsby-plugin-react-i18next";
-import * as styles from "../styles/imprint.css";
+import * as styles from "../styles/imprint.css"; //eslint-disable-line no-unused-vars
 
 const CLASSES = {
   textGrid: "grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3",

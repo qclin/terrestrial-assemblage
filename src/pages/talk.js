@@ -18,7 +18,7 @@ const CLASSES = {
 const TalkPage = ({ location, data }) => {
   const { id, time } = queryString.parse(location.search);
 
-  const talkNode = data.allTalks.talks.find((t) => t.id == id);
+  const talkNode = data.allTalks.talks.find((t) => t.id === id);
   var md = new Remarkable();
 
   return (

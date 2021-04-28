@@ -28,6 +28,7 @@ const Footer = () => {
           href="https://www.eventbrite.com/"
           target="_blank"
           className={CLASSES.link}
+          rel="noreferrer"
         >
           <Trans>Book Visit</Trans>
         </a>

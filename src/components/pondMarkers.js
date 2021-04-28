@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function PondMarkers({ active }) {
   const radius = 19.5;
@@ -10,11 +10,11 @@ function PondMarkers({ active }) {
   };
   return (
     <svg
-      width="514px"
-      height="477px"
-      viewBox="0 0 514 477"
+      width="660px"
+      height="609px"
+      viewBox="0 0 660 609"
       version="1.1"
-      className="z-10 absolute bottom-0 right-0"
+      className="z-10 absolute bottom-5 right-5"
     >
       <defs>
         <filter
@@ -30,100 +30,103 @@ function PondMarkers({ active }) {
       </defs>
       <g stroke="none" fill="none">
         <g fill={colors.default} stroke="#979797">
-          <g id="Group">
-            <circle
-              cx="19.5"
-              cy="335.5"
-              r={radius}
-              filter={filter}
-              fill={active === "Ana_Alenso" ? colors.highlight : colors.default}
-            ></circle>
-            <circle
-              cx="316.5"
-              cy="271.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Anne_Duk_Hee_Jordan"
-                  ? colors.highlight
-                  : colors.default
-              }
-            ></circle>
-            <circle
-              cx="284.5"
-              cy="158.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Clemens_Wilhelm" ? colors.highlight : colors.default
-              }
-            ></circle>
-            <circle
-              cx="360.5"
-              cy="115.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Folke_Koebberling"
-                  ? colors.highlight
-                  : colors.default
-              }
-            ></circle>
-            <circle
-              cx="443.5"
-              cy="193.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Han_Seok_Hyun" ? colors.highlight : colors.default
-              }
-            ></circle>
-            <circle
-              cx="492.5"
-              cy="34.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Ines_Doujak" ? colors.highlight : colors.default
-              }
-            ></circle>
-            <circle
-              cx="436.5"
-              cy="19.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Marco_Barotti" ? colors.highlight : colors.default
-              }
-            ></circle>
-            <circle
-              cx="103.5"
-              cy="144.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Mischa_Leinkauf" ? colors.highlight : colors.default
-              }
-            ></circle>
-            <circle
-              cx="58.5"
-              cy="455.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Santiago_Sierra" ? colors.highlight : colors.default
-              }
-            ></circle>
-            <circle
-              cx="186.5"
-              cy="316.5"
-              r={radius}
-              filter={filter}
-              fill={
-                active === "Shira_Wachsmann" ? colors.highlight : colors.default
-              }
-            ></circle>
-          </g>
+          <circle
+            filter={filter}
+            r={radius}
+            cx="568.4"
+            cy="45.4"
+            fill={
+              active === "Han_Seok_Hyun" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="579.4"
+            cy="128.4"
+            fill={
+              active === "Shira_Wachsmann" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="613.4"
+            cy="244.4"
+            fill={
+              active === "Santiago_Sierra" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="572.4"
+            cy="244.4"
+            fill={
+              active === "Mischa_Leinkauf" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="480.4"
+            cy="320.8"
+            fill={active === "Ines_Doujak" ? colors.highlight : colors.default}
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="199.4"
+            cy="268.8"
+            fill={
+              active === "Marco_Barotti" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="61.4"
+            cy="421.8"
+            fill={
+              active === "Anne_Duk_Hee_Jordan"
+                ? colors.highlight
+                : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="87.4"
+            cy="547.8"
+            fill={active === "Ana_Alenso" ? colors.highlight : colors.default}
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="234.4"
+            cy="465.8"
+            fill={
+              active === "Folke_Koebberling" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="504.4"
+            cy="438.8"
+            fill={
+              active === "Mischa_Leinkauf" ? colors.highlight : colors.default
+            }
+          />
+          <circle
+            filter={filter}
+            r={radius}
+            cx="554.4"
+            cy="420.8"
+            fill={
+              active === "Clemens_Wilhelm" ? colors.highlight : colors.default
+            }
+          />
         </g>
       </g>
     </svg>
