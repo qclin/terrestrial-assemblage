@@ -25,7 +25,7 @@ const Footer = () => {
           <Trans>Press PDF</Trans>
         </a>
         <a
-          href="https://www.eventbrite.com/"
+          href="https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197"
           target="_blank"
           className={CLASSES.link}
           rel="noreferrer"

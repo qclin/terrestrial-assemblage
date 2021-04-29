@@ -6,6 +6,7 @@ import TalkRow from "../components/talkRow";
 import * as styles from "../styles/program.css"; //eslint-disable-line no-unused-vars
 import BackgroundImage from "../components/background/bgProgram";
 import clsx from "clsx";
+import TitleSVG from "../assets/svgs/headers/symposium-title.svg";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",
@@ -23,20 +24,15 @@ const ProgramPage = ({ data }) => {
     <Layout>
       <BackgroundImage />
       <section
-        className="grid relative mx-10 overflow-y-scroll"
+        className="grid relative mx-24 overflow-y-scroll"
         style={{
           gridArea: "1/1",
           height: "100vh",
         }}
       >
-        <h1 className="text-7xl text-white mt-10">
-          <Trans>Symposium Program</Trans>
-          <br />
-          <Trans>Ecological Thinking in Border Zones</Trans>
-          <br />
-          <Trans>18 May 2021, 10am - 6pm</Trans>
-          <br />
-        </h1>
+        <div className="mt-10">
+          <TitleSVG />
+        </div>
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
             <div dangerouslySetInnerHTML={{ __html: markdownNode.html }} />

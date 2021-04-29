@@ -9,11 +9,11 @@ import BackgroundImage from "../components/background/bgArtists";
 const CLASSES = {
   link: "block px-5 rounded-md",
   linkOverlay:
-    "mix-blend-color w-full h-20 absolute filter blur-lg hover:bg-algea-light",
+    "mix-blend-color w-full h-20 absolute filter blur-lg hover:bg-algea-light left-0",
   linkText: "text-white text-7xl no-underline text-center",
 };
 
-function ArtistsPage({ location }) {
+function ArtistsPage() {
   const [active, setActive] = useState();
   return (
     <Layout>
@@ -25,10 +25,14 @@ function ArtistsPage({ location }) {
             style={{
               gridArea: "1/1",
             }}
-            className="grid m-24"
+            className="m-24"
           >
             {ARTISTS.map((artist) => (
-              <div className="relative my-2" key={artist.identifier}>
+              <div
+                className="relative my-2"
+                key={artist.identifier}
+                style={{ width: "fit-content" }}
+              >
                 <Link
                   key={artist.identifier}
                   to={`/artist?id=${artist.identifier}`}
@@ -38,9 +42,14 @@ function ArtistsPage({ location }) {
                 >
                   <div
                     className={CLASSES.linkOverlay}
-                    style={{ mixBlendMode: "color" }}
+                    style={{
+                      mixBlendMode: "color",
+                      borderRadius: "0.375rem",
+                      filter: "blur(16px)",
+                    }}
                   ></div>
                 </Link>
+
                 <span className={CLASSES.linkText}>{artist.name}</span>
               </div>
             ))}

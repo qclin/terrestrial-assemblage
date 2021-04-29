@@ -12,8 +12,7 @@ import BackgroundImage from "../components/background/bgArtist";
 const CLASSES = {
   imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6",
   image: "filter grayscale hover:filter-none",
-  textBox:
-    "rounded-lg px-8 m-5 shadow-tintAlgea shadow-md bg-gradient-to-b from-algea-tint via-white-tint to-algea-tint",
+  textBox: "rounded-lg px-8 m-5 shadow-whiteTint shadow-md bg-white-tint",
 };
 
 const ArtistPage = ({ location, data }) => {

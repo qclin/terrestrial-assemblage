@@ -31,6 +31,7 @@ module.exports = {
       },
       boxShadow: {
         white: "0 0 5px 10px #FFF",
+        whiteTint: "0 0 5px 10px #ffffffE6",
         tintAlgea: "0 0 10px 10px #e3e6c0E6",
         algea: "0 0 50px -12px #e3e6c0",
       },

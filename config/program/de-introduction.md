@@ -4,3 +4,5 @@ Das Symposium wird ermöglicht durch die freundliche Unterstützung durch das Ko
 Naturschutz Deutschland e.V. (BUND).
 
 Livestream hier und im Auditorium der [Floating ~~University~~ Berlin](http://www.floatinguniversity.org/)
+
+**Moderation: Carola Uehlken**

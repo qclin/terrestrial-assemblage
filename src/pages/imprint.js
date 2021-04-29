@@ -9,7 +9,7 @@ import * as styles from "../styles/imprint.css"; //eslint-disable-line no-unused
 const CLASSES = {
   textGrid: "grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3",
   textBox:
-    "rounded-lg px-8 py-4 mx-24 shadow-tintAlgea shadow-md bg-gradient-to-r from-algea-tint via-white-tint to-algea-tint",
+    "rounded-lg px-8 py-4 mx-24 shadow-whiteTint shadow-md bg-white-tint",
 };
 
 const ImprintPage = ({ data }) => {
