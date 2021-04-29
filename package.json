@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "extract": "babel --config-file ./babel-extract.config.js -o tmp/chunk.js 'src/**/*.{js,jsx,ts,tsx}' && rm -rf tmp"
+    "extract": "babel --config-file ./babel-extract.config.js -o tmp/chunk.js 'src/**/*.{js,jsx,ts,tsx}' && rm -rf tmp",
+    "clean-svgs": "./script/clean-svgs"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -48,6 +49,7 @@
     "@babel/plugin-transform-typescript": "^7.13.0",
     "autoprefixer": "^10.2.5",
     "babel-plugin-i18next-extract": "^0.8.3",
+    "svgo": "^2.3.0",
     "tailwindcss": "^2.0.4"
   }
 }
