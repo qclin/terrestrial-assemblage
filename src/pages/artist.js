@@ -8,6 +8,7 @@ import Video from "../components/video";
 import { ARTIST_MEDIA } from "../constants/constants";
 import clsx from "clsx";
 import BackgroundImage from "../components/background/bgArtist";
+import NameVector from "../components/nameVector";
 
 const CLASSES = {
   imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6",
@@ -40,9 +41,9 @@ const ArtistPage = ({ location, data }) => {
         >
           <Trans>Go back</Trans>
         </button>
-        <h1 className="text-9xl mt-24 text-white">
-          <Trans>{id}</Trans>
-        </h1>
+        <div className="mt-24">
+          <NameVector identifier={id} className="h-24" />
+        </div>
         {video && (
           <Video
             videoSrcURL={video}

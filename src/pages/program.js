@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Trans, useI18next } from "gatsby-plugin-react-i18next";
+import { useI18next } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import TalkRow from "../components/talkRow";
@@ -76,6 +76,7 @@ export const query = graphql`
           id
           description
           speaker
+          name
           time
           title
           organization

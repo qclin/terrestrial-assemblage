@@ -14,7 +14,7 @@ function PondMarkers({ active }) {
       height="609px"
       viewBox="0 0 660 609"
       version="1.1"
-      className="z-10 absolute bottom-5 right-5"
+      className="z-0 absolute bottom-5 right-5"
     >
       <defs>
         <filter

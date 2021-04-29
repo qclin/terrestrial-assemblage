@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "gatsby-plugin-react-i18next";
-import { ARTISTS } from "../constants/routes";
+import { ARTISTS } from "../constants/constants";
 import { graphql } from "gatsby";
 import PondMarkers from "../components/pondMarkers";
 import Layout from "../components/layout";
+import NameVector from "../components/nameVector";
 import BackgroundImage from "../components/background/bgArtists";
 
 const CLASSES = {
@@ -25,20 +26,20 @@ function ArtistsPage() {
             style={{
               gridArea: "1/1",
             }}
-            className="m-24"
+            className="m-24 text-left"
           >
             {ARTISTS.map((artist) => (
               <div
                 className="relative my-2"
-                key={artist.identifier}
+                key={artist}
                 style={{ width: "fit-content" }}
               >
                 <Link
-                  key={artist.identifier}
-                  to={`/artist?id=${artist.identifier}`}
+                  key={artist}
+                  to={`/artist?id=${artist}`}
                   state={{ artist }}
                   className={CLASSES.link}
-                  onMouseOver={() => setActive(artist.identifier)}
+                  onMouseOver={() => setActive(artist)}
                 >
                   <div
                     className={CLASSES.linkOverlay}
@@ -49,8 +50,7 @@ function ArtistsPage() {
                     }}
                   ></div>
                 </Link>
-
-                <span className={CLASSES.linkText}>{artist.name}</span>
+                <NameVector identifier={artist} className="w-auto h-24 " />
               </div>
             ))}
           </nav>

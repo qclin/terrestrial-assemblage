@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { utcToZonedTime, format } from "date-fns-tz";
 import enGB from "date-fns/locale/en-GB";
 import { Link } from "gatsby-plugin-react-i18next";
-
+import NameVector from "./nameVector";
 const CLASSES = {
   text: "text-white backdrop-filter backdrop-blur-sm ml-10",
 };
@@ -41,7 +41,9 @@ const TalkRow = ({ talk }) => {
             CLASSES.text,
           ])}
         >
-          <h3 className="text-6xl">{talk.speaker && `${talk.speaker}`}</h3>
+          {talk.name && (
+            <NameVector identifier={talk.name} className="h-16 w-auto" />
+          )}
           <div className="max-w-xl">
             {talk.organization}
             <br />

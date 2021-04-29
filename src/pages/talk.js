@@ -8,6 +8,7 @@ import clsx from "clsx";
 import BackgroundImage from "../components/background/bgTalk";
 import { Remarkable } from "remarkable";
 import { Link } from "gatsby-plugin-react-i18next";
+import NameVector from "../components/nameVector";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 ml-10",
@@ -33,7 +34,9 @@ const TalkPage = ({ location, data }) => {
 
         <section className="mt-24 ml-10 text-white">
           <span className="text-base w-36 inline">{time}</span>
-          <h3 className="text-6xl ">{talkNode.speaker}</h3>
+          {talkNode.name && (
+            <NameVector identifier={talkNode.name} className="h-24" />
+          )}
           <div className="max-w-xl">
             {talkNode.organization}
             <br />
@@ -72,6 +75,7 @@ export const query = graphql`
       language
       talks {
         id
+        name
         description
         organization
         speaker
