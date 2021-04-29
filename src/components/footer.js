@@ -2,6 +2,7 @@ import * as React from "react";
 import { useI18next, Trans, Link } from "gatsby-plugin-react-i18next";
 import DEPressRelease from "../assets/pdfs/Terrestrial Assemblage_Pressemitteilung.pdf";
 import ENPRessRelease from "../assets/pdfs/Terrestrial Assemblage_pressrelease.pdf";
+import { BOOKING_URL } from "../constants/constants";
 
 const CLASSES = {
   link: "text-lg uppercase hover:text-algea bg-white-half mr-4 px-1 py-0",
@@ -25,7 +26,7 @@ const Footer = () => {
           <Trans>Press PDF</Trans>
         </a>
         <a
-          href="https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197"
+          href={BOOKING_URL}
           target="_blank"
           className={CLASSES.link}
           rel="noreferrer"

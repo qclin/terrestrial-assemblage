@@ -16,6 +16,7 @@ import DEExhibitionSVG from "../assets/svgs/headers/de/menu/exhibition.svg";
 import DElivestreamSVG from "../assets/svgs/headers/de/menu/livestream.svg";
 import DEProgramSVG from "../assets/svgs/headers/de/menu/program.svg";
 import DEVisitSVG from "../assets/svgs/headers/de/menu/visit.svg";
+import { BOOKING_URL } from "../constants/constants";
 
 const CLASSES = {
   menuBtn:
@@ -26,19 +27,30 @@ const CLASSES = {
   linkText: "text-white text-9xl no-underline text-center",
 };
 
+const PAGES = [
+  { path: "about", en: AboutSVG, de: DEAboutSVG },
+  { path: BOOKING_URL, en: VisitSVG, de: DEVisitSVG, external: true },
+  { path: "artists", en: ArtistsSVG, de: DEArtistsSVG },
+  { path: "program", en: ProgramSVG, de: DEProgramSVG },
+  { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
+  { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
+];
+
 function Menu() {
   const { language } = useI18next();
 
-  const PAGES = [
-    { path: "about", en: AboutSVG, de: DEAboutSVG },
-    { path: "artists", en: ArtistsSVG, de: DEArtistsSVG },
-    { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
-    { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
-    { path: "program", en: ProgramSVG, de: DEProgramSVG },
-    { path: "visit", en: VisitSVG, de: DEVisitSVG },
-  ];
   const [visible, setVisible] = React.useState(false);
 
+  const overlay = () => (
+    <div
+      className={CLASSES.linkOverlay}
+      style={{
+        mixBlendMode: "color",
+        borderRadius: "0.375rem",
+        filter: "blur(16px)",
+      }}
+    ></div>
+  );
   return (
     <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
       <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
@@ -61,23 +73,23 @@ function Menu() {
           >
             {PAGES.map((page) => {
               const Title = page[language];
+
               return (
                 <div className="relative " key={page.path}>
-                  <Link
-                    key={page}
-                    to={`/${page.path}`}
-                    onClick={() => setVisible(false)}
-                    className={CLASSES.link}
-                  >
-                    <div
-                      className={CLASSES.linkOverlay}
-                      style={{
-                        mixBlendMode: "color",
-                        borderRadius: "0.375rem",
-                        filter: "blur(16px)",
-                      }}
-                    ></div>
-                  </Link>
+                  {page.external ? (
+                    <a href={page.path} target="_blank" rel="noreferrer">
+                      {overlay()}
+                    </a>
+                  ) : (
+                    <Link
+                      key={page}
+                      to={`/${page.path}`}
+                      onClick={() => setVisible(false)}
+                      className={CLASSES.link}
+                    >
+                      {overlay()}
+                    </Link>
+                  )}
                   <Title className="h-12 md:h-32" />
                 </div>
               );

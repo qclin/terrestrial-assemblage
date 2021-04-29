@@ -41,3 +41,6 @@ export const ARTIST_MEDIA = {
     video: "https://www.youtube.com/embed/rt6vz10OEus",
   },
 };
+
+export const BOOKING_URL =
+  "https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197";

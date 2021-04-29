@@ -9,6 +9,7 @@ import BackgroundImage from "../components/background/bgTalk";
 import { Remarkable } from "remarkable";
 import { Link } from "gatsby-plugin-react-i18next";
 import NameVector from "../components/nameVector";
+import BackIcon from "../assets/svgs/icons/back.svg";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 ml-10",
@@ -27,8 +28,8 @@ const TalkPage = ({ location, data }) => {
     <Layout>
       <BackgroundImage />
       <main>
-        <Link className="fixed top-14" to="/program">
-          <Trans>Go back</Trans>
+        <Link className="fixed top-16" to="/program">
+          <BackIcon className="ml-5" />
         </Link>
 
         <section className="mt-24 ml-10 text-white">

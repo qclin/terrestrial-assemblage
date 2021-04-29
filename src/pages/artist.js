@@ -1,5 +1,5 @@
 import React from "react";
-import { Trans, useI18next } from "gatsby-plugin-react-i18next";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
 import { graphql, navigate } from "gatsby";
@@ -9,6 +9,7 @@ import { ARTIST_MEDIA } from "../constants/constants";
 import clsx from "clsx";
 import BackgroundImage from "../components/background/bgArtist";
 import NameVector from "../components/nameVector";
+import BackIcon from "../assets/svgs/icons/back.svg";
 
 const CLASSES = {
   imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6",
@@ -35,12 +36,9 @@ const ArtistPage = ({ location, data }) => {
       <BackgroundImage />
 
       <main>
-        <button
-          className="focus:outline-none fixed top-14"
-          onClick={() => navigate(-1)}
-        >
-          <Trans>Go back</Trans>
-        </button>
+        <Link className="fixed top-16" to="/artists">
+          <BackIcon className="ml-5" />
+        </Link>
         <div className="mt-24">
           <NameVector identifier={id} className="h-24" />
         </div>

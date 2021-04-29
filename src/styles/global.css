@@ -10,3 +10,7 @@ main section div a:hover {
   cursor: pointer;
   background-color: #e3e6c0;
 }
+
+main div a {
+  background-color: #e3e6c0e6;
+}
