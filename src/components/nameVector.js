@@ -34,10 +34,10 @@ const nameSvgs = [
 ];
 
 function NameVector({ identifier, ...props }) {
-  if (!identifier) return;
+  if (!identifier) return null;
 
   const NameSVG = nameSvgs.find((vector) => vector.name === identifier)?.svg;
-  if (!NameSVG) return;
+  if (!NameSVG) return null;
   return <NameSVG {...props} />;
 }
 

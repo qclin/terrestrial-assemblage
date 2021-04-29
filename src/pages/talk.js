@@ -26,7 +26,6 @@ const TalkPage = ({ location, data }) => {
   return (
     <Layout>
       <BackgroundImage />
-
       <main>
         <Link className="fixed top-14" to="/program">
           <Trans>Go back</Trans>
