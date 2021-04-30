@@ -45,11 +45,12 @@ const ArtistPage = ({ location, data }) => {
           <NameVector identifier={id} className="h-24" />
         </div>
         {video && (
-          <Video
-            videoSrcURL={video}
-            videoTitle="Official Music Video on YouTube"
-            className="w-full"
-          />
+          <div className="w-full">
+            <Video
+              videoSrcURL={video}
+              videoTitle="Official Music Video on YouTube"
+            />
+          </div>
         )}
         <div className="md:grid md:grid-cols-3 gap-4">
           <div className={CLASSES.imageGrid}>
@@ -69,7 +70,7 @@ const ArtistPage = ({ location, data }) => {
               </div>
             ))}
           </div>
-          <div className={CLASSES.textBox}>
+          <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
             <div dangerouslySetInnerHTML={{ __html: profileNode?.html }} />
           </div>
         </div>
