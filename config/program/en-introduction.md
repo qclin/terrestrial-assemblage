@@ -4,4 +4,4 @@ The symposium is made possible by the kind support of the Korean Cultural Center
 
 Livestream online and in the auditorium of the [Floating ~~University~~ Berlin](http://www.floatinguniversity.org/)
 
-**Moderation by Carola Uehlken**
+**Moderation by [Carola Uehlken](https://www.carolauehlken.com/)**

@@ -5,4 +5,4 @@ Naturschutz Deutschland e.V. (BUND).
 
 Livestream hier und im Auditorium der [Floating ~~University~~ Berlin](http://www.floatinguniversity.org/)
 
-**Moderation: Carola Uehlken**
+**Moderation: [Carola Uehlken](https://www.carolauehlken.com/)**
