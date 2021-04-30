@@ -35,7 +35,11 @@ const ProgramPage = ({ data }) => {
         </div>
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
-            <div dangerouslySetInnerHTML={{ __html: markdownNode.html }} />
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<div>${markdownNode.html}</div>`,
+              }}
+            />
           </div>
           <div className={CLASSES.textColumn}>
             {program.talks.map((talk, index) => (
