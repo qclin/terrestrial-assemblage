@@ -73,7 +73,7 @@ const ArtistPage = ({ location, data }) => {
           <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
             <div
               dangerouslySetInnerHTML={{
-                __html: `<div>${profileNode.html}</div>`,
+                __html: `<div>${profileNode?.html}</div>`,
               }}
             />
           </div>
