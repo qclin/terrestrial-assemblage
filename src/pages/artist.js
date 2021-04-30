@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import * as queryString from "query-string";
 import Video from "../components/video";
 import { ARTIST_MEDIA } from "../constants/constants";
@@ -25,6 +25,7 @@ const ArtistPage = ({ location, data }) => {
     n.fileAbsolutePath.includes(`/${language}/artists/${id}`)
   );
 
+  console.log(" ARTIST PAGE ", id, profileNode);
   const clImages = data.images.edges.filter((e) =>
     e.node.public_id.includes(id)
   );
@@ -46,6 +47,7 @@ const ArtistPage = ({ location, data }) => {
           <Video
             videoSrcURL={video}
             videoTitle="Official Music Video on YouTube"
+            className="w-full"
           />
         )}
         <div className="md:grid md:grid-cols-3 gap-4">
@@ -62,6 +64,7 @@ const ArtistPage = ({ location, data }) => {
                   className={CLASSES.image}
                   src={image.node.secure_url}
                   alt={image.key}
+                  style={{ filter: "grayscale(1)" }}
                 />
               </div>
             ))}
