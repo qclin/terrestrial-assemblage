@@ -14,7 +14,3 @@ main section div a:hover {
 main div a {
   background-color: #e3e6c0e6;
 }
-
-img:hover {
-  filter: none;
-}

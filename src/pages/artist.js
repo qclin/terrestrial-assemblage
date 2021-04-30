@@ -44,14 +44,14 @@ const ArtistPage = ({ location, data }) => {
         <div className="mt-24">
           <NameVector identifier={id} className="h-24" />
         </div>
-        {video && (
-          <div className="w-full">
+        <section>
+          {video && (
             <Video
               videoSrcURL={video}
               videoTitle="Official Music Video on YouTube"
             />
-          </div>
-        )}
+          )}
+        </section>
         <div className="md:grid md:grid-cols-3 gap-4">
           <div className={CLASSES.imageGrid}>
             {clImages.map((image, index) => (
@@ -71,7 +71,7 @@ const ArtistPage = ({ location, data }) => {
             ))}
           </div>
           <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
-            <div dangerouslySetInnerHTML={{ __html: profileNode?.html }} />
+            <div dangerouslySetInnerHTML={{ __html: profileNode.html }} />
           </div>
         </div>
       </main>
