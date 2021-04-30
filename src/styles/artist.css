@@ -1,0 +1,7 @@
+.artworks img:hover {
+  filter: none;
+}
+
+.artworks img {
+  filter: grayscale(1);
+}

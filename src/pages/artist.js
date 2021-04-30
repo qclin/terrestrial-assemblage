@@ -10,9 +10,10 @@ import clsx from "clsx";
 import BackgroundImage from "../components/background/bgArtist";
 import NameVector from "../components/nameVector";
 import BackIcon from "../assets/svgs/icons/back.svg";
+import * as styles from "../styles/artist.css"; //eslint-disable-line no-unused-vars
 
 const CLASSES = {
-  imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6",
+  imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6 artworks",
   image: "filter grayscale hover:filter-none",
   textBox: "rounded-lg px-8 m-5 shadow-whiteTint shadow-md bg-white-tint",
 };
@@ -64,7 +65,6 @@ const ArtistPage = ({ location, data }) => {
                   className={CLASSES.image}
                   src={image.node.secure_url}
                   alt={image.key}
-                  style={{ filter: "grayscale(1)" }}
                 />
               </div>
             ))}
