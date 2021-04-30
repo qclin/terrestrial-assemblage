@@ -31,6 +31,15 @@ const LanguageToggle = () => {
       >
         <Trans>Press</Trans>
       </a>
+      <br />
+      <a
+        href="https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197"
+        target="_blank"
+        className="text-lg text-white uppercase hover:text-algea"
+        rel="noreferrer"
+      >
+        <Trans>Visit</Trans>
+      </a>
     </header>
   );
 };
