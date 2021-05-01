@@ -11,6 +11,7 @@ import BackgroundImage from "../components/background/bgArtist";
 import NameVector from "../components/nameVector";
 import BackIcon from "../assets/svgs/icons/back.svg";
 import * as styles from "../styles/artist.css"; //eslint-disable-line no-unused-vars
+import { Remarkable } from "remarkable";
 
 const CLASSES = {
   imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6 artworks",
@@ -23,11 +24,11 @@ const ArtistPage = ({ location, data }) => {
   const { language } = useI18next();
   const { id } = queryString.parse(location.search);
 
-  const profileNode = data.allMarkdownRemark.nodes.find((n) =>
-    n.fileAbsolutePath.includes(`/${language}/artists/${id}`)
-  );
+  const profileNode = data.allProfiles.artists.find((a) => a.key === id);
 
   console.log("[ArtistPage] ", id, profileNode);
+  var md = new Remarkable();
+
   const clImages = data.images.edges.filter((e) =>
     e.node.public_id.includes(id)
   );
@@ -75,9 +76,10 @@ const ArtistPage = ({ location, data }) => {
           <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
             <div
               dangerouslySetInnerHTML={{
-                __html: `<div>${profileNode?.html}</div>`,
+                __html: md.render(profileNode.description),
               }}
             />
+            <a href={profileNode.website}>website</a>
           </div>
         </div>
       </main>
@@ -100,10 +102,21 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(artists)/" } }) {
-      nodes {
-        html
-        fileAbsolutePath
+    allProfiles: profilesJson(language: { eq: $language }) {
+      language
+      artists {
+        website
+        name
+        key
+        description
+        captions {
+          caption
+          image
+        }
+        associations {
+          label
+          path
+        }
       }
     }
     images: allCloudinaryMedia {
