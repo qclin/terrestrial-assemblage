@@ -13,7 +13,7 @@ import BackgroundImage from "../components/background/bgAbout";
 const CLASSES = {
   svgHeader: "max-w-full max-h-36 mb-5",
   textBox:
-    "m-10 p-5 md:py-10 rounded-lg shadow-whiteTint shadow-md bg-white-tint",
+    "m-10 p-5 md:py-10 rounded-lg shadow-whiteTint shadow-md bg-white-tint description",
 };
 const AboutPage = ({ data }) => {
   const { language } = useI18next();

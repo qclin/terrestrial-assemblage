@@ -11,9 +11,8 @@ import NameVector from "../components/nameVector";
 import BackIcon from "../assets/svgs/icons/back.svg";
 
 const CLASSES = {
-  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 ml-10",
-  textColumn:
-    "md:col-span-2 lg:col-span-5 lg:col-start-1 p-2 mb-10 md:px-8 m-5",
+  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",
+  textColumn: "md:col-span-2 lg:col-span-5 lg:col-start-1 p-2 mb-10 md:px-8",
   textBlock: "bg-white rounded-md shadow-md shadow-white",
 };
 
@@ -27,29 +26,39 @@ const TalkPage = ({ location, data }) => {
   return (
     <Layout>
       <BackgroundImage />
-      <main>
-        <Link className="fixed top-16" to="/program">
-          <BackIcon className="ml-5" />
-        </Link>
-
-        <section className="mt-24 ml-10 text-white">
+      <Link className="fixed top-16" to="/program">
+        <BackIcon className="ml-5" />
+      </Link>
+      <main className="mx-5 md:ml-32">
+        <section className="mt-24 mb-8 text-white">
           <span className="text-base w-36 inline">{time}</span>
           {talkNode.name && (
             <NameVector identifier={talkNode.name} className="h-24" />
           )}
           <div className="max-w-xl">
-            {talkNode.organization}
-            <br />
-            <span>{talkNode.title}</span>
+            {talkNode.organization && [talkNode.organization, <br />]}
+
+            <span>⟶ {talkNode.title}</span>
           </div>
         </section>
         <section className={CLASSES.textGrid}>
-          <div
-            className={clsx([CLASSES.textColumn, CLASSES.textBlock])}
-            dangerouslySetInnerHTML={{
-              __html: md.render(talkNode.description),
-            }}
-          />
+          <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: md.render(talkNode.description),
+              }}
+            />
+            {talkNode.website && (
+              <a
+                href={talkNode.website}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-algea"
+              >
+                website
+              </a>
+            )}
+          </div>
         </section>
       </main>
     </Layout>
@@ -81,6 +90,7 @@ export const query = graphql`
         speaker
         time
         title
+        website
       }
     }
   }

@@ -9,7 +9,7 @@ import clsx from "clsx";
 import TitleSVG from "../assets/svgs/headers/symposium-title.svg";
 
 const CLASSES = {
-  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",
+  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9",
   textColumn: "md:col-span-2 lg:col-span-5 lg:col-start-1 p-5 m-3",
   textBlock: "bg-white rounded-md shadow-md shadow-white",
 };
@@ -24,7 +24,7 @@ const ProgramPage = ({ data }) => {
     <Layout>
       <BackgroundImage />
       <section
-        className="grid relative md:mx-24 overflow-y-scroll"
+        className="grid relative md:mx-32 overflow-y-scroll"
         style={{
           gridArea: "1/1",
           height: "100vh",
@@ -36,16 +36,17 @@ const ProgramPage = ({ data }) => {
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
             <div
+              className="description"
               dangerouslySetInnerHTML={{
                 __html: `<div>${markdownNode.html}</div>`,
               }}
             />
           </div>
-          <div className={CLASSES.textColumn}>
-            {program.talks.map((talk, index) => (
-              <TalkRow talk={talk} key={`talk.${index}`} />
-            ))}
-          </div>
+        </div>
+        <div className={clsx([CLASSES.textGrid, "my-24 pb-28"])}>
+          {program.talks.map((talk, index) => (
+            <TalkRow talk={talk} key={`talk.${index}`} />
+          ))}
         </div>
       </section>
     </Layout>

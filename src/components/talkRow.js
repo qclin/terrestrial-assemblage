@@ -5,7 +5,9 @@ import enGB from "date-fns/locale/en-GB";
 import { Link } from "gatsby-plugin-react-i18next";
 import NameVector from "./nameVector";
 const CLASSES = {
+  time: "text-base w-36 text-white md:col-start-1",
   text: "text-white backdrop-filter backdrop-blur-sm ml-10",
+  textColumn: "md:col-span-2 lg:col-span-6",
 };
 const TalkRow = ({ talk }) => {
   const datetimeFormat = Intl.DateTimeFormat().resolvedOptions();
@@ -20,39 +22,30 @@ const TalkRow = ({ talk }) => {
   });
 
   if (!talk.description) {
-    return (
-      <div className={"items-baseline mb-12"}>
-        <span className="text-base w-36 text-white">{localTimeString}</span>
-        <span className={CLASSES.text}> {talk.title} </span>
-      </div>
-    );
+    return [
+      <span className={CLASSES.time}>{localTimeString}</span>,
+      <span className={clsx([CLASSES.text, CLASSES.textColumn])}>
+        {talk.title}
+      </span>,
+    ];
   }
 
-  return (
-    <div className="my-2">
-      <div className={"items-baseline mb-12"}>
-        <span className="text-base w-36 text-white inline">
-          {localTimeString}
-        </span>
-        <Link
-          to={`/talk?id=${talk.id}&time=${localTimeString}`}
-          className={clsx([
-            "flex-auto text-left focus:outline-none inline max-w-xl",
-            CLASSES.text,
-          ])}
-        >
-          {talk.name && (
-            <NameVector identifier={talk.name} className="h-16 w-auto" />
-          )}
-          <div className="max-w-xl">
-            {talk.organization}
-            <br />
-            <span className="hover:underline">⟶ {talk.title}</span>
-          </div>
-        </Link>
+  return [
+    <span className={CLASSES.time}>{localTimeString}</span>,
+    <Link
+      to={`/talk?id=${talk.id}&time=${localTimeString}`}
+      className={clsx([CLASSES.textColumn, CLASSES.text])}
+    >
+      {talk.name && (
+        <NameVector identifier={talk.name} className="h-16 w-auto" />
+      )}
+      <div className="max-w-xl">
+        {talk.organization}
+        <br />
+        <span className="hover:underline">⟶ {talk.title}</span>
       </div>
-    </div>
-  );
+    </Link>,
+  ];
 };
 
 export default TalkRow;

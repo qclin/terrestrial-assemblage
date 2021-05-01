@@ -35,7 +35,7 @@ const ArtistPage = ({ location, data }) => {
     e.node.public_id.includes(id)
   );
 
-  if (!profile) return null;
+  if (!profile) return <div>Loading</div>;
   return (
     <Layout>
       <BackgroundImage />
@@ -90,14 +90,16 @@ const ArtistPage = ({ location, data }) => {
                 __html: md.render(profile?.description),
               }}
             />
-            <a
-              href={profile.website}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-algea"
-            >
-              website
-            </a>
+            {profile.website && (
+              <a
+                href={profile.website}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-algea"
+              >
+                website
+              </a>
+            )}
           </div>
         </div>
       </main>

@@ -9,11 +9,11 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Ana_Alenso"
+          "path": "/exhibition/#Ana_Alenso"
         },
         {
           "label": "Symposiumsvortrag",
-          "path": "/de/talk?id=1515_we_are_satellites&time=15:15%20CEST"
+          "path": "/talk?id=1515_we_are_satellites&time=15:15%20CEST"
         }
       ],
       "captions": [
@@ -31,11 +31,11 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Anne_Duk_Hee_Jordan"
+          "path": "/exhibition/#Anne_Duk_Hee_Jordan"
         },
         {
           "label": "Symposiumsvortrag",
-          "path": "/de/talk?id=1620_peace_canal_unrealised_artistic_project&time=16:20%20CEST"
+          "path": "/talk?id=1620_peace_canal_unrealised_artistic_project&time=16:20%20CEST"
         }
       ],
       "captions": [
@@ -53,7 +53,7 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Clemens_Wilhelm"
+          "path": "/exhibition/#Clemens_Wilhelm"
         }
       ],
       "video": {
@@ -69,7 +69,7 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Folke_Koebberling"
+          "path": "/exhibition/#Folke_Koebberling"
         }
       ],
       "captions": [
@@ -87,7 +87,7 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Han_Seok_Hyun"
+          "path": "/exhibition/#Han_Seok_Hyun"
         }
       ],
       "captions": [
@@ -105,7 +105,7 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Ines_Doujak"
+          "path": "/exhibition/#Ines_Doujak"
         }
       ],
       "captions": [
@@ -123,7 +123,7 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Marco_Barotti"
+          "path": "/exhibition/#Marco_Barotti"
         }
       ],
       "video": {
@@ -139,11 +139,11 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Mischa_Leinkauf"
+          "path": "/exhibition/#Mischa_Leinkauf"
         },
         {
           "label": "Symposiumsvortrag",
-          "path": "/de/talk?id=1200_liberty_of_movement_as_artistic_practice&time=12:00%20CEST"
+          "path": "/talk?id=1200_liberty_of_movement_as_artistic_practice&time=12:00%20CEST"
         }
       ],
       "captions": [
@@ -161,11 +161,11 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Santiago_Sierra"
+          "path": "/exhibition/#Santiago_Sierra"
         },
         {
           "label": "Symposiumsvortrag",
-          "path": "/de/talk?id=1045_santiago_sierra&time=10:45%20CEST"
+          "path": "/talk?id=1045_santiago_sierra&time=10:45%20CEST"
         }
       ],
       "video": {
@@ -181,11 +181,11 @@
       "associations": [
         {
           "label": "Austellung foto",
-          "path": "/de/exhibition/#Shira_Wachsmann"
+          "path": "/exhibition/#Shira_Wachsmann"
         },
         {
           "label": "Symposiumsvortrag",
-          "path": "/de/talk?id=1140_the_moment_before_the_explosion&time=11:40%20CEST"
+          "path": "/talk?id=1140_the_moment_before_the_explosion&time=11:40%20CEST"
         }
       ],
       "captions": [
