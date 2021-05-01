@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const LanguageToggle = () => {
   const { languages, originalPath, language } = useI18next();
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
 
   const redirectWithQuery = ({ location }) => {
     location.search && setSearch(location.search);
