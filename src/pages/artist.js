@@ -27,6 +27,7 @@ const ArtistPage = ({ location, data }) => {
     n.fileAbsolutePath.includes(`/${language}/artists/${id}`)
   );
 
+  console.log("[ArtistPage] ", id, profileNode);
   const clImages = data.images.edges.filter((e) =>
     e.node.public_id.includes(id)
   );
