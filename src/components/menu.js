@@ -54,7 +54,7 @@ function Menu() {
   return (
     <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
       <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
-        {visible ? "X" : <Trans>menu</Trans>}
+        {visible ? "X" : "menu"}
       </button>
       {visible && (
         <section className="grid ">

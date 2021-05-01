@@ -15,7 +15,8 @@ import * as styles from "../styles/artist.css"; //eslint-disable-line no-unused-
 const CLASSES = {
   imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6 artworks",
   image: "filter grayscale hover:filter-none",
-  textBox: "rounded-lg px-8 m-5 shadow-whiteTint shadow-md bg-white-tint",
+  textBox:
+    "rounded-lg p-2 mb-10 md:px-8 m-5 shadow-whiteTint shadow-md bg-white-tint ",
 };
 
 const ArtistPage = ({ location, data }) => {
@@ -26,7 +27,6 @@ const ArtistPage = ({ location, data }) => {
     n.fileAbsolutePath.includes(`/${language}/artists/${id}`)
   );
 
-  console.log(" ARTIST PAGE ", id, profileNode);
   const clImages = data.images.edges.filter((e) =>
     e.node.public_id.includes(id)
   );
@@ -42,24 +42,25 @@ const ArtistPage = ({ location, data }) => {
           <BackIcon className="ml-5" />
         </Link>
         <div className="mt-24">
-          <NameVector identifier={id} className="h-24" />
+          <NameVector identifier={id} className="m-5 h-14 md:h-24" />
         </div>
         <section>
           {video && (
             <Video
               videoSrcURL={video}
-              videoTitle="Official Music Video on YouTube"
+              className="w-full"
+              style={{ height: "fit-content" }}
             />
           )}
         </section>
-        <div className="md:grid md:grid-cols-3 gap-4">
+        <div className="m-5 md:m-0 md:grid md:grid-cols-3 md:gap-4">
           <div className={CLASSES.imageGrid}>
             {clImages.map((image, index) => (
               <div
                 key={`${index}-cl`}
                 className={clsx(
-                  index % 3 === 0 && "col-span-4",
-                  index % 2 === 0 && "col-span-2 col-end-6"
+                  index % 3 === 0 && "md:col-span-4",
+                  index % 2 === 0 && "md:col-span-2 md:col-end-6"
                 )}
               >
                 <img

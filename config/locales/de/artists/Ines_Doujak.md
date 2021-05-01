@@ -9,3 +9,4 @@ In der digitalen Collage von Ines Doujak sind die Grenzen zwischen Gegenwart und
 **Ines Doujak** (Wien) arbeitet an der Dekonstruktion der politischen Implikationen von sexistischen und rassistischen Stereotypen. Ausgehend von der Tradition des Karnevals, der Maskerade und Motiven aus der Kulturgeschichte deckt sie ausbeuterische Strukturen und Ungleichheiten in der Gesellschaft auf, oft in Bezug auf koloniale Geschichte. Ihre Recherchen zur Textilindustrie haben zu zahlreichen Arbeiten geführt, die sich mit Gender-, Klassen- und Kulturkonflikten im Zusammenhang mit der globalen Produktion, dem Handel und der Distribution von Mode und Textilien beschäftigen.
 
 [website](http://www.inesdoujak.net/)
+[Podcastserie](https://liverpoolbiennial2021.com/programme/ines-doujak-john-barker-transmission-a-series-of-five-podcasts-on-disease-and-pandemics-in-a-distorted-world/)

@@ -33,10 +33,6 @@ export const ARTIST_MEDIA = {
   Marco_Barotti: {
     video: "https://player.vimeo.com/video/372061141",
   },
-  Mischa_Leinkauf: {
-    video: "https://player.vimeo.com/video/402611948",
-    password: "leinkauf",
-  },
   Santiago_Sierra: {
     video: "https://www.youtube.com/embed/rt6vz10OEus",
   },

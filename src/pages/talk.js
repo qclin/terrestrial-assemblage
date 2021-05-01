@@ -1,5 +1,4 @@
 import React from "react";
-import { Trans } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
@@ -13,7 +12,8 @@ import BackIcon from "../assets/svgs/icons/back.svg";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 ml-10",
-  textColumn: "md:col-span-2 lg:col-span-5 lg:col-start-1 p-5 m-3",
+  textColumn:
+    "md:col-span-2 lg:col-span-5 lg:col-start-1 p-2 mb-10 md:px-8 m-5",
   textBlock: "bg-white rounded-md shadow-md shadow-white",
 };
 

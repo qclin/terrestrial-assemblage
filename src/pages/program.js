@@ -24,14 +24,14 @@ const ProgramPage = ({ data }) => {
     <Layout>
       <BackgroundImage />
       <section
-        className="grid relative mx-24 overflow-y-scroll"
+        className="grid relative md:mx-24 overflow-y-scroll"
         style={{
           gridArea: "1/1",
           height: "100vh",
         }}
       >
         <div className="mt-10">
-          <TitleSVG />
+          <TitleSVG className="w-full" />
         </div>
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>

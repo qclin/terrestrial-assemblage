@@ -26,12 +26,12 @@ function ArtistsPage() {
             style={{
               gridArea: "1/1",
             }}
-            className="m-24 text-left"
+            className="m-5 my-14 md:m-24 text-left max-w-full"
           >
             {ARTISTS.map((artist) => (
               <div
                 className="relative my-2"
-                key={artist}
+                key={artist.identifier}
                 style={{ width: "fit-content" }}
               >
                 <Link
@@ -50,7 +50,7 @@ function ArtistsPage() {
                     }}
                   ></div>
                 </Link>
-                <artist.svg className="w-auto h-24" />
+                <artist.svg className="w-auto h-14 md:h-24" />
               </div>
             ))}
           </nav>

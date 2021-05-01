@@ -7,7 +7,7 @@ const LanguageToggle = () => {
   const [search, setSearch] = useState();
 
   const redirectWithQuery = ({ location }) => {
-    setSearch(location.search);
+    location.search && setSearch(location.search);
   };
 
   return (
