@@ -26,7 +26,6 @@ const ArtistPage = ({ location, data }) => {
 
   const profileNode = data.allProfiles.artists.find((a) => a.key === id);
 
-  console.log("[ArtistPage] ", id, profileNode);
   var md = new Remarkable();
 
   const clImages = data.images.edges.filter((e) =>
@@ -46,9 +45,10 @@ const ArtistPage = ({ location, data }) => {
         <div className="mt-24">
           <NameVector identifier={id} className="m-5 h-14 md:h-24" />
         </div>
-        {profileNode.associations.map((internalLink) => (
-          <Link to={internalLink.path}>{internalLink.label}</Link>
-        ))}
+        {profileNode &&
+          profileNode?.associations.map((internalLink) => (
+            <Link to={internalLink.path}>{internalLink.label}</Link>
+          ))}
         <section>
           {video && (
             <Video
@@ -82,7 +82,9 @@ const ArtistPage = ({ location, data }) => {
                 __html: md.render(profileNode?.description),
               }}
             />
-            <a href={profileNode.website}>website</a>
+            <a href={profileNode?.website} target="_blank" rel="noreferrer">
+              website
+            </a>
           </div>
         </div>
       </main>
