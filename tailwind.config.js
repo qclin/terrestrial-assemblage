@@ -29,6 +29,12 @@ module.exports = {
           half: colors.halfWhite,
         },
       },
+      maxWidth: {
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
+        "4/5": "90%",
+      },
       boxShadow: {
         white: "0 0 5px 10px #FFF",
         whiteTint: "0 0 5px 10px #ffffffE6",

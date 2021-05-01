@@ -35,7 +35,6 @@ function ArtistsPage() {
                 style={{ width: "fit-content" }}
               >
                 <Link
-                  key={artist}
                   to={`/artist?id=${artist.identifier}`}
                   state={{ artist }}
                   className={CLASSES.link}

@@ -22,21 +22,5 @@ export const ARTISTS = [
   { identifier: "Shira_Wachsmann", svg: ShiraSVG },
 ];
 
-export const ARTIST_MEDIA = {
-  Clemens_Wilhelm: {
-    video: "https://player.vimeo.com/video/260849191",
-  },
-  Ines_Doujak: {
-    podcast:
-      "https://liverpoolbiennial2021.com/programme/ines-doujak-john-barker-transmission-a-series-of-five-podcasts-on-disease-and-pandemics-in-a-distorted-world/",
-  },
-  Marco_Barotti: {
-    video: "https://player.vimeo.com/video/372061141",
-  },
-  Santiago_Sierra: {
-    video: "https://www.youtube.com/embed/rt6vz10OEus",
-  },
-};
-
 export const BOOKING_URL =
   "https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197";

@@ -18,7 +18,7 @@
       ],
       "captions": [
         {
-          "image": "Agreement_2019_Foto_credits_Joe_Clark",
+          "image": "_1300x762_alenso_foto_joeclark_2019",
           "caption": "Ana Alenso, Agreement (2019) Foto credit: Joe Clark"
         }
       ]
@@ -56,12 +56,10 @@
           "path": "/de/exhibition/#Clemens_Wilhelm"
         }
       ],
-      "captions": [
-        {
-          "image": "Clemens_Wilhelm_A_HORSE_WITH_WHEELS",
-          "caption": "A Horse with Wheels (2017), video still, HD video, stereo sound, 29 min"
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/260849191",
+        "caption": "A Horse with Wheels (2017), video still, HD video, stereo sound, 29 min"
+      }
     },
     {
       "name": "Folke Köbberling",
@@ -128,12 +126,10 @@
           "path": "/de/exhibition/#Marco_Barotti"
         }
       ],
-      "captions": [
-        {
-          "image": "MarcoBarotti_TheEgg",
-          "caption": "The Egg (2019), kinetic sound sculpture, 75cm x 150 cm"
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/372061141",
+        "caption": "The Egg (2019), kinetic sound sculpture, 75cm x 150 cm"
+      }
     },
     {
       "name": "Mischa Leinkauf",
@@ -172,12 +168,10 @@
           "path": "/de/talk?id=1045_santiago_sierra&time=10:45%20CEST"
         }
       ],
-      "captions": [
-        {
-          "image": "2005.103",
-          "caption": "Position exchange for two distinct, 30-meter volumes of earth (2005), video still, 23:55 min"
-        }
-      ]
+      "video": {
+        "url": "https://www.youtube.com/embed/rt6vz10OEus",
+        "caption": "Position exchange for two distinct, 30-meter volumes of earth (2005), video still, 23:55 min"
+      }
     },
     {
       "name": "Shira Wachsmann",
