@@ -46,6 +46,9 @@ const ArtistPage = ({ location, data }) => {
         <div className="mt-24">
           <NameVector identifier={id} className="m-5 h-14 md:h-24" />
         </div>
+        {profileNode.associations.map((internalLink) => (
+          <Link to={internalLink.path}>{internalLink.label}</Link>
+        ))}
         <section>
           {video && (
             <Video
@@ -76,7 +79,7 @@ const ArtistPage = ({ location, data }) => {
           <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
             <div
               dangerouslySetInnerHTML={{
-                __html: md.render(profileNode.description),
+                __html: md.render(profileNode?.description),
               }}
             />
             <a href={profileNode.website}>website</a>
