@@ -20,9 +20,9 @@ export default function Layout({ children }) {
     // <div onMouseMove={handleMoveMove}>
     <div>
       <Menu />
-      <div className="fixed mx-10 top-0 right-0 z-20">
-        <LanguageToggle />
-      </div>
+
+      <LanguageToggle />
+
       {children}
 
       {/* <MouseOverlay mousePosition={mousePosition} /> */}

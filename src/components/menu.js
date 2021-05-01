@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
 import { StaticImage } from "gatsby-plugin-image";
 import clsx from "clsx";
 
@@ -22,9 +22,9 @@ const CLASSES = {
   menuBtn:
     "bg-algea-dark m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
   link: "block px-5 rounded-md ",
-  linkOverlay:
-    "mix-blend-color w-full h-32 absolute filter blur-lg hover:bg-algea-light left-0",
+  linkOverlay: "w-full absolute filter blur-lg hover:bg-algea-light left-0",
   linkText: "text-white text-9xl no-underline text-center",
+  linkHeight: "h-16 md:h-32",
 };
 
 const PAGES = [
@@ -43,10 +43,10 @@ function Menu() {
 
   const overlay = () => (
     <div
-      className={CLASSES.linkOverlay}
+      className={clsx([CLASSES.linkOverlay, CLASSES.linkHeight])}
       style={{
         mixBlendMode: "color",
-        borderRadius: "0.375rem",
+        borderRadius: "6px",
         filter: "blur(16px)",
       }}
     ></div>
@@ -56,6 +56,7 @@ function Menu() {
       <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
         {visible ? "X" : "menu"}
       </button>
+
       {visible && (
         <section className="grid ">
           <StaticImage
@@ -90,7 +91,7 @@ function Menu() {
                       {overlay()}
                     </Link>
                   )}
-                  <Title className="h-12 md:h-32" />
+                  <Title className={CLASSES.linkHeight} />
                 </div>
               );
             })}

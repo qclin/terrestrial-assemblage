@@ -5,3 +5,9 @@
 .artworks img {
   filter: grayscale(1);
 }
+
+@media (max-width: 768px) {
+  iframe {
+    height: fit-content;
+  }
+}

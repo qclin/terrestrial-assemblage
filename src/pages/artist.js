@@ -17,7 +17,7 @@ const CLASSES = {
   imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6 artworks",
   image: "filter grayscale hover:filter-none",
   textBox:
-    "rounded-lg p-2 mb-10 md:px-8 m-5 shadow-whiteTint shadow-md bg-white-tint",
+    "rounded-lg p-2 mb-10 md:px-8 md:ml-3 mt-8 shadow-whiteTint shadow-md bg-white-tint",
 };
 
 const ArtistPage = ({ location, data }) => {
@@ -39,17 +39,20 @@ const ArtistPage = ({ location, data }) => {
   return (
     <Layout>
       <BackgroundImage />
-      <main>
-        <Link className="fixed top-16" to="/artists">
-          <BackIcon className="ml-5" />
-        </Link>
-        <div className="mt-24 m-5 flex items-end">
-          <NameVector identifier={id} className="h-14 md:h-24 md:inline" />
-          <div className="inline">
+      <Link className="fixed top-16" to="/artists">
+        <BackIcon className="ml-5" />
+      </Link>
+      <main className="m-7 mt-24 md:ml-32 md:mt-24">
+        <div className="md:flex md:items-end justify-center md:justify-start">
+          <NameVector
+            identifier={id}
+            className="block h-14 md:h-24 md:inline mx-auto md:mx-0"
+          />
+          <div className="">
             {profile.associations.map((internalLink) => (
-              <BgHighlight className="even:ml-10 mb-2">
+              <BgHighlight className="md:even:ml-10 mb-2 mx-auto">
                 <Link
-                  className="text-white mr-4 px-4 uppercase"
+                  className="text-white mr-4 px-4 uppercase "
                   to={internalLink.path}
                   key={internalLink.label}
                 >
@@ -73,7 +76,7 @@ const ArtistPage = ({ location, data }) => {
             </BgHighlight>
           </section>
         )}
-        <div className="m-5 md:m-0 md:grid md:grid-cols-3 md:gap-4">
+        <div className="md:grid md:grid-cols-3 md:gap-4">
           <div className={CLASSES.imageGrid}>
             {clImages.map((image, index) => (
               <CaptionImage
@@ -86,6 +89,7 @@ const ArtistPage = ({ location, data }) => {
           </div>
           <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
             <div
+              className="description"
               dangerouslySetInnerHTML={{
                 __html: md.render(profile?.description),
               }}

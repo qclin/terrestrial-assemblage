@@ -23,15 +23,16 @@ const ProgramPage = ({ data }) => {
   return (
     <Layout>
       <BackgroundImage />
+
       <section
-        className="grid relative md:mx-32 overflow-y-scroll"
+        className="grid relative overflow-y-scroll m-7 mt-24 md:ml-32 md:mt-24"
         style={{
           gridArea: "1/1",
           height: "100vh",
         }}
       >
-        <div className="mt-10">
-          <TitleSVG className="w-full" />
+        <div>
+          <TitleSVG className="max-w-full" />
         </div>
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
@@ -43,7 +44,7 @@ const ProgramPage = ({ data }) => {
             />
           </div>
         </div>
-        <div className={clsx([CLASSES.textGrid, "my-24 pb-28"])}>
+        <div className={clsx([CLASSES.textGrid, "my-8 md:my-24 pb-28"])}>
           {program.talks.map((talk, index) => (
             <TalkRow talk={talk} key={`talk.${index}`} />
           ))}

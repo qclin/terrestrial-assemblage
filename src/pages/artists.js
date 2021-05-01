@@ -10,7 +10,7 @@ import BackgroundImage from "../components/background/bgArtists";
 const CLASSES = {
   link: "block px-5 rounded-md",
   linkOverlay:
-    "mix-blend-color w-full h-20 absolute filter blur-lg hover:bg-algea-light left-0",
+    "w-full h-20 absolute filter blur-lg hover:bg-algea-light left-0",
   linkText: "text-white text-7xl no-underline text-center",
 };
 
@@ -44,7 +44,7 @@ function ArtistsPage() {
                     className={CLASSES.linkOverlay}
                     style={{
                       mixBlendMode: "color",
-                      borderRadius: "0.375rem",
+                      borderRadius: "6px",
                       filter: "blur(16px)",
                     }}
                   ></div>

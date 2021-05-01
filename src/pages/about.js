@@ -11,9 +11,9 @@ import Layout from "../components/layout";
 import BackgroundImage from "../components/background/bgAbout";
 
 const CLASSES = {
-  svgHeader: "max-w-full max-h-36 mb-5",
+  svgHeader: "max-w-full max-h-24 my-5",
   textBox:
-    "m-10 p-5 md:py-10 rounded-lg shadow-whiteTint shadow-md bg-white-tint description",
+    "p-5 md:py-10 rounded-lg shadow-whiteTint shadow-md bg-white-tint description",
 };
 const AboutPage = ({ data }) => {
   const { language } = useI18next();
@@ -38,28 +38,30 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <BackgroundImage />
-      <section className="md:grid md:grid-cols-10 gap-4 m-10">
-        <div className="md:col-span-5 ">
-          <AboutVector className={CLASSES.svgHeader} />
-          <div className={CLASSES.textBox}>
-            <div dangerouslySetInnerHTML={{ __html: aboutMDNode.html }} />
+      <main className="m-7 mt-16 md:ml-32 md:mt-24">
+        <section className="md:grid md:grid-cols-10 gap-4">
+          <div className="md:col-span-5 ">
+            <AboutVector className={CLASSES.svgHeader} />
+            <div className={CLASSES.textBox}>
+              <div dangerouslySetInnerHTML={{ __html: aboutMDNode.html }} />
+            </div>
           </div>
-        </div>
-        <div className="md:col-span-5 md:col-start-1 md:py-5">
-          <ExhibitionVector className={CLASSES.svgHeader} />
-          <div className={CLASSES.textBox}>
-            <div
-              dangerouslySetInnerHTML={{ __html: exhibitionVenueMDNode.html }}
-            />
+          <div className="md:col-span-5 md:col-start-1 md:py-5">
+            <ExhibitionVector className={CLASSES.svgHeader} />
+            <div className={CLASSES.textBox}>
+              <div
+                dangerouslySetInnerHTML={{ __html: exhibitionVenueMDNode.html }}
+              />
+            </div>
           </div>
-        </div>
-        <div className="md:col-span-5 md:col-start-1 md:py-5">
-          <CuratorVector className={CLASSES.svgHeader} />
-          <div className={CLASSES.textBox}>
-            <div dangerouslySetInnerHTML={{ __html: curatorsMDNode.html }} />
+          <div className="md:col-span-5 md:col-start-1 md:py-5">
+            <CuratorVector className={CLASSES.svgHeader} />
+            <div className={CLASSES.textBox}>
+              <div dangerouslySetInnerHTML={{ __html: curatorsMDNode.html }} />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </Layout>
   );
 };

@@ -5,8 +5,8 @@ import enGB from "date-fns/locale/en-GB";
 import { Link } from "gatsby-plugin-react-i18next";
 import NameVector from "./nameVector";
 const CLASSES = {
-  time: "text-base w-36 text-white md:col-start-1",
-  text: "text-white backdrop-filter backdrop-blur-sm ml-10",
+  time: "text-base w-36 text-white md:col-start-1 mt-10 md:mt-0",
+  text: "text-white backdrop-filter backdrop-blur-sm",
   textColumn: "md:col-span-2 lg:col-span-6",
 };
 const TalkRow = ({ talk }) => {
@@ -23,27 +23,28 @@ const TalkRow = ({ talk }) => {
 
   if (!talk.description) {
     return [
-      <span className={CLASSES.time}>{localTimeString}</span>,
-      <span className={clsx([CLASSES.text, CLASSES.textColumn])}>
+      <div className={CLASSES.time}>{localTimeString}</div>,
+      <div className={clsx([CLASSES.text, CLASSES.textColumn])}>
         {talk.title}
-      </span>,
+      </div>,
     ];
   }
 
   return [
-    <span className={CLASSES.time}>{localTimeString}</span>,
+    <div className={CLASSES.time}>{localTimeString}</div>,
     <Link
       to={`/talk?id=${talk.id}&time=${localTimeString}`}
-      className={clsx([CLASSES.textColumn, CLASSES.text])}
+      className={clsx([CLASSES.textColumn, CLASSES.text, "max-w-xl"])}
     >
       {talk.name && (
-        <NameVector identifier={talk.name} className="h-16 w-auto" />
+        <NameVector
+          identifier={talk.name}
+          className="h-12 md:h-16 w-auto max-w-full"
+        />
       )}
-      <div className="max-w-xl">
-        {talk.organization}
-        <br />
-        <span className="hover:underline">⟶ {talk.title}</span>
-      </div>
+
+      {talk.organization}
+      <div className="hover:underline">⟶ {talk.title}</div>
     </Link>,
   ];
 };

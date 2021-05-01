@@ -14,9 +14,9 @@ function CaptionImage({ image, captions, index }) {
   return (
     <div
       className={clsx(
-        index % 3 === 0 && "md:col-end-6",
+        index % 3 === 0 && index > 0 && "md:col-end-6",
         index % 2 === 0 && index > 0 && "md:col-span-4",
-        index === 0 ? "md:col-span-5 ml-24" : "md:col-span-2"
+        index === 0 ? "md:col-span-6" : "md:col-span-2"
       )}
     >
       <img

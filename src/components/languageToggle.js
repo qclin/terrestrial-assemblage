@@ -11,27 +11,25 @@ const LanguageToggle = () => {
   };
 
   return (
-    <header className="main-header">
-      <ul className="flex flex-row mt-5">
-        {languages.map((lng) => (
-          <li
-            key={lng}
-            className={clsx(
-              language === lng && "underline bold",
-              "text-lg text-white uppercase pr-2 bold"
-            )}
+    <ul className="fixed mx-5 md:mx-10 top-0 right-0 z-20 flex flex-row mt-5">
+      {languages.map((lng) => (
+        <li
+          key={lng}
+          className={clsx(
+            language === lng && "underline bold",
+            "text-lg text-white uppercase pr-2 bold"
+          )}
+        >
+          <Link
+            to={originalPath + search}
+            language={lng}
+            getProps={redirectWithQuery}
           >
-            <Link
-              to={originalPath + search}
-              language={lng}
-              getProps={redirectWithQuery}
-            >
-              {lng}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </header>
+            {lng}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

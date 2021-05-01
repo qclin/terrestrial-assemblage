@@ -29,11 +29,14 @@ const TalkPage = ({ location, data }) => {
       <Link className="fixed top-16" to="/program">
         <BackIcon className="ml-5" />
       </Link>
-      <main className="mx-5 md:ml-32">
-        <section className="mt-24 mb-8 text-white">
+      <main className="m-7 mt-24 md:ml-32 md:mt-24">
+        <section className="md:mt-24 mb-8 text-center md:text-left text-white">
           <span className="text-base w-36 inline">{time}</span>
           {talkNode.name && (
-            <NameVector identifier={talkNode.name} className="h-24" />
+            <NameVector
+              identifier={talkNode.name}
+              className="h-14 md:h-24 mx-auto md:mx-0 mb-4"
+            />
           )}
           <div className="max-w-xl">
             {talkNode.organization && [talkNode.organization, <br />]}
@@ -44,6 +47,7 @@ const TalkPage = ({ location, data }) => {
         <section className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
             <div
+              className="description"
               dangerouslySetInnerHTML={{
                 __html: md.render(talkNode.description),
               }}
