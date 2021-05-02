@@ -43,7 +43,7 @@ const ImprintPage = ({ data }) => {
           <div className={CLASSES.textGrid}>
             {markdownNodes.map((node) => (
               <div
-                className="p-2 descriptions"
+                className="p-2 description imprint"
                 dangerouslySetInnerHTML={{ __html: node.html }}
               />
             ))}

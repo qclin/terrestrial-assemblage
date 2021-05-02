@@ -2,7 +2,7 @@ import React from "react";
 const Video = ({ videoSrcURL, videoTitle, ...props }) => (
   <div className="video my-5">
     <iframe
-      src={videoSrcURL}
+      src={`${videoSrcURL}?autoplay=1`}
       title={videoTitle}
       width="100%"
       height={800}

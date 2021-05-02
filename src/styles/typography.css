@@ -22,3 +22,54 @@
   font-family: "Whyte-Regular";
   src: url("../fonts/Whyte-Regular.ttf");
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav a,
+nav span {
+  font-family: "Charon-Regular", serif;
+}
+
+a {
+  font-family: "Stretch-Medium", serif;
+}
+
+p,
+body {
+  font-family: "Whyte-Medium", sans-serif;
+  font-size: 19px;
+  line-height: 25px;
+}
+
+.artist.description p {
+  font-size: 14px;
+  line-height: 17.5px;
+}
+
+.artist header {
+  font-size: 12px;
+  line-height: 1.25;
+  font-family: "Stretch-Medium";
+}
+footer p {
+  font-family: "Stretch-Medium";
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+.menu button,
+.menu a,
+footer a {
+  height: 21px;
+  font-family: "Stretch-Medium";
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -11,13 +11,13 @@ const LanguageToggle = () => {
   };
 
   return (
-    <ul className="fixed mx-5 md:mx-10 top-0 right-0 z-20 flex flex-row mt-5">
+    <ul className="fixed mx-5 md:mx-10 top-0 right-0 z-20 flex flex-row mt-5 menu">
       {languages.map((lng) => (
         <li
           key={lng}
           className={clsx(
-            language === lng && "underline bold",
-            "text-lg text-white uppercase pr-2 bold"
+            language === lng && "bg-button",
+            "text-lg text-white uppercase px-2 mr-2 bold hover:bg-button-hover"
           )}
         >
           <Link

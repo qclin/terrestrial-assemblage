@@ -8,8 +8,8 @@ function BgHighlight({ className, children }) {
       style={{ width: "fit-content" }}
     >
       <div
-        className="mix-blend-color h-full w-full absolute bg-algea-tint"
-        style={{ mixBlendMode: "color", zIndex: -10 }}
+        className="mix-blend-color h-full w-full absolute bg-button hover:bg-button-hover"
+        style={{ mixBlendMode: "color", zIndex: -1 }}
       ></div>
       {children}
     </div>

@@ -5,19 +5,16 @@ import ENPRessRelease from "../assets/pdfs/Terrestrial Assemblage_pressrelease.p
 import { BOOKING_URL } from "../constants/constants";
 
 const CLASSES = {
-  link: "text-lg uppercase hover:text-algea bg-white-half mr-4 px-1 py-0",
+  link:
+    "text-lg uppercase mr-4 px-1 py-0 text-white bg-button hover:bg-button-hover",
 };
 const Footer = () => {
   const { language } = useI18next();
   const isGerman = language === "de";
 
   return (
-    <section className="fixed bottom-0 w-full">
-      <div
-        className="backdrop-filter backdrop-blur-sm h-16 w-full absolute bottom-0"
-        style={{ zIndex: -1 }}
-      ></div>
-      <div className="flex flex-row mx-10 mb-5 z-10">
+    <footer className="mx-10 mb-5">
+      <div className="flex flex-row">
         <a
           href={isGerman ? DEPressRelease : ENPRessRelease}
           download
@@ -37,7 +34,10 @@ const Footer = () => {
           <Trans>Imprint</Trans>
         </Link>
       </div>
-    </section>
+      <p className="text-white max-w-md">
+        <Trans>Covid Guidelines</Trans>
+      </p>
+    </footer>
   );
 };
 

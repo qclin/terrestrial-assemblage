@@ -1,5 +1,18 @@
 import React from "react";
 
+const ARTWORK_POSITIONS = [
+  { id: "Anne_Duk_Hee_Jordan", x: 61.4, y: 421.8 },
+  { id: "Ana_Alenso", x: 87.4, y: 547.8 },
+  { id: "Marco_Barotti", x: 199.4, y: 268.8 },
+  { id: "Folke_Koebberling", x: 234.4, y: 465.8 },
+  { id: "Mischa_Leinkauf", x: 504.4, y: 438.8 },
+  { id: "Han_Seok_Hyun", x: 568.4, y: 45.4 },
+  { id: "Ines_Doujak", x: 480.4, y: 320.8 },
+  { id: "Clemens_Wilhelm", x: 554.4, y: 420.8 },
+  { id: "Mischa_Leinkauf", x: 572.4, y: 244.4 },
+  { id: "Santiago_Sierra", x: 613.4, y: 244.4 },
+  { id: "Shira_Wachsmann", x: 579.4, y: 128.4 },
+];
 function PondMarkers({ active }) {
   const radius = 19.5;
   const filter = "url(#blur-edges)";
@@ -30,103 +43,15 @@ function PondMarkers({ active }) {
       </defs>
       <g stroke="none" fill="none">
         <g fill={colors.default} stroke="#979797">
-          <circle
-            filter={filter}
-            r={radius}
-            cx="568.4"
-            cy="45.4"
-            fill={
-              active === "Han_Seok_Hyun" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="579.4"
-            cy="128.4"
-            fill={
-              active === "Shira_Wachsmann" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="613.4"
-            cy="244.4"
-            fill={
-              active === "Santiago_Sierra" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="572.4"
-            cy="244.4"
-            fill={
-              active === "Mischa_Leinkauf" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="480.4"
-            cy="320.8"
-            fill={active === "Ines_Doujak" ? colors.highlight : colors.default}
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="199.4"
-            cy="268.8"
-            fill={
-              active === "Marco_Barotti" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="61.4"
-            cy="421.8"
-            fill={
-              active === "Anne_Duk_Hee_Jordan"
-                ? colors.highlight
-                : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="87.4"
-            cy="547.8"
-            fill={active === "Ana_Alenso" ? colors.highlight : colors.default}
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="234.4"
-            cy="465.8"
-            fill={
-              active === "Folke_Koebberling" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="504.4"
-            cy="438.8"
-            fill={
-              active === "Mischa_Leinkauf" ? colors.highlight : colors.default
-            }
-          />
-          <circle
-            filter={filter}
-            r={radius}
-            cx="554.4"
-            cy="420.8"
-            fill={
-              active === "Clemens_Wilhelm" ? colors.highlight : colors.default
-            }
-          />
+          {ARTWORK_POSITIONS.map((artwork) => (
+            <circle
+              filter={filter}
+              r={radius}
+              cx={artwork.x}
+              cy={artwork.y}
+              fill={active === artwork.id ? colors.highlight : colors.default}
+            />
+          ))}
         </g>
       </g>
     </svg>

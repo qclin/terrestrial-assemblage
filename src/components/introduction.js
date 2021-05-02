@@ -11,7 +11,7 @@ const Introduction = () => {
     <section>
       <div
         className="md:grid md:grid-cols-10 gap-4"
-        style={{ marginTop: "75vh", marginBottom: "35vh" }}
+        style={{ marginTop: "75vh", marginBottom: "15vh" }}
       >
         {isGerman ? (
           <DEOpeningHoursText className="lg:mx-10 sm:mb-5 md:col-span-7" />

@@ -20,10 +20,9 @@ import { BOOKING_URL } from "../constants/constants";
 
 const CLASSES = {
   menuBtn:
-    "bg-algea-dark m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
+    "bg-button hover:bg-button-hover m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
   link: "block px-5 rounded-md ",
   linkOverlay: "w-full absolute filter blur-lg hover:bg-algea-light left-0",
-  linkText: "text-white text-9xl no-underline text-center",
   linkHeight: "h-16 md:h-32",
 };
 
@@ -53,7 +52,10 @@ function Menu() {
   );
   return (
     <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
-      <button className={CLASSES.menuBtn} onClick={() => setVisible(!visible)}>
+      <button
+        className={clsx([CLASSES.menuBtn, "menu"])}
+        onClick={() => setVisible(!visible)}
+      >
         {visible ? "X" : "menu"}
       </button>
 

@@ -12,9 +12,10 @@ import CaptionImage from "../components/CaptionImage";
 import BackIcon from "../assets/svgs/icons/back.svg";
 import * as styles from "../styles/artist.css"; //eslint-disable-line no-unused-vars
 import { Remarkable } from "remarkable";
+import clsx from "clsx";
 
 const CLASSES = {
-  imageGrid: "col-span-2 grid grid-flow-row gap-2 md:grid-cols-6 artworks",
+  imageGrid: "col-span-2 grid grid-flow-row gap-4 md:grid-cols-6 artworks",
   image: "filter grayscale hover:filter-none",
   textBox:
     "rounded-lg p-2 mb-10 md:px-8 md:ml-3 mt-8 shadow-whiteTint shadow-md bg-white-tint",
@@ -43,7 +44,7 @@ const ArtistPage = ({ location, data }) => {
         <BackIcon className="ml-5" />
       </Link>
       <main className="m-7 mt-24 md:ml-32 md:mt-24">
-        <div className="md:flex md:items-end justify-center md:justify-start">
+        <div className="md:flex md:items-center justify-center md:justify-start">
           <NameVector
             identifier={id}
             className="block h-14 md:h-24 md:inline mx-auto md:mx-0"
@@ -64,12 +65,9 @@ const ArtistPage = ({ location, data }) => {
         </div>
 
         {profile.video && (
-          <section>
-            <Video
-              videoSrcURL={profile.video.url}
-              className="max-w-4/5 mx-auto"
-            />
-            <BgHighlight className="md:ml-24">
+          <section className="md:mr-24">
+            <Video videoSrcURL={profile.video.url} className="mx-auto" />
+            <BgHighlight>
               <span className="text-white text-sm">
                 {profile.video.caption}
               </span>
@@ -87,9 +85,15 @@ const ArtistPage = ({ location, data }) => {
               />
             ))}
           </div>
-          <div className={CLASSES.textBox} style={{ height: "fit-content" }}>
+          <div
+            className={clsx([CLASSES.textBox, "artist description"])}
+            style={{ height: "fit-content" }}
+          >
+            <header>
+              <div className="uppercase mb-1 block">{profile.title}</div>
+              {profile.metatag}
+            </header>
             <div
-              className="description"
               dangerouslySetInnerHTML={{
                 __html: md.render(profile?.description),
               }}
@@ -99,7 +103,7 @@ const ArtistPage = ({ location, data }) => {
                 href={profile.website}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-algea"
+                className="px-2 bg-button hover:bg-button-hover text-base"
               >
                 website
               </a>
@@ -129,6 +133,8 @@ export const query = graphql`
     allProfiles: profilesJson(language: { eq: $language }) {
       language
       artists {
+        title
+        metatag
         website
         name
         key

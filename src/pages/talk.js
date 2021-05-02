@@ -57,7 +57,7 @@ const TalkPage = ({ location, data }) => {
                 href={talkNode.website}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-algea"
+                className="px-2 bg-button hover:bg-button-hover"
               >
                 website
               </a>

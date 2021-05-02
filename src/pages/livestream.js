@@ -8,11 +8,11 @@ const LivestreamPage = () => {
   return (
     <Layout>
       <BackgroundImage />
+
       <Video
-        className="mx-auto mt-24"
+        className="mx-auto mt-24 p-2 md:p-7 bg-white-tint shadow-2xl shadow-whiteTint rounded-md w-4/5"
         videoSrcURL="https://www.youtube.com/embed/O34gKi2IHk4"
         videoTitle="Official Music Video on YouTube"
-        width="80%"
       />
       <main></main>
     </Layout>

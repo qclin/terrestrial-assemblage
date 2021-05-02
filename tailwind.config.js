@@ -4,8 +4,9 @@ const colors = {
   algea: "#e3e6c0",
   lightAlgea: "#c9c99e",
   darkAlgea: "#ADA77A",
+  halfAlgea: "#ada77a87",
+  halfWhite: "#ffffff87",
   tintWhite: "#ffffffE6",
-  halfWhite: "#ffffff94",
   tintAlgea: "#e3e6c0E6",
 };
 
@@ -27,6 +28,10 @@ module.exports = {
           DEFAULT: colors.white,
           tint: colors.tintWhite,
           half: colors.halfWhite,
+        },
+        button: {
+          DEFAULT: colors.halfAlgea,
+          hover: colors.halfWhite,
         },
       },
       maxWidth: {
