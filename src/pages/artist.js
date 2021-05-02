@@ -159,7 +159,9 @@ export const query = graphql`
         }
       }
     }
-    images: allCloudinaryMedia {
+    images: allCloudinaryMedia(
+      filter: { public_id: { regex: "artworks(?s)(.*)/teaser/" } }
+    ) {
       edges {
         node {
           secure_url
