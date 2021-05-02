@@ -56,6 +56,7 @@ module.exports = {
       padding: ["odd", "even"],
       margin: ["odd", "even"],
       textAlign: ["odd", "even"],
+      display: ["odd", "even"],
     },
   },
   plugins: [],

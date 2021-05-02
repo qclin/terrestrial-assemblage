@@ -6,7 +6,7 @@ import { BOOKING_URL } from "../constants/constants";
 
 const CLASSES = {
   link:
-    "text-lg uppercase mr-4 px-1 py-0 text-white bg-button hover:bg-button-hover",
+    "text-lg uppercase mr-4 px-1 py-0 text-white bg-button hover:bg-button-hover rounded-sm",
 };
 const Footer = () => {
   const { language } = useI18next();

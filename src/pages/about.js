@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <BackgroundImage />
-      <main className="m-7 mt-16 md:ml-32 md:mt-24">
+      <main className="m-7 mt-16 md:ml-32 md:pt-24">
         <section className="md:grid md:grid-cols-10 gap-4">
           <div className="md:col-span-5 ">
             <AboutVector className={CLASSES.svgHeader} />

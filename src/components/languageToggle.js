@@ -17,7 +17,7 @@ const LanguageToggle = () => {
           key={lng}
           className={clsx(
             language === lng && "bg-button",
-            "text-lg text-white uppercase px-2 mr-2 bold hover:bg-button-hover"
+            "text-lg text-white uppercase px-2 mr-2 bold hover:bg-button-hover rounded-sm"
           )}
         >
           <Link

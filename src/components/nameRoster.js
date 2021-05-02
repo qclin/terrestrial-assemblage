@@ -18,7 +18,7 @@ const Introduction = () => {
   return (
     <section>
       <div className="col-span-3 grid space-between sm:grid-cols-2 md:grid-cols-1 m-10">
-        <div className="md:mt-24">
+        <div className="md:pt-24">
           <span className={textStyles.highlight}>
             <Trans>Curators</Trans>:
           </span>

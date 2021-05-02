@@ -29,8 +29,8 @@ const TalkPage = ({ location, data }) => {
       <Link className="fixed top-16" to="/program">
         <BackIcon className="ml-5" />
       </Link>
-      <main className="m-7 mt-24 md:ml-32 md:mt-24">
-        <section className="md:mt-24 mb-8 text-center md:text-left text-white">
+      <main className="m-7 md:ml-32 md:pt-24">
+        <section className="mb-8 text-center md:text-left text-white">
           <span className="text-base w-36 inline">{time}</span>
           {talkNode.name && (
             <NameVector
@@ -57,7 +57,7 @@ const TalkPage = ({ location, data }) => {
                 href={talkNode.website}
                 target="_blank"
                 rel="noreferrer"
-                className="px-2 bg-button hover:bg-button-hover"
+                className="px-2 bg-button hover:bg-button-hover rounded-sm"
               >
                 website
               </a>

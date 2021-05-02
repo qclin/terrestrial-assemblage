@@ -19,6 +19,8 @@ const CLASSES = {
   image: "filter grayscale hover:filter-none",
   textBox:
     "rounded-lg p-2 mb-10 md:px-8 md:ml-3 mt-8 shadow-whiteTint shadow-md bg-white-tint",
+  highLightBG: "bg-button hover:bg-button-hover rounded-sm",
+  link: "md:even:ml-10 even:block mb-2 mx-auto text-white mr-4 px-4 uppercase",
 };
 
 const ArtistPage = ({ location, data }) => {
@@ -43,7 +45,7 @@ const ArtistPage = ({ location, data }) => {
       <Link className="fixed top-16" to="/artists">
         <BackIcon className="ml-5" />
       </Link>
-      <main className="m-7 mt-24 md:ml-32 md:mt-24">
+      <main className="m-7 md:ml-32 md:pt-24">
         <div className="md:flex md:items-center justify-center md:justify-start">
           <NameVector
             identifier={id}
@@ -51,27 +53,31 @@ const ArtistPage = ({ location, data }) => {
           />
           <div className="">
             {profile.associations.map((internalLink) => (
-              <BgHighlight className="md:even:ml-10 mb-2 mx-auto">
-                <Link
-                  className="text-white mr-4 px-4 uppercase "
-                  to={internalLink.path}
-                  key={internalLink.label}
-                >
-                  {internalLink.label}
-                </Link>
-              </BgHighlight>
+              <Link
+                className={clsx([CLASSES.link, CLASSES.highLightBG])}
+                to={internalLink.path}
+                key={internalLink.label}
+              >
+                {internalLink.label}
+              </Link>
             ))}
           </div>
         </div>
 
         {profile.video && (
-          <section className="md:mr-24">
-            <Video videoSrcURL={profile.video.url} className="mx-auto" />
-            <BgHighlight>
-              <span className="text-white text-sm">
-                {profile.video.caption}
-              </span>
-            </BgHighlight>
+          <section className="md:mr-24 mb-5">
+            <Video
+              videoSrcURL={profile.video.url}
+              className="mx-auto"
+              style={{ height: "75vh" }}
+            />
+
+            <div
+              className="text-white text-sm bg-button"
+              style={{ width: "fit-content" }}
+            >
+              {profile.video.caption}
+            </div>
           </section>
         )}
         <div className="md:grid md:grid-cols-3 md:gap-4">
@@ -103,7 +109,7 @@ const ArtistPage = ({ location, data }) => {
                 href={profile.website}
                 target="_blank"
                 rel="noreferrer"
-                className="px-2 bg-button hover:bg-button-hover text-base"
+                className={clsx("px-2 text-base", CLASSES.highLightBG)}
               >
                 website
               </a>
