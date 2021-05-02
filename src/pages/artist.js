@@ -7,7 +7,7 @@ import * as queryString from "query-string";
 import Video from "../components/video";
 import BackgroundImage from "../components/background/bgArtist";
 import NameVector from "../components/nameVector";
-import BgHighlight from "../components/BgHighlight";
+import PreviewModal from "../components/PreviewModal";
 import CaptionImage from "../components/CaptionImage";
 import BackIcon from "../assets/svgs/icons/back.svg";
 import * as styles from "../styles/artist.css"; //eslint-disable-line no-unused-vars
@@ -27,6 +27,7 @@ const ArtistPage = ({ location, data }) => {
   const { language } = useI18next();
   const { id } = queryString.parse(location.search);
   const [profile, setProfile] = useState();
+  const [preview, setPreview] = useState();
   useEffect(() => {
     const profileNode = data.allProfiles.artists.find((a) => a.key === id);
     if (profileNode) setProfile(profileNode);
@@ -83,12 +84,22 @@ const ArtistPage = ({ location, data }) => {
         <div className="md:grid md:grid-cols-3 md:gap-4">
           <div className={CLASSES.imageGrid}>
             {clImages.map((image, index) => (
-              <CaptionImage
-                image={image}
-                captions={profile.captions}
+              <button
+                onClick={() => setPreview(image)}
+                className={clsx(
+                  index % 3 === 0 && index > 0 && "md:col-end-6",
+                  index % 2 === 0 && index > 0 && "md:col-span-4",
+                  index === 0 ? "md:col-span-6" : "md:col-span-2",
+                  "focus:outline-none"
+                )}
                 key={image.node.public_id}
-                index={index}
-              />
+              >
+                <CaptionImage
+                  image={image}
+                  captions={profile.captions}
+                  key={image.node.public_id}
+                />
+              </button>
             ))}
           </div>
           <div
@@ -116,6 +127,16 @@ const ArtistPage = ({ location, data }) => {
             )}
           </div>
         </div>
+        {preview && (
+          <PreviewModal
+            image={preview}
+            captions={profile.captions}
+            onClose={() => {
+              console.log(" close close ");
+              setPreview(undefined);
+            }}
+          />
+        )}
       </main>
     </Layout>
   );
