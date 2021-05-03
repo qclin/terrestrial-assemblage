@@ -8,6 +8,7 @@ const overLayStyle = {
   transition: "3s",
   transitionTimingFunction: "ease-in-out",
   pointerEvents: "none",
+  willChange: "opacity",
 };
 
 function MouseOverlay({ mousePosition }) {

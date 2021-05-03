@@ -15,7 +15,7 @@ import { Remarkable } from "remarkable";
 import clsx from "clsx";
 
 const CLASSES = {
-  imageGrid: "col-span-2 grid grid-flow-row gap-4 md:grid-cols-6 artworks",
+  imageGrid: "col-span-2 grid grid-flow-row gap-10 md:grid-cols-6 artworks",
   image: "filter grayscale hover:filter-none",
   textBox:
     "rounded-lg p-2 mb-10 md:px-8 md:ml-3 mt-8 shadow-whiteTint shadow-md bg-white-tint",
@@ -25,7 +25,6 @@ const CLASSES = {
 };
 
 const ArtistPage = ({ location, data }) => {
-  const { language } = useI18next();
   const { id } = queryString.parse(location.search);
   const [profile, setProfile] = useState();
   const [preview, setPreview] = useState();
@@ -108,7 +107,9 @@ const ArtistPage = ({ location, data }) => {
             style={{ height: "fit-content" }}
           >
             <header>
-              <div className="uppercase mb-1 block">{profile.title}</div>
+              <div className="uppercase mb-1 block text-xl">
+                {profile.title}
+              </div>
               {profile.metatag}
             </header>
             <div

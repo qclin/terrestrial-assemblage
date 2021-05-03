@@ -89,6 +89,7 @@ function Menu() {
                       to={`/${page.path}`}
                       onClick={() => setVisible(false)}
                       className={CLASSES.link}
+                      style={{ width: "fit-content" }}
                     >
                       {overlay()}
                     </Link>

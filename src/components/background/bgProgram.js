@@ -5,7 +5,7 @@ function ProgramBackground({ search }) {
   return (
     <div className="grid fixed top-0" style={{ zIndex: -20 }}>
       <StaticImage
-        style={{ gridArea: "1/1" }}
+        style={{ gridArea: "1/1", maxHeight: "100vh" }}
         layout="fullWidth"
         src={"../../assets/images/background/7-LEAFY.jpg"}
         alt="pond"
