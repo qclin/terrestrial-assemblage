@@ -8,8 +8,7 @@ const CLASSES = {
   time: "text-base w-36 text-white md:col-start-1 mt-10 md:mt-0",
   text: "text-white backdrop-filter backdrop-blur-sm",
   textColumn: "md:col-span-2 lg:col-span-6",
-  linkOverlay:
-    "w-full h-full absolute filter blur-lg hover:bg-algea-light left-0",
+  linkOverlay: "w-full h-full absolute filter blur-lg hover:bg-button left-0",
 };
 const TalkRow = ({ talk }) => {
   const datetimeFormat = Intl.DateTimeFormat().resolvedOptions();

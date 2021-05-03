@@ -1,31 +1,66 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import Slider from "react-slick";
+import { StaticImage } from "gatsby-plugin-image";
+import clsx from "clsx";
+import { Link } from "gatsby-plugin-react-i18next";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "../styles/exhibition.css"; //eslint-disable-line no-unused-vars
 import NameVector from "../components/nameVector";
+import { ARTISTS } from "../constants/constants";
 
-const ExhibitionPage = ({ data }) => {
+const CLASSES = {
+  linkOverlay: "w-full h-24 absolute filter blur-lg hover:bg-button left-0",
+};
+
+const ExhibitionPage = ({ location, data }) => {
   const clImages = data.images.edges;
   const [activeArrow, setActiveArrow] = useState();
   const sliderRef = useRef();
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const [artist, setArtist] = useState(ARTISTS[0]);
+
   const settings = {
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     variableWidth: true,
     slidesToScroll: 1,
     centerMode: true,
     lazyLoad: true,
     afterChange: (current) => setActiveIndex(current),
+    vertical: window.innerWidth < window.innerHeight,
   };
 
-  const artistKey = clImages[activeIndex].node.public_id.split("/")[2];
+  const slideToArtist = useCallback(() => {
+    const searchId = location.hash?.substring(1);
+    if (searchId) {
+      const searchIndex = clImages.findIndex(
+        (image) => image.node.public_id.split("/")[2] === searchId
+      );
+      sliderRef.current.slickGoTo(searchIndex);
+      setActiveIndex(searchIndex);
+    }
+  }, [location.hash, sliderRef, clImages]);
+
+  useEffect(() => {
+    if (sliderRef) slideToArtist();
+  }, [location.hash, sliderRef, slideToArtist]);
+
+  const updateTitles = useCallback(() => {
+    const artistKey = clImages[activeIndex].node.public_id.split("/")[2];
+    const activeArtist = ARTISTS.find(
+      (artist) => artist.identifier === artistKey
+    );
+    setArtist(activeArtist);
+  }, [clImages, activeIndex]);
+
+  useEffect(() => {
+    updateTitles();
+  }, [activeIndex, updateTitles]);
 
   const checkMousePosition = (event) => {
     const posX = event.pageX;
@@ -49,25 +84,54 @@ const ExhibitionPage = ({ data }) => {
 
   return (
     <Layout>
+      <div className="grid fixed top-0 w-full h-full" style={{ zIndex: -20 }}>
+        <StaticImage
+          style={{ gridArea: "1/1" }}
+          layout="fullWidth"
+          src={"../assets/images/background/5-DRIP.jpg"}
+          alt="pond"
+        />
+      </div>
       <main
         onMouseMove={checkMousePosition}
         onClick={swipe}
-        className="bg-black"
+        className="pt-16 md:pt-24 w-full"
+        style={{
+          gridArea: "1/1",
+        }}
       >
         <section className="text-center align-center">
-          <NameVector
-            identifier={artistKey}
-            className="block h-14 md:h-24 md:inline mx-auto md:mx-0"
-          />
+          <Link className="relative" to={`/artist?id=${artist.identifier}`}>
+            <div
+              className={CLASSES.linkOverlay}
+              style={{
+                mixBlendMode: "color",
+                borderRadius: "6px",
+                filter: "blur(16px)",
+              }}
+            ></div>
+            <NameVector
+              identifier={artist.identifier}
+              className="block h-10 md:h-16 md:inline mx-auto md:mx-0"
+              title
+            />
+            <div className="text-white uppercase mb-4">{artist.title}</div>
+          </Link>
         </section>
-        <Slider {...settings} className={activeArrow} ref={sliderRef}>
+        <Slider
+          {...settings}
+          className={clsx([activeArrow, "h-full"])}
+          ref={sliderRef}
+        >
           {clImages.map((image) => {
             const ratio = image.node.width / image.node.height;
-            const width = ratio * 500;
+            const scale = window.innerWidth * 0.4;
+            const width = ratio * scale;
+
             return (
-              <div style={{ width }} key={image.node.public_id}>
+              <div style={{ width }} key={image.node.public_id.split("/")[2]}>
                 <img
-                  className="mx-1 px-1 focus:outline-none"
+                  className="mx-1 px-2 focus:outline-none"
                   src={image.node.secure_url}
                   alt={image.key}
                 />

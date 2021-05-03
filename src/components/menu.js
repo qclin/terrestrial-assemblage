@@ -22,7 +22,7 @@ const CLASSES = {
   menuBtn:
     "bg-button hover:bg-button-hover rounded-sm m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
   link: "block px-5 rounded-md ",
-  linkOverlay: "w-full absolute filter blur-lg hover:bg-algea-light left-0",
+  linkOverlay: "w-full absolute filter blur-lg hover:bg-button left-0",
   linkHeight: "h-16 md:h-32",
 };
 

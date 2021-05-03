@@ -9,8 +9,7 @@ import BackgroundImage from "../components/background/bgArtists";
 
 const CLASSES = {
   link: "block px-5 rounded-md",
-  linkOverlay:
-    "w-full h-20 absolute filter blur-lg hover:bg-algea-light left-0",
+  linkOverlay: "w-full h-20 absolute filter blur-lg hover:bg-button left-0",
   linkText: "text-white text-7xl no-underline text-center",
 };
 
