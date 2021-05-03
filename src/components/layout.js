@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import MouseOverlay from "./mouseOverlay";
-import Partners from "./partners";
 import "./layout.css";
 import LanguageToggle from "./languageToggle";
+import Menu from "./menu";
 
 export default function Layout({ children }) {
   const [mousePosition, setMousePosition] = useState({
@@ -18,13 +18,10 @@ export default function Layout({ children }) {
 
   return (
     <div onMouseMove={handleMoveMove}>
-      <div className="fixed mx-10 top-0 right-0">
-        <LanguageToggle />
-      </div>
-      {/* <Menu /> */}
+      <Menu />
+      <LanguageToggle />
       {children}
       <MouseOverlay mousePosition={mousePosition} />
-      <Partners />
     </div>
   );
 }

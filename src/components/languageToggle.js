@@ -1,46 +1,35 @@
-import { Link, useI18next, Trans } from "gatsby-plugin-react-i18next";
-import React from "react";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import React, { useState } from "react";
 import clsx from "clsx";
-import DEPressRelease from "../assets/pdfs/Terrestrial Assemblage_Pressemitteilung.pdf";
-import ENPRessRelease from "../assets/pdfs/Terrestrial Assemblage_pressrelease.pdf";
 
 const LanguageToggle = () => {
   const { languages, originalPath, language } = useI18next();
-  const isGerman = language === "de";
+  const [search, setSearch] = useState("");
+
+  const redirectWithQuery = ({ location }) => {
+    location.search && setSearch(location.search);
+  };
+
   return (
-    <header className="main-header">
-      <ul className="flex flex-row mt-5">
-        {languages.map((lng) => (
-          <li
-            key={lng}
-            className={clsx(
-              language === lng && "underline bold",
-              "text-lg text-white uppercase pr-2 bold"
-            )}
+    <ul className="fixed mx-5 md:mx-10 top-0 right-0 z-20 flex flex-row mt-5 menu">
+      {languages.map((lng) => (
+        <li
+          key={lng}
+          className={clsx(
+            language === lng && "bg-button",
+            "text-lg text-white uppercase px-2 mr-2 bold hover:bg-button-hover rounded-sm"
+          )}
+        >
+          <Link
+            to={originalPath + search}
+            language={lng}
+            getProps={redirectWithQuery}
           >
-            <Link to={originalPath} language={lng}>
-              {lng}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <a
-        href={isGerman ? DEPressRelease : ENPRessRelease}
-        download
-        className="text-lg text-white uppercase hover:text-algea"
-      >
-        <Trans>Press</Trans>
-      </a>
-      <br />
-      <a
-        href="https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197"
-        target="_blank"
-        className="text-lg text-white uppercase hover:text-algea"
-        rel="noreferrer"
-      >
-        <Trans>Visit</Trans>
-      </a>
-    </header>
+            {lng}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

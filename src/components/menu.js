@@ -1,58 +1,103 @@
 import * as React from "react";
-import { Link, useTranslation, Trans } from "gatsby-plugin-react-i18next";
-import LanguageToggle from "./languageToggle";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
 import { StaticImage } from "gatsby-plugin-image";
+import clsx from "clsx";
+
+import AboutSVG from "../assets/svgs/headers/en/menu/about.svg";
+import ArtistsSVG from "../assets/svgs/headers/en/menu/artists.svg";
+import ExhibitionSVG from "../assets/svgs/headers/en/menu/exhibition.svg";
+import LivestreamSVG from "../assets/svgs/headers/en/menu/livestream.svg";
+import ProgramSVG from "../assets/svgs/headers/en/menu/program.svg";
+import VisitSVG from "../assets/svgs/headers/en/menu/visit.svg";
+
+import DEAboutSVG from "../assets/svgs/headers/de/menu/about.svg";
+import DEArtistsSVG from "../assets/svgs/headers/de/menu/artists.svg";
+import DEExhibitionSVG from "../assets/svgs/headers/de/menu/exhibition.svg";
+import DElivestreamSVG from "../assets/svgs/headers/de/menu/livestream.svg";
+import DEProgramSVG from "../assets/svgs/headers/de/menu/program.svg";
+import DEVisitSVG from "../assets/svgs/headers/de/menu/visit.svg";
+import { BOOKING_URL } from "../constants/constants";
+
+const CLASSES = {
+  menuBtn:
+    "bg-button hover:bg-button-hover rounded-sm m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
+  link: "block px-5 rounded-md ",
+  linkOverlay: "w-full absolute filter blur-lg hover:bg-button left-0",
+  linkHeight: "h-16 md:h-32",
+};
+
+const PAGES = [
+  { path: "about", en: AboutSVG, de: DEAboutSVG },
+  { path: BOOKING_URL, en: VisitSVG, de: DEVisitSVG, external: true },
+  { path: "artists", en: ArtistsSVG, de: DEArtistsSVG },
+  { path: "program", en: ProgramSVG, de: DEProgramSVG },
+  // { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
+  // { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
+];
 
 function Menu() {
-  const { t } = useTranslation();
-
-  const pages = [
-    { path: "about", label: t("about") },
-    { path: "artists", label: t("artists") },
-    { path: "livestream", label: t("livestream") },
-    { path: "program", label: t("program") },
-    { path: "symposium", label: t("symposium") },
-    { path: "announcement", label: t("announcement") },
-    { path: "social", label: t("social") },
-  ];
+  const { language } = useI18next();
 
   const [visible, setVisible] = React.useState(false);
+
+  const overlay = () => (
+    <div
+      className={clsx([CLASSES.linkOverlay, CLASSES.linkHeight])}
+      style={{
+        mixBlendMode: "color",
+        borderRadius: "6px",
+        filter: "blur(16px)",
+      }}
+    ></div>
+  );
   return (
-    <div className="fixed inset-0">
-      <div className="flex flex-row">
-        <button
-          className="bg-white m-5 px-2 py-1 rounded-full shadow-md shadow-white focus:outline-none"
-          onClick={() => setVisible(!visible)}
-        >
-          {visible ? "X" : <Trans>menu</Trans>}
-        </button>
-        <LanguageToggle />
-      </div>
+    <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
+      <button
+        className={clsx([CLASSES.menuBtn, "menu"])}
+        onClick={() => setVisible(!visible)}
+      >
+        {visible ? "X" : "menu"}
+      </button>
+
       {visible && (
         <section className="grid ">
           <StaticImage
             style={{ gridArea: "1/1" }}
             layout="fullWidth"
             src={"../assets/images/background/3-BUBBLES.jpg"}
+            alt="pond"
           />
           <nav
             style={{
               gridArea: "1/1",
+              height: "100vh",
             }}
-            className="grid relative place-items-center"
+            className="grid relative place-items-center py-32"
           >
-            {pages.map((page) => (
-              <Link
-                key={page}
-                to={`/${page.path}`}
-                onClick={() => setVisible(false)}
-                className="block rounded-full px-5 hover:shadow-md hover:shadow-algea hover:bg-algea backdrop-opacity-50 mix-blend-difference"
-              >
-                <span className="text-white text-9xl no-underline text-center">
-                  {page.label}
-                </span>
-              </Link>
-            ))}
+            {PAGES.map((page) => {
+              const Title = page[language];
+
+              return (
+                <div className="relative " key={page.path}>
+                  {page.external ? (
+                    <a href={page.path} target="_blank" rel="noreferrer">
+                      {overlay()}
+                    </a>
+                  ) : (
+                    <Link
+                      key={page}
+                      to={`/${page.path}`}
+                      onClick={() => setVisible(false)}
+                      className={CLASSES.link}
+                      style={{ width: "fit-content" }}
+                    >
+                      {overlay()}
+                    </Link>
+                  )}
+                  <Title className={CLASSES.linkHeight} />
+                </div>
+              );
+            })}
           </nav>
         </section>
       )}

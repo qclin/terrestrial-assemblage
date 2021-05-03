@@ -1,0 +1,10 @@
+.imprint p {
+  font-size: 0.875rem;
+  font-family: "Whyte-Regular";
+}
+
+b,
+strong {
+  font-family: "Whyte-Medium";
+  font-weight: 900;
+}

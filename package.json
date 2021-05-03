@@ -13,10 +13,13 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "extract": "babel --config-file ./babel-extract.config.js -o tmp/chunk.js 'src/**/*.{js,jsx,ts,tsx}' && rm -rf tmp"
+    "extract": "babel --config-file ./babel-extract.config.js -o tmp/chunk.js 'src/**/*.{js,jsx,ts,tsx}' && rm -rf tmp",
+    "clean-svgs": "./script/clean-svgs"
   },
   "dependencies": {
     "clsx": "^1.1.1",
+    "date-fns-tz": "^1.1.4",
+    "dotenv": "^8.2.0",
     "gatsby": "^3.2.1",
     "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-postcss": "^4.2.0",
@@ -26,22 +29,30 @@
     "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^3.2.1",
     "gatsby-plugin-sitemap": "^3.2.0",
+    "gatsby-source-cloudinary": "^0.1.14",
     "gatsby-source-filesystem": "^3.2.0",
+    "gatsby-transformer-json": "^3.3.0",
     "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "i18next": "^20.2.1",
     "lodash": "^4.17.21",
     "postcss": "^8.2.9",
+    "query-string": "^7.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.8.12"
+    "react-i18next": "^11.8.12",
+    "react-modal": "^3.13.1",
+    "react-slick": "^0.28.1",
+    "remarkable": "^2.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "@babel/plugin-transform-typescript": "^7.13.0",
     "autoprefixer": "^10.2.5",
     "babel-plugin-i18next-extract": "^0.8.3",
+    "svgo": "^2.3.0",
     "tailwindcss": "^2.0.4"
   }
 }

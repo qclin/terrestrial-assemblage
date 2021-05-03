@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  margin: 1.25rem 0;
+}
+
+nav button,
+nav a,
+div.description a {
+  cursor: pointer;
+  background-color: #ada77a87;
+  border-radius: 2px;
+}
+
+nav a:hover,
+nav button:hover,
+div.description a:hover {
+  background-color: #ffffff87;
+}

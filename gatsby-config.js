@@ -1,3 +1,76 @@
+require("dotenv").config();
+
+const cloudinaryConfig = {
+  cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+  apiKey: process.env.CLOUDINARY_API_KEY,
+  apiSecret: process.env.CLOUDINARY_API_SECRET,
+};
+
+const sourceCloudinary = {
+  resolve: `gatsby-source-cloudinary`,
+  options: {
+    ...cloudinaryConfig,
+    resourceType: `image`,
+    prefix: `terrestrial-assemblage/`,
+    maxResults: 500,
+  },
+};
+
+const sourceSiteMap = {
+  resolve: "gatsby-plugin-sitemap",
+  options: {
+    exclude: ["/**/404", "/**/404.html"],
+    query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
+            edges {
+              node {
+                context {
+                  i18n {
+                    defaultLanguage
+                    languages
+                    originalPath
+                  }
+                }
+                path
+              }
+            }
+          }
+        }
+      `,
+    serialize: ({ site, allSitePage }) => {
+      return allSitePage.edges.map((edge) => {
+        const {
+          languages,
+          originalPath,
+          defaultLanguage,
+        } = edge.node.context.i18n;
+        const { siteUrl } = site.siteMetadata;
+        const url = siteUrl + originalPath;
+        const links = [
+          { lang: defaultLanguage, url },
+          { lang: "x-default", url },
+        ];
+        languages.forEach((lang) => {
+          if (lang === defaultLanguage) return;
+          links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
+        });
+        return {
+          url,
+          changefreq: "daily",
+          priority: originalPath === "/" ? 1.0 : 0.7,
+          links,
+        };
+      });
+    },
+  },
+};
+
 module.exports = {
   siteMetadata: {
     title: "terrestrial-assemblage",
@@ -16,12 +89,19 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "background",
+        path: "./src/assets/images/background/",
+      },
+      __key: "background",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "images",
         path: "./src/assets/images/",
       },
       __key: "images",
     },
-
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -35,6 +115,21 @@ module.exports = {
       options: {
         path: `${__dirname}/config/locales`,
         name: `locale`,
+      },
+    },
+    "gatsby-transformer-json",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `program`,
+        path: `${__dirname}/config/program`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `profiles`,
+        path: `${__dirname}/config/profiles`,
       },
     },
     {
@@ -68,62 +163,14 @@ module.exports = {
             matchPath: "/preview",
             languages: ["en"],
           },
+          {
+            matchPath: "/artist/:lang/:uid",
+            getLanguageFromPath: true,
+          },
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        exclude: ["/**/404", "/**/404.html"],
-        query: `
-            {
-              site {
-                siteMetadata {
-                  siteUrl
-                }
-              }
-              allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
-                edges {
-                  node {
-                    context {
-                      i18n {
-                        defaultLanguage
-                        languages
-                        originalPath
-                      }
-                    }
-                    path
-                  }
-                }
-              }
-            }
-          `,
-        serialize: ({ site, allSitePage }) => {
-          return allSitePage.edges.map((edge) => {
-            const {
-              languages,
-              originalPath,
-              defaultLanguage,
-            } = edge.node.context.i18n;
-            const { siteUrl } = site.siteMetadata;
-            const url = siteUrl + originalPath;
-            const links = [
-              { lang: defaultLanguage, url },
-              { lang: "x-default", url },
-            ];
-            languages.forEach((lang) => {
-              if (lang === defaultLanguage) return;
-              links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
-            });
-            return {
-              url,
-              changefreq: "daily",
-              priority: originalPath === "/" ? 1.0 : 0.7,
-              links,
-            };
-          });
-        },
-      },
-    },
+    sourceSiteMap,
+    sourceCloudinary,
   ],
 };

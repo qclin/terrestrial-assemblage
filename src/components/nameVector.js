@@ -1,0 +1,30 @@
+import React from "react";
+
+import BernhardSVG from "../assets/svgs/names/Bernhard.svg";
+import Kim_SeungSVG from "../assets/svgs/names/Kim_Seung.svg";
+import KyungSVG from "../assets/svgs/names/Kyung.svg";
+import LianaSVG from "../assets/svgs/names/Liana.svg";
+import MelanieSVG from "../assets/svgs/names/Melanie.svg";
+import NadavSVG from "../assets/svgs/names/Nadav.svg";
+import { ARTISTS } from "../constants/constants";
+
+const nameSvgs = [
+  { identifier: "Bernhard", svg: BernhardSVG },
+  { identifier: "Kim_Seung", svg: Kim_SeungSVG },
+  { identifier: "Kyung", svg: KyungSVG },
+  { identifier: "Liana", svg: LianaSVG },
+  { identifier: "Melanie", svg: MelanieSVG },
+  { identifier: "Nadav", svg: NadavSVG },
+  ...ARTISTS,
+];
+
+function NameVector({ identifier, title, ...props }) {
+  if (!identifier) return null;
+
+  const Speaker = nameSvgs.find((vector) => vector.identifier === identifier);
+  if (!Speaker) return null;
+
+  return <Speaker.svg {...props} />;
+}
+
+export default NameVector;

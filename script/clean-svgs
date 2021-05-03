@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Clean up *.svg files
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+cd "$(dirname "$0")/.."
+
+# Remove unnecessary data from SVG files
+# https://github.com/svg/svgo
+npx \
+  svgo \
+  --quiet \
+  --enable prefixIds \
+  --pretty \
+  --recursive \
+  --folder src
+
+# Pretty-print SVG files for readability and clearer diffs
+# https://github.com/prettier/prettier
+npx \
+  prettier \
+  --loglevel warn \
+  --parser html \
+  --write 'src/**/*.svg'

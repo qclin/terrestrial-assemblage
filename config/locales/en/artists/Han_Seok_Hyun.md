@@ -1,0 +1,9 @@
+**Han Seok Hyun**
+
+_My Head in the Clouds - Test Run_ (2021)
+
+Ephemeral cloud sculpture: rainwater, high-pressure pump, electricity, water filter
+
+Han Seok Hyun, whose artistic practice explores the malleability of &quot;nature&quot;, its naturalness and its artificiality, investigates how to reproduce the meteorological phenomenon of cloud as an ephemeral artistic image. Using rainwater from the Floating ~~University~~ and high electrical pressure, Han attempts to artificially replicate clouds. The conditions, which are difficult to control, depending on the weather, change his cloud images. The variability of their shape, size and colour reflects the microclimate in the third landscape of the Floating ~~University~~ , which is neither entirely natural nor entirely artificial. Han&#39;s relationship with this ephemeral cloud sculpture is one of constant trial and error. His artificial intervention using high pressure technology cannot capture the fleeting beauty of the clouds; Han himself comments on his futile attempts to reproduce natural phenomena in _Heads in the Clouds_ as the seemingly insatiable need for us humans to want to manipulate &quot;nature&quot;.
+
+Inspired by the idea of the increasing influence of artificiality in our everyday lives, **Han Seok Hyun** (Berlin, Seoul) explores manifestations of this phenomenon in his work. In a multi-faceted use of installation, photography and sculpture, he draws the viewer&#39;s attention to manipulations of the environment that are taken for granted. He aims to shed light on the changing relationship between man and his natural environment over generations, especially with regard to the standardization of plants, food and the accompanying transfiguration of landscapes. Hence his work questions notions of &quot;contemporary nature&quot; and the ambivalence of our understanding of it.
