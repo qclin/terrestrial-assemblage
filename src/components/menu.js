@@ -72,7 +72,7 @@ function Menu() {
               gridArea: "1/1",
               height: "100vh",
             }}
-            className="grid relative place-items-center"
+            className="grid relative place-items-center py-32"
           >
             {PAGES.map((page) => {
               const Title = page[language];

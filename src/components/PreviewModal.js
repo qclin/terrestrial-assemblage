@@ -33,7 +33,8 @@ function PreviewModal({ captions, image, onClose }) {
       </button>
       <figure>
         <img
-          style={{ height: "80vh" }}
+          // style={{ height: "80vh" }}
+          className="md:h-modal"
           src={image.node.secure_url}
           alt={image.key}
         />

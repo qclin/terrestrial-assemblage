@@ -1,6 +1,4 @@
 import React from "react";
-import BgHighlight from "./BgHighlight";
-import clsx from "clsx";
 
 const CLASSES = {
   image: "filter grayscale hover:filter-none",

@@ -40,6 +40,9 @@ module.exports = {
         "3/4": "75%",
         "4/5": "90%",
       },
+      height: {
+        modal: "80vh",
+      },
       boxShadow: {
         white: "0 0 5px 10px #FFF",
         whiteTint: "0 0 5px 10px #ffffffE6",

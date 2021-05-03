@@ -6,15 +6,15 @@ import { BOOKING_URL } from "../constants/constants";
 
 const CLASSES = {
   link:
-    "text-lg uppercase mr-4 px-1 py-0 text-white bg-button hover:bg-button-hover rounded-sm",
+    "text-lg uppercase mr-4 px-1 py-0 mt-2 text-white bg-button hover:bg-button-hover rounded-sm whitespace-nowrap",
 };
 const Footer = () => {
   const { language } = useI18next();
   const isGerman = language === "de";
 
   return (
-    <footer className="mx-10 mb-5">
-      <div className="flex flex-row">
+    <footer className="mx-2 md:mx-10 md:mb-5">
+      <div className="flex flex-wrap">
         <a
           href={isGerman ? DEPressRelease : ENPRessRelease}
           download
@@ -34,7 +34,7 @@ const Footer = () => {
           <Trans>Imprint</Trans>
         </Link>
       </div>
-      <p className="text-white max-w-md">
+      <p className="text-white max-w-md ">
         <Trans>Covid Guidelines</Trans>
       </p>
     </footer>

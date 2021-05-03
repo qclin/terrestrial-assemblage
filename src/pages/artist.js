@@ -20,7 +20,8 @@ const CLASSES = {
   textBox:
     "rounded-lg p-2 mb-10 md:px-8 md:ml-3 mt-8 shadow-whiteTint shadow-md bg-white-tint",
   highLightBG: "bg-button hover:bg-button-hover rounded-sm",
-  link: "md:even:ml-10 even:block mb-2 mx-auto text-white mr-4 px-4 uppercase",
+  link:
+    "md:even:ml-10 md:even:block mb-2 mx-auto text-white mr-4 px-4 uppercase whitespace-nowrap",
 };
 
 const ArtistPage = ({ location, data }) => {
@@ -46,13 +47,13 @@ const ArtistPage = ({ location, data }) => {
       <Link className="fixed top-16" to="/artists">
         <BackIcon className="ml-5" />
       </Link>
-      <main className="m-7 md:ml-32 md:pt-24">
+      <main className="m-7 pt-16 md:ml-32 md:pt-24">
         <div className="md:flex md:items-center justify-center md:justify-start">
           <NameVector
             identifier={id}
             className="block h-14 md:h-24 md:inline mx-auto md:mx-0"
           />
-          <div className="">
+          <div className="text-center md:text-left">
             {profile.associations.map((internalLink) => (
               <Link
                 className={clsx([CLASSES.link, CLASSES.highLightBG])}

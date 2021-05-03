@@ -32,7 +32,6 @@ const ExhibitionPage = ({ location, data }) => {
     centerMode: true,
     lazyLoad: true,
     afterChange: (current) => setActiveIndex(current),
-    vertical: window.innerWidth < window.innerHeight,
   };
 
   const slideToArtist = useCallback(() => {
@@ -64,6 +63,7 @@ const ExhibitionPage = ({ location, data }) => {
 
   const checkMousePosition = (event) => {
     const posX = event.pageX;
+
     const pageWidth = window.innerWidth;
     if (posX < pageWidth / 4) {
       setActiveArrow("left");
@@ -125,8 +125,8 @@ const ExhibitionPage = ({ location, data }) => {
         >
           {clImages.map((image) => {
             const ratio = image.node.width / image.node.height;
-            const scale = window.innerWidth * 0.4;
-            const width = ratio * scale;
+
+            const width = ratio * 600;
 
             return (
               <div style={{ width }} key={image.node.public_id.split("/")[2]}>
