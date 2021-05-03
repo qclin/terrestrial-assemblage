@@ -4,7 +4,7 @@ import AboutSVG from "../assets/svgs/headers/en/subheader/About.svg";
 import ExhibitionSVG from "../assets/svgs/headers/en/subheader/Exhibition-Venue.svg";
 import CuratorSVG from "../assets/svgs/headers/en/subheader/Curators.svg";
 import DEAboutSVG from "../assets/svgs/headers/de/subheader/Uber.svg";
-import DEExhibitionSVG from "../assets/svgs/headers/de/subheader/Austellungsort.svg";
+import DEExhibitionSVG from "../assets/svgs/headers/de/subheader/Ausstellungsort.svg";
 import DECuratorSVG from "../assets/svgs/headers/de/subheader/Kuratorinnen.svg";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";

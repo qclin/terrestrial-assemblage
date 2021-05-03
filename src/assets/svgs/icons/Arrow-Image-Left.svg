@@ -1,7 +1,6 @@
 <svg width="86" height="25" xmlns="http://www.w3.org/2000/svg">
   <path
     fill="#FF0"
-    fill-rule="nonzero"
     d="m25.574.65-.062 9.999 56.5.351 2 .012-.024 4-2-.012-56.501-.351-.062 10L1.5 12.5z"
   />
 </svg>

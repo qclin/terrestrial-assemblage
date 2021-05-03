@@ -7,6 +7,7 @@ import * as styles from "../styles/program.css"; //eslint-disable-line no-unused
 import BackgroundImage from "../components/background/bgProgram";
 import clsx from "clsx";
 import TitleSVG from "../assets/svgs/headers/symposium-title.svg";
+import MobileTitleSVG from "../assets/svgs/headers/symposium-title-mobile.svg";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9",
@@ -25,14 +26,15 @@ const ProgramPage = ({ data }) => {
       <BackgroundImage />
 
       <section
-        className="grid relative m-7 md:ml-32 md:pt-24 overflow-auto fadedScroller"
+        className="grid relative m-7 pt-16 md:ml-32 md:pt-24 overflow-auto fadedScroller"
         style={{
           gridArea: "1/1",
           height: "100vh",
         }}
       >
         <div>
-          <TitleSVG className="max-w-full" />
+          <TitleSVG className="max-w-full hidden md:block" />
+          <MobileTitleSVG className="block md:hidden" />
         </div>
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
