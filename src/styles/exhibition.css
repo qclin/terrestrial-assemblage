@@ -1,0 +1,17 @@
+.slick-slider.left {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODYiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGgKICAgIGZpbGw9IiNGRjAiCiAgICBkPSJtMjUuNTc0LjY1LS4wNjIgOS45OTkgNTYuNS4zNTEgMiAuMDEyLS4wMjQgNC0yLS4wMTItNTYuNTAxLS4zNTEtLjA2MiAxMEwxLjUgMTIuNXoiCiAgLz4KPC9zdmc+Cg=="),
+    auto;
+}
+
+.slick-slider.right {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODYiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGgKICAgIGZpbGw9IiNGRjAiCiAgICBkPSJNNTkuOTM4LjY1IDYwIDEwLjY0OCAzLjUgMTFsLTIgLjAxMi4wMjUgNCAyLS4wMTIgNTYuNS0uMzUxLjA2MiAxMEw4NC4wMTIgMTIuNXoiCiAgLz4KPC9zdmc+Cg=="),
+    auto;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-slide div {
+  outline: none;
+}
