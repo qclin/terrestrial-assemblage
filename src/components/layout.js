@@ -3,6 +3,7 @@ import MouseOverlay from "./mouseOverlay";
 import "./layout.css";
 import LanguageToggle from "./languageToggle";
 import Menu from "./menu";
+import Footer from "./footer";
 
 export default function Layout({ children }) {
   const [mousePosition, setMousePosition] = useState({
@@ -22,6 +23,9 @@ export default function Layout({ children }) {
       <LanguageToggle />
       {children}
       <MouseOverlay mousePosition={mousePosition} />
+      <div className="mt-52">
+        <Footer />
+      </div>
     </div>
   );
 }

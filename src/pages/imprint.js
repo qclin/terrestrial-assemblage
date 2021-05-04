@@ -1,12 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import Partners from "../components/partners";
 import { StaticImage } from "gatsby-plugin-image";
 import { Trans, useI18next } from "gatsby-plugin-react-i18next";
 import * as styles from "../styles/imprint.css"; //eslint-disable-line no-unused-vars
 import DEImprintSVG from "../assets/svgs/headers/de/subheader/Impressum.svg";
 import ImprintSVG from "../assets/svgs/headers/en/subheader/Imprint.svg";
+
+import Footer from "../components/footer";
 
 const CLASSES = {
   svgHeader: "max-h-24 mt-16",
@@ -48,9 +49,6 @@ const ImprintPage = ({ data }) => {
               />
             ))}
           </div>
-        </section>
-        <section className="mx-10">
-          <Partners />
         </section>
       </main>
     </Layout>

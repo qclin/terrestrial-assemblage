@@ -18,42 +18,40 @@ function ArtistsPage() {
   return (
     <Layout>
       <BackgroundImage />
-      <div className="fixed inset-0">
-        <section className="grid h-full overflow-y-scroll">
-          <PondMarkers active={active} />
-          <nav
-            style={{
-              gridArea: "1/1",
-            }}
-            className="m-5 my-14 md:m-24 text-left max-w-full"
-          >
-            {ARTISTS.map((artist) => (
-              <div
-                className="relative my-2"
-                key={artist.identifier}
-                style={{ width: "fit-content" }}
+      <section className="grid h-full overflow-y-scroll">
+        <PondMarkers active={active} />
+        <nav
+          style={{
+            gridArea: "1/1",
+          }}
+          className="m-5 my-14 md:m-24 text-left max-w-full"
+        >
+          {ARTISTS.map((artist) => (
+            <div
+              className="relative my-2"
+              key={artist.identifier}
+              style={{ width: "fit-content" }}
+            >
+              <Link
+                to={`/artist?id=${artist.identifier}`}
+                state={{ artist }}
+                className={CLASSES.link}
+                onMouseOver={() => setActive(artist.identifier)}
               >
-                <Link
-                  to={`/artist?id=${artist.identifier}`}
-                  state={{ artist }}
-                  className={CLASSES.link}
-                  onMouseOver={() => setActive(artist.identifier)}
-                >
-                  <div
-                    className={CLASSES.linkOverlay}
-                    style={{
-                      mixBlendMode: "color",
-                      borderRadius: "6px",
-                      filter: "blur(16px)",
-                    }}
-                  ></div>
-                </Link>
-                <artist.svg className="w-auto h-14 md:h-24" />
-              </div>
-            ))}
-          </nav>
-        </section>
-      </div>
+                <div
+                  className={CLASSES.linkOverlay}
+                  style={{
+                    mixBlendMode: "color",
+                    borderRadius: "6px",
+                    filter: "blur(16px)",
+                  }}
+                ></div>
+              </Link>
+              <artist.svg className="w-auto h-14 md:h-24" />
+            </div>
+          ))}
+        </nav>
+      </section>
     </Layout>
   );
 }

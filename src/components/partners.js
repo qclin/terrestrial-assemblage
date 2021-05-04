@@ -6,7 +6,7 @@ function Partners() {
   const { t } = useTranslation();
 
   return (
-    <section className="m-10 wi">
+    <section>
       <div className="flex mt-5 justify-end">
         <StaticImage
           height={75}
