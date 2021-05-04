@@ -14,7 +14,7 @@ const Footer = () => {
   const isGerman = language === "de";
 
   return (
-    <footer className="mx-2 md:mx-10 md:mb-5 flex justify-between">
+    <footer className="mx-2 md:mx-10 md:mb-5 md:flex md:justify-between">
       <div>
         <div className="flex flex-wrap">
           <a

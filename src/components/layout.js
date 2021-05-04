@@ -23,7 +23,7 @@ export default function Layout({ children }) {
       <LanguageToggle />
       {children}
       <MouseOverlay mousePosition={mousePosition} />
-      <div className="mt-52">
+      <div className="md:mt-52 mx-3">
         <Footer />
       </div>
     </div>
