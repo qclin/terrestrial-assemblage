@@ -164,7 +164,6 @@ export const query = graphql`
       }
     }
     allProfiles: profilesJson(language: { eq: $language }) {
-      language
       artists {
         title
         metatag

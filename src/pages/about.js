@@ -54,7 +54,7 @@ const AboutPage = ({ data }) => {
               />
             </div>
           </div>
-          <div className="md:col-span-5 md:col-start-1 md:py-5">
+          <div className="md:col-span-5 md:col-start-1 md:py-5" id="curators">
             <CuratorVector className={CLASSES.svgHeader} />
             <div className={CLASSES.textBox}>
               <div dangerouslySetInnerHTML={{ __html: curatorsMDNode.html }} />

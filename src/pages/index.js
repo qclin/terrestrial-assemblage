@@ -3,12 +3,21 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import Introduction from "../components/introduction";
 import Hero from "../components/background/hero";
+import HomeFeature from "../components/homeFeature";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const clImages = data.images.edges;
+
   return (
     <Layout>
       <Hero />
       <main>
+        <section className="fixed right-20 inset-y-1/3">
+          <HomeFeature
+            featureJson={data.feature.features}
+            clImages={clImages}
+          />
+        </section>
         <Introduction />
       </main>
     </Layout>
@@ -28,6 +37,26 @@ export const query = graphql`
           data
           language
         }
+      }
+    }
+    images: allCloudinaryMedia(
+      filter: { public_id: { regex: "/(/feature/)/" } }
+    ) {
+      edges {
+        node {
+          secure_url
+          public_id
+          width
+          height
+        }
+      }
+    }
+
+    feature: featuresJson(language: { eq: $language }) {
+      features {
+        key
+        path
+        tagline
       }
     }
   }

@@ -1,0 +1,30 @@
+{
+  "language": "en",
+  "features": [
+    {
+      "key": "Bernhard",
+      "path": "/talk?id=1015_going_north_from_the_dmz&time=10:15%20CEST",
+      "tagline": "Going North from the DMZ  -Dr. Bernhard J. Seliger"
+    },
+    {
+      "key": "Curators",
+      "path": "/about#curators",
+      "tagline": "Curators: Pauline Doutreiluinge & Keumhwa Kim"
+    },
+    {
+      "key": "Kyung",
+      "path": "/talk?id=1430_my_own_dmz_story:_landscape_research_and_art_projects_along_the_borderline&time=14:30%20CEST",
+      "tagline": "My Own DMZ Story  -Kyung Jin Zoh, PhD"
+    },
+    {
+      "key": "Liana",
+      "path": "/talk?id=1400_green_belt-from_iron_curtain_to_lifeline&time=14:00%20CEST",
+      "tagline": "Green Belt - From Iron Curtain to Lifeline -Dr. Liana Geidezis"
+    },
+    {
+      "key": "Melanie",
+      "path": "/talk?id=1400_green_belt-memorial_landscape&time=14:00%20CEST",
+      "tagline": "Green Belt – Memorial Landscape -Melanie Kreutz"
+    }
+  ]
+}
