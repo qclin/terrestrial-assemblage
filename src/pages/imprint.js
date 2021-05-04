@@ -7,8 +7,6 @@ import * as styles from "../styles/imprint.css"; //eslint-disable-line no-unused
 import DEImprintSVG from "../assets/svgs/headers/de/subheader/Impressum.svg";
 import ImprintSVG from "../assets/svgs/headers/en/subheader/Imprint.svg";
 
-import Footer from "../components/footer";
-
 const CLASSES = {
   svgHeader: "max-h-24 mt-16",
   textGrid: "grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3",

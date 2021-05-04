@@ -19,7 +19,7 @@ const ProgramPage = ({ data }) => {
   const markdownNode = data.allMarkdownRemark.nodes.find((n) =>
     n.fileAbsolutePath.includes(`/program/${language}-introduction`)
   );
-  const program = data.programs.nodes.find((n) => n.language === language);
+  const program = data.program;
 
   return (
     <Layout>
@@ -77,19 +77,16 @@ export const query = graphql`
         html
       }
     }
-    programs: allProgramJson {
-      nodes {
-        language
-        talks {
-          id
-          description
-          speaker {
-            name
-          }
-          time
-          title
-          organization
+    program: programJson(language: { eq: $language }) {
+      talks {
+        description
+        organization
+        speaker {
+          name
         }
+        time
+        title
+        website
       }
     }
   }

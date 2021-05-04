@@ -93,7 +93,6 @@ export const query = graphql`
       }
     }
     allTalks: programJson(language: { eq: $language }) {
-      language
       talks {
         id
         description
