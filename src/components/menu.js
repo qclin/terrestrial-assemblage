@@ -17,10 +17,11 @@ import DElivestreamSVG from "../assets/svgs/headers/de/menu/livestream.svg";
 import DEProgramSVG from "../assets/svgs/headers/de/menu/program.svg";
 import DEVisitSVG from "../assets/svgs/headers/de/menu/visit.svg";
 import { BOOKING_URL } from "../constants/constants";
+import TerrestrialTextSvg from "../assets/svgs/headers/terrestrial.svg";
 
 const CLASSES = {
   menuBtn:
-    "bg-button hover:bg-button-hover rounded-sm m-5 px-2 pb-0 pt-1 focus:outline-none z-10 absolute text-white uppercase",
+    "bg-button hover:bg-button-hover rounded-sm px-2 pb-0 pt-1 focus:outline-none text-white uppercase",
   link: "block px-5 rounded-md ",
   linkOverlay: "w-full absolute filter blur-lg hover:bg-button left-0",
   linkHeight: "h-16 md:h-32",
@@ -52,13 +53,17 @@ function Menu() {
   );
   return (
     <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
-      <button
-        className={clsx([CLASSES.menuBtn, "menu"])}
-        onClick={() => setVisible(!visible)}
-      >
-        {visible ? "X" : "menu"}
-      </button>
-
+      <div className="flex m-5 absolute z-10">
+        <button
+          className={clsx([CLASSES.menuBtn, "menu"])}
+          onClick={() => setVisible(!visible)}
+        >
+          {visible ? "X" : "menu"}
+        </button>
+        <Link to="/" className="px-2 pb-0 pt-1 opacity-40 hover:opacity-100">
+          <TerrestrialTextSvg className="h-5" />
+        </Link>
+      </div>
       {visible && (
         <section className="grid ">
           <StaticImage

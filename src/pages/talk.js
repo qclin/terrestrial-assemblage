@@ -12,7 +12,7 @@ import BackIcon from "../assets/svgs/icons/back.svg";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",
-  textColumn: "md:col-span-2 lg:col-span-5 lg:col-start-1 p-2 mb-10 md:px-8",
+  textColumn: "md:col-span-2 lg:col-span-4 lg:col-start-1 p-2 mb-10 md:px-8",
   textBlock: "bg-white rounded-md shadow-md shadow-white",
 };
 
