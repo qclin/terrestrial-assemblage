@@ -32,9 +32,9 @@ const TalkPage = ({ location, data }) => {
       <main className="m-7 pt-16 md:ml-32 md:pt-24">
         <section className="mb-8 text-center md:text-left text-white">
           <span className="text-base w-36 inline">{time}</span>
-          {talkNode.name && (
+          {talkNode.speaker && (
             <NameVector
-              identifier={talkNode.name}
+              identifier={talkNode.speaker.name}
               className="h-14 md:h-24 mx-auto md:mx-0 mb-4"
             />
           )}
@@ -50,6 +50,14 @@ const TalkPage = ({ location, data }) => {
               className="description"
               dangerouslySetInnerHTML={{
                 __html: md.render(talkNode.description),
+              }}
+            />
+          </div>
+          <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
+            <div
+              className="description"
+              dangerouslySetInnerHTML={{
+                __html: md.render(talkNode.speaker.biography),
               }}
             />
             {talkNode.website && (
@@ -88,10 +96,12 @@ export const query = graphql`
       language
       talks {
         id
-        name
         description
         organization
-        speaker
+        speaker {
+          name
+          biography
+        }
         time
         title
         website

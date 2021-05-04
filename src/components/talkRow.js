@@ -37,9 +37,9 @@ const TalkRow = ({ talk }) => {
       to={`/talk?id=${talk.id}&time=${localTimeString}`}
       className={clsx([CLASSES.textColumn, CLASSES.text, "max-w-xl"])}
     >
-      {talk.name && (
+      {talk.speaker && (
         <NameVector
-          identifier={talk.name}
+          identifier={talk.speaker.name}
           className="h-14 md:h-24 w-auto max-w-full"
         />
       )}

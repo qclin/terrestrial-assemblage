@@ -83,8 +83,9 @@ export const query = graphql`
         talks {
           id
           description
-          speaker
-          name
+          speaker {
+            name
+          }
           time
           title
           organization
