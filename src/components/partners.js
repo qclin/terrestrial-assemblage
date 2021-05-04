@@ -23,7 +23,7 @@ function Partners() {
           src={"../assets/images/partners/KoreanCenter.png"}
         />
         <StaticImage
-          height={60}
+          height={70}
           className="mr-3"
           objectFit="contain"
           alt={t("Hanns Seidel Stiftung")}
