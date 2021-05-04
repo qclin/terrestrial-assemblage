@@ -11,3 +11,14 @@
     height: fit-content;
   }
 }
+
+@media (min-width: 768px) {
+  .artist.description {
+    margin-top: 66vh;
+  }
+
+  .artist.description.with-video {
+    margin-top: -16vh;
+    z-index: 10;
+  }
+}

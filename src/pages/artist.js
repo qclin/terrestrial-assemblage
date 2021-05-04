@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import { Link } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
@@ -103,7 +103,11 @@ const ArtistPage = ({ location, data }) => {
             ))}
           </div>
           <div
-            className={clsx([CLASSES.textBox, "artist description"])}
+            className={clsx([
+              CLASSES.textBox,
+              "artist description",
+              profile.video && "with-video",
+            ])}
             style={{ height: "fit-content" }}
           >
             <header>
