@@ -9,10 +9,7 @@ const Introduction = () => {
 
   return (
     <section>
-      <div
-        className="md:grid md:grid-cols-10 gap-4"
-        style={{ marginTop: "75vh", marginBottom: "15vh" }}
-      >
+      <div className="md:grid md:grid-cols-10 gap-4" id="introduction">
         {isGerman ? (
           <DEOpeningHoursText className="lg:mx-10 sm:mb-5 md:col-span-7" />
         ) : (

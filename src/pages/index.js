@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Introduction from "../components/introduction";
 import Hero from "../components/background/hero";
 import HomeFeature from "../components/homeFeature";
+import * as styles from "../styles/home.css"; //eslint-disable-line no-unused-vars
 
 const IndexPage = ({ data }) => {
   const clImages = data.images.edges;
@@ -12,7 +13,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero />
       <main>
-        <section className="fixed right-20 inset-y-1/3">
+        <section className="md:fixed md:right-20 md:inset-y-1/3 mt-24">
           <HomeFeature
             featureJson={data.feature.features}
             clImages={clImages}

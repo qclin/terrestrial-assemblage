@@ -14,7 +14,7 @@ const HomeFeature = ({ featureJson, clImages }) => {
   return (
     <Link to={feature.path}>
       <figure
-        className="mx-10 relative text-left"
+        className="p-10  text-left relative"
         style={{ width: "fit-content" }}
       >
         <div
@@ -23,16 +23,17 @@ const HomeFeature = ({ featureJson, clImages }) => {
             padding: "5rem",
             borderRadius: "6px",
             filter: "blur(16px)",
+            zIndex: -10,
           }}
         ></div>
-        <figcaption className="text-white text-sm bg-button text-wrap">
+        <figcaption className="text-white text-sm text-wrap">
           {feature.tagline}
         </figcaption>
         <img
           src={secure_url}
           layout="fullWidth"
           className={clsx([
-            width > height ? "w-80 h-auto" : "h-80 w-auto mx-auto",
+            width > height ? "w-96 h-auto" : "h-96 w-auto mx-auto",
           ])}
           style={{ filter: "grayscale(1)" }}
           alt={public_id}

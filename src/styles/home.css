@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+  #introduction {
+    margin-top: 75vh;
+  }
+}
+
+#introduction {
+  margin-bottom: 15vh;
+}

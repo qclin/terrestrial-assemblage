@@ -25,6 +25,56 @@
       "key": "Melanie",
       "path": "/talk?id=1400_green_belt-memorial_landscape&time=14:00%20CEST",
       "tagline": "Grünes Band - Erinnerungslandschaft -Melanie Kreutz "
+    },
+    {
+      "key": "Ana_Alenso",
+      "path": "/artist?id=Ana_Alenso",
+      "tagline": "Ana Alenso"
+    },
+    {
+      "key": "Anne_Duk_Hee_Jordan",
+      "path": "/artist?id=Anne_Duk_Hee_Jordan",
+      "tagline": "Anne Duk Hee Jordan"
+    },
+    {
+      "key": "Clemens_Wilhelm",
+      "path": "/artist?id=Clemens_Wilhelm",
+      "tagline": "Clemens Wilhelm"
+    },
+    {
+      "key": "Folke_Koebberling",
+      "path": "/artist?id=Folke_Koebberling",
+      "tagline": "Folke Köbberling"
+    },
+    {
+      "key": "Han_Seok_Hyun",
+      "path": "/artist?id=Han_Seok_Hyun",
+      "tagline": "Han Seok Hyun"
+    },
+    {
+      "key": "Ines_Doujak",
+      "path": "/artist?id=Ines_Doujak",
+      "tagline": "Ines Doujak"
+    },
+    {
+      "key": "Marco_Barotti",
+      "path": "/artist?id=Marco_Barotti",
+      "tagline": "Marco Barotti"
+    },
+    {
+      "key": "Mischa_Leinkauf",
+      "path": "/artist?id=Mischa_Leinkauf",
+      "tagline": "Mischa Leinkauf"
+    },
+    {
+      "key": "Santiago_Sierra",
+      "path": "/artist?id=Santiago_Sierra",
+      "tagline": "Santiago Sierra"
+    },
+    {
+      "key": "Shira_Wachsmann",
+      "path": "/artist?id=Shira_Wachsmann",
+      "tagline": "Shira Wachsmann"
     }
   ]
 }

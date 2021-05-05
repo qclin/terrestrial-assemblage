@@ -55,12 +55,15 @@ function Menu() {
     <div className={clsx(visible && "inset-0 h-full", "fixed top-0 z-20")}>
       <div className="flex m-5 absolute z-10">
         <button
-          className={clsx([CLASSES.menuBtn, "menu"])}
+          className={clsx([CLASSES.menuBtn, "menu mr-2"])}
           onClick={() => setVisible(!visible)}
         >
           {visible ? "X" : "menu"}
         </button>
-        <Link to="/" className="px-2 pb-0 pt-1 opacity-40 hover:opacity-100">
+        <Link
+          to="/"
+          className="px-2 pb-0 pt-1 md:opacity-40 md:hover:opacity-100"
+        >
           <TerrestrialTextSvg className="h-5" />
         </Link>
       </div>
