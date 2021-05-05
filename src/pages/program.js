@@ -79,6 +79,7 @@ export const query = graphql`
     }
     program: programJson(language: { eq: $language }) {
       talks {
+        id
         description
         organization
         speaker {
