@@ -26,10 +26,11 @@ const ProgramPage = ({ data }) => {
       <BackgroundImage />
 
       <section
-        className="grid relative m-7 pt-16 md:ml-32 md:pt-24 overflow-auto fadedScroller"
+        className="grid relative m-7 pt-16 md:ml-32 md:pt-24 overflow-auto"
         style={{
           gridArea: "1/1",
           height: "100vh",
+          scrollbarWidth: "thin",
         }}
       >
         <div>

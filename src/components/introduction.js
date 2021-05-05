@@ -11,9 +11,9 @@ const Introduction = () => {
     <section>
       <div className="md:grid md:grid-cols-10 gap-4" id="introduction">
         {isGerman ? (
-          <DEOpeningHoursText className="lg:mx-10 sm:mb-5 md:col-span-7" />
+          <DEOpeningHoursText className="mx-3 md:mx-10 sm:mb-5 md:col-span-7" />
         ) : (
-          <OpeningHoursText className="lg:mx-10 sm:mb-5 md:col-span-7" />
+          <OpeningHoursText className="mx-3 md:mx-10 sm:mb-5 md:col-span-7" />
         )}
       </div>
     </section>

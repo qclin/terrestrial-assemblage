@@ -7,7 +7,7 @@ import Partners from "./partners";
 
 const CLASSES = {
   link:
-    "text-lg uppercase mr-4 px-1 pb-7 mt-2 text-white bg-button hover:bg-button-hover rounded-sm whitespace-nowrap",
+    "text-sm md:text-lg uppercase mr-4 px-1 pb-7 mt-2 text-white bg-button hover:bg-button-hover rounded-sm whitespace-nowrap",
 };
 const Footer = () => {
   const { language } = useI18next();
