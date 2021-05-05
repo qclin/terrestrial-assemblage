@@ -18,6 +18,7 @@ import DEProgramSVG from "../assets/svgs/headers/de/menu/program.svg";
 import DEVisitSVG from "../assets/svgs/headers/de/menu/visit.svg";
 import { BOOKING_URL } from "../constants/constants";
 import TerrestrialTextSvg from "../assets/svgs/headers/terrestrial.svg";
+import TATextSvg from "../assets/svgs/headers/TA.svg";
 
 const CLASSES = {
   menuBtn:
@@ -62,9 +63,10 @@ function Menu() {
         </button>
         <Link
           to="/"
-          className="px-2 pb-0 pt-1 md:opacity-40 md:hover:opacity-100 hidden md:block"
+          className="px-2 pb-0 pt-1 md:opacity-40 md:hover:opacity-100"
         >
-          <TerrestrialTextSvg className="h-5" />
+          <TerrestrialTextSvg className="h-5 hidden md:block" />
+          <TATextSvg className="h-5 md:hidden" />
         </Link>
       </div>
       {visible && (
