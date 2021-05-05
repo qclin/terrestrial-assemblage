@@ -16,7 +16,7 @@ function Hero({ path }) {
   }, []);
 
   return (
-    <div className="grid fixed top-0" style={{ zIndex: -20 }}>
+    <div className="grid fixed inset-0" style={{ zIndex: -20 }}>
       <StaticImage
         style={{ gridArea: "1/1", height: "100vh" }}
         layout="constrained"

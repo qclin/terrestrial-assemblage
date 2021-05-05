@@ -6,6 +6,12 @@
   filter: grayscale(1);
 }
 
+.artist a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0 0.5rem;
+}
+
 @media (max-width: 768px) {
   iframe {
     height: fit-content;
@@ -20,5 +26,9 @@
   .artist.description.with-video {
     margin-top: -16vh;
     z-index: 10;
+  }
+
+  #video {
+    height: 75vh;
   }
 }

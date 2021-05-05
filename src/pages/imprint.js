@@ -10,7 +10,8 @@ import ImprintSVG from "../assets/svgs/headers/en/subheader/Imprint.svg";
 const CLASSES = {
   svgHeader: "max-h-24 mt-16",
   textGrid: "grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3",
-  textBox: "rounded-lg px-8 py-4 shadow-whiteTint shadow-md bg-white-tint",
+  textBox:
+    "rounded-lg px-8 py-4 shadow-whiteTint shadow-md bg-white-tint md:mx-10",
 };
 
 const ImprintPage = ({ data }) => {
@@ -24,8 +25,8 @@ const ImprintPage = ({ data }) => {
   const ImprintVector = isGerman ? DEImprintSVG : ImprintSVG;
 
   return (
-    <Layout>
-      <div className="grid fixed top-0 w-full h-full" style={{ zIndex: -20 }}>
+    <Layout canGoBack>
+      <div className="grid fixed inset-0 w-full h-full" style={{ zIndex: -20 }}>
         <StaticImage
           style={{ gridArea: "1/1" }}
           layout="fullWidth"

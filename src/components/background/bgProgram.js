@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 function ProgramBackground({ search }) {
   return (
-    <div className="grid fixed top-0" style={{ zIndex: -20 }}>
+    <div className="grid fixed inset-0" style={{ zIndex: -20 }}>
       <StaticImage
         style={{ gridArea: "1/1", maxHeight: "100vh" }}
         layout="fullWidth"

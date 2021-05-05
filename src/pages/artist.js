@@ -9,13 +9,13 @@ import BackgroundImage from "../components/background/bgArtist";
 import NameVector from "../components/nameVector";
 import PreviewModal from "../components/PreviewModal";
 import CaptionImage from "../components/CaptionImage";
-import BackIcon from "../assets/svgs/icons/back.svg";
 import * as styles from "../styles/artist.css"; //eslint-disable-line no-unused-vars
 import { Remarkable } from "remarkable";
 import clsx from "clsx";
 
 const CLASSES = {
-  imageGrid: "col-span-2 grid grid-flow-row gap-10 md:grid-cols-6 artworks",
+  imageGrid:
+    "col-span-2 grid grid-flow-row gap-3 md:gap-10 md:grid-cols-6 artworks",
   image: "filter grayscale hover:filter-none",
   textBox:
     "rounded-lg p-2 mb-10 md:px-8 md:ml-3 mt-8 shadow-whiteTint shadow-md bg-white-tint",
@@ -41,16 +41,13 @@ const ArtistPage = ({ location, data }) => {
 
   if (!profile) return <div>Loading</div>;
   return (
-    <Layout>
+    <Layout canGoBack>
       <BackgroundImage />
-      <Link className="fixed top-16" to="/artists">
-        <BackIcon className="ml-5" />
-      </Link>
       <main className="m-7 pt-16 md:ml-32 md:pt-24">
-        <div className="md:flex md:items-center justify-center md:justify-start">
+        <div className="md:flex md:items-center justify-center md:justify-start mb-12 md:mb-0">
           <NameVector
             identifier={id}
-            className="block h-14 md:h-24 md:inline mx-auto md:mx-0"
+            className="block md:h-24 md:inline mx-auto md:m-0 mb-2"
           />
           <div className="text-center md:text-left">
             {profile.associations.map((internalLink) => (
@@ -66,15 +63,15 @@ const ArtistPage = ({ location, data }) => {
         </div>
 
         {profile.video && (
-          <section className="md:mr-24 mb-5">
+          <section className="md:mr-24 mb-5 text-center">
             <Video
               videoSrcURL={profile.video.url}
               className="mx-auto"
-              style={{ height: "75vh" }}
+              id="video"
             />
 
             <div
-              className="text-white text-sm bg-button"
+              className="text-white text-sm bg-button mx-auto"
               style={{ width: "fit-content" }}
             >
               {profile.video.caption}

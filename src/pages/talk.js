@@ -24,11 +24,8 @@ const TalkPage = ({ location, data }) => {
 
   if (!talkNode) return <div>Talk not found</div>;
   return (
-    <Layout>
+    <Layout canGoBack>
       <BackgroundImage />
-      <Link className="fixed top-16" to="/program">
-        <BackIcon className="ml-5" />
-      </Link>
       <main className="m-7 pt-16 md:ml-32 md:pt-24">
         <section className="mb-8 text-center md:text-left text-white">
           <span className="text-base w-36 inline">{time}</span>

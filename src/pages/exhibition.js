@@ -83,8 +83,8 @@ const ExhibitionPage = ({ location, data }) => {
   };
 
   return (
-    <Layout>
-      <div className="grid fixed top-0 w-full h-full" style={{ zIndex: -20 }}>
+    <Layout canGoBack>
+      <div className="grid fixed inset-0 w-full h-full" style={{ zIndex: -20 }}>
         <StaticImage
           style={{ gridArea: "1/1" }}
           layout="fullWidth"

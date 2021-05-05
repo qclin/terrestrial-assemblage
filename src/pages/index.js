@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero />
       <main>
-        <StackedTATextSvg className="h-24 mx-auto mt-24 md:hidden" />
+        <StackedTATextSvg className="mx-4 mt-24 md:hidden" />
         <section className="md:fixed md:right-20 md:inset-y-1/4 mt-8 md:mt-0">
           <HomeFeature
             featureJson={data.feature.features}

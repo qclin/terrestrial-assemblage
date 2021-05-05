@@ -29,7 +29,7 @@ const HomeFeature = ({ featureJson, clImages }) => {
   return (
     <Link to={feature.path}>
       <figure
-        className="p-10  text-left relative"
+        className="p-7 md:p-10 text-left relative"
         style={{ width: "fit-content" }}
       >
         <div
