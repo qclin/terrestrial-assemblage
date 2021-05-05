@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import sample from "lodash/sample";
 import clsx from "clsx";
 import { Link } from "gatsby-plugin-react-i18next";
@@ -8,9 +8,24 @@ const CLASSES = {
 };
 
 const HomeFeature = ({ featureJson, clImages }) => {
-  const { secure_url, height, width, public_id } = sample(clImages).node;
-  const feature = featureJson.find((item) => public_id.includes(item.key));
+  const [feature, setFeature] = useState();
+  const [image, setImage] = useState();
 
+  useEffect(() => {
+    reloadPhoto();
+  }, []);
+
+  const reloadPhoto = useCallback(() => {
+    const clImage = sample(clImages).node;
+    setImage(clImage);
+
+    const tmp = featureJson.find((item) =>
+      clImage.public_id.includes(item.key)
+    );
+    setFeature(tmp);
+  }, [clImages]);
+
+  if (!feature || !image) return null;
   return (
     <Link to={feature.path}>
       <figure
@@ -30,13 +45,13 @@ const HomeFeature = ({ featureJson, clImages }) => {
           {feature.tagline}
         </figcaption>
         <img
-          src={secure_url}
+          src={image.secure_url}
           layout="fullWidth"
           className={clsx([
-            width > height ? "w-96 h-auto" : "h-96 w-auto mx-auto",
+            image.width > image.height ? "w-96 h-auto" : "h-96 w-auto mx-auto",
           ])}
           style={{ filter: "grayscale(1)" }}
-          alt={public_id}
+          alt={image.public_id}
         />
       </figure>
     </Link>

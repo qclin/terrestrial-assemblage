@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero />
       <main>
-        <section className="md:fixed md:right-20 md:inset-y-1/3 mt-24">
+        <section className="md:fixed md:right-20 md:inset-y-1/4 mt-24 md:mt-0">
           <HomeFeature
             featureJson={data.feature.features}
             clImages={clImages}

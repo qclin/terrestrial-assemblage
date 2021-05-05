@@ -62,7 +62,7 @@ function Menu() {
         </button>
         <Link
           to="/"
-          className="px-2 pb-0 pt-1 md:opacity-40 md:hover:opacity-100"
+          className="px-2 pb-0 pt-1 md:opacity-40 md:hover:opacity-100 hidden md:block"
         >
           <TerrestrialTextSvg className="h-5" />
         </Link>
