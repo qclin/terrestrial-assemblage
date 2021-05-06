@@ -41,7 +41,7 @@ const HomeFeature = ({ featureJson, clImages }) => {
             zIndex: -10,
           }}
         ></div>
-        <figcaption className="text-white text-sm text-wrap">
+        <figcaption className="text-white text-sm text-wrap w-auto">
           {feature.tagline}
         </figcaption>
         <img
