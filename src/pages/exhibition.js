@@ -167,7 +167,7 @@ const ExhibitionPage = ({ location, data }) => {
               <section className="text-center align-center relative">
                 <Link to={`/artist?id=${tmpArtist.identifier}`}>
                   <div
-                    className="sticky top-0 z-10 mx-auto"
+                    className="sticky top-16 z-10 mx-auto"
                     style={{ width: "fit-content " }}
                   >
                     <div
