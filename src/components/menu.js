@@ -23,7 +23,7 @@ import TATextSvg from "../assets/svgs/headers/TA.svg";
 const CLASSES = {
   menuBtn:
     "bg-button hover:bg-button-hover rounded-sm px-2 pb-0 pt-1 focus:outline-none text-white uppercase",
-  link: "block px-5 rounded-md ",
+  link: "block rounded-md ",
   linkOverlay: "w-full absolute filter blur-lg hover:bg-button left-0",
   linkHeight: "h-16 md:h-32",
 };
@@ -80,9 +80,8 @@ function Menu() {
           <nav
             style={{
               gridArea: "1/1",
-              height: "100vh",
             }}
-            className="grid relative place-items-center"
+            className="grid relative place-items-center md:h-screen menu"
           >
             {PAGES.map((page) => {
               const Title = page[language];

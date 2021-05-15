@@ -7,3 +7,9 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
 }
+
+@media (min-width: 768px) {
+  nav.menu {
+    height: "-webkit-fill-available";
+  }
+}

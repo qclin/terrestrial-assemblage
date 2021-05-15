@@ -31,7 +31,7 @@ const ExhibitionPage = ({ location, data }) => {
     variableWidth: true,
     slidesToScroll: 1,
     centerMode: true,
-    lazyLoad: true,
+    lazyLoad: false,
     afterChange: (current) => setActiveIndex(current),
   };
 
@@ -85,7 +85,6 @@ const ExhibitionPage = ({ location, data }) => {
 
   const byArtist = groupBy(clImages, (img) => img.node.public_id.split("/")[2]);
 
-  console.log(" group by ", byArtist);
   return (
     <Layout canGoBack>
       <div className="grid fixed inset-0 w-full h-full" style={{ zIndex: -20 }}>
@@ -165,7 +164,7 @@ const ExhibitionPage = ({ location, data }) => {
             );
 
             return (
-              <section className="text-center align-center">
+              <section className="text-center align-center relative">
                 <Link to={`/artist?id=${tmpArtist.identifier}`}>
                   <div className="sticky top-0">
                     <NameVector
@@ -184,7 +183,7 @@ const ExhibitionPage = ({ location, data }) => {
                     <img src={image.node.secure_url} alt={image.key} />
                   </figure>
                 ))}
-                <figcaption className="text-white mb-4 mx-auto text-sm bg-button rounded-sm sticky bottom-0">
+                <figcaption className="text-left text-white mb-4 mx-auto text-sm bg-button rounded-sm sticky bottom-0">
                   {tmpArtist.caption}
                 </figcaption>
               </section>
