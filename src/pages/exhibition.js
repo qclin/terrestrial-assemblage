@@ -47,7 +47,7 @@ const ExhibitionPage = ({ location, data }) => {
   }, [location.hash, sliderRef, clImages]);
 
   useEffect(() => {
-    if (sliderRef) slideToArtist();
+    if (sliderRef.current) slideToArtist();
   }, [location.hash, sliderRef, slideToArtist]);
 
   const updateTitles = useCallback(() => {
@@ -98,7 +98,7 @@ const ExhibitionPage = ({ location, data }) => {
       <main
         onMouseMove={checkMousePosition}
         onClick={swipe}
-        className="pt-16 md:pt-24 w-full"
+        className="pt-16 md:pt-24 w-full mb-10"
         style={{
           gridArea: "1/1",
         }}
@@ -152,7 +152,7 @@ const ExhibitionPage = ({ location, data }) => {
           </figcaption>
         </BrowserView>
         <MobileView
-          className="mx-7 overflow-scroll"
+          className="mx-7 overflow-scroll image-wrapper"
           style={{ height: "70vh" }}
           onScroll={(e) => {
             console.log(" SCROLLED", e);
@@ -166,7 +166,18 @@ const ExhibitionPage = ({ location, data }) => {
             return (
               <section className="text-center align-center relative">
                 <Link to={`/artist?id=${tmpArtist.identifier}`}>
-                  <div className="sticky top-0">
+                  <div
+                    className="sticky top-0 z-10 mx-auto"
+                    style={{ width: "fit-content " }}
+                  >
+                    <div
+                      className={CLASSES.linkOverlay}
+                      style={{
+                        mixBlendMode: "color",
+                        borderRadius: "6px",
+                        filter: "blur(16px)",
+                      }}
+                    ></div>
                     <NameVector
                       identifier={tmpArtist.identifier}
                       className="block h-10 md:h-16 md:inline mx-auto md:mx-0"
@@ -183,6 +194,7 @@ const ExhibitionPage = ({ location, data }) => {
                     <img src={image.node.secure_url} alt={image.key} />
                   </figure>
                 ))}
+                {/* <div className="h-1/2 fixed left-0 bottom-0 filter grayscale w-full"></div> */}
                 <figcaption className="text-left text-white mb-4 mx-auto text-sm bg-button rounded-sm sticky bottom-0">
                   {tmpArtist.caption}
                 </figcaption>

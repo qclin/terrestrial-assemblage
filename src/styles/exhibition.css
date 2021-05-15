@@ -21,7 +21,8 @@
   filter: none;
 }
 
-.slick-slide img {
+.slick-slide img,
+.image-wrapper img {
   filter: grayscale(1);
 }
 
