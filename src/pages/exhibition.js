@@ -13,7 +13,7 @@ import NameVector from "../components/nameVector";
 import { ARTISTS } from "../constants/constants";
 
 const CLASSES = {
-  linkOverlay: "w-full h-24 absolute filter blur-lg hover:bg-button left-0",
+  linkOverlay: "w-full h-24 absolute filter blur-lg bg-button left-0",
 };
 
 const ExhibitionPage = ({ location, data }) => {
@@ -101,21 +101,29 @@ const ExhibitionPage = ({ location, data }) => {
         }}
       >
         <section className="text-center align-center">
-          <Link className="relative" to={`/artist?id=${artist.identifier}`}>
+          <Link
+            className="relative float-item"
+            to={`/artist?id=${artist.identifier}`}
+          >
             <div
-              className={CLASSES.linkOverlay}
-              style={{
-                mixBlendMode: "color",
-                borderRadius: "6px",
-                filter: "blur(16px)",
-              }}
-            ></div>
-            <NameVector
-              identifier={artist.identifier}
-              className="block h-10 md:h-16 md:inline mx-auto md:mx-0"
-              title
-            />
-            <div className="text-white uppercase mb-4">{artist.title}</div>
+              className="float-item mx-auto"
+              style={{ width: "fit-content" }}
+            >
+              <div
+                className={CLASSES.linkOverlay}
+                style={{
+                  mixBlendMode: "color",
+                  borderRadius: "6px",
+                  filter: "blur(16px)",
+                }}
+              ></div>
+              <NameVector
+                identifier={artist.identifier}
+                className="block h-10 md:h-16 md:inline mx-auto md:mx-0"
+                title
+              />
+              <div className="text-white uppercase mb-4">{artist.title}</div>
+            </div>
           </Link>
         </section>
         <Slider
@@ -139,6 +147,9 @@ const ExhibitionPage = ({ location, data }) => {
             );
           })}
         </Slider>
+        <div className="text-white md:w-1/2 mb-4 mx-auto text-sm">
+          {artist.caption}
+        </div>
       </main>
     </Layout>
   );
@@ -160,7 +171,7 @@ export const query = graphql`
       }
     }
     images: allCloudinaryMedia(
-      filter: { public_id: { regex: "artworks(?s)(.*)/teaser/" } }
+      filter: { public_id: { regex: "artworks(?s)(.*)/installation/" } }
     ) {
       edges {
         node {

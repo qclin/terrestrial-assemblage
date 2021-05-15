@@ -6,9 +6,7 @@ import * as queryString from "query-string";
 import clsx from "clsx";
 import BackgroundImage from "../components/background/bgTalk";
 import { Remarkable } from "remarkable";
-import { Link } from "gatsby-plugin-react-i18next";
 import NameVector from "../components/nameVector";
-import BackIcon from "../assets/svgs/icons/back.svg";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",

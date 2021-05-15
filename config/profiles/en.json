@@ -42,12 +42,10 @@
           "path": "/talk?id=1620_peace_canal_unrealised_artistic_project&time=16:20%20CEST"
         }
       ],
-      "captions": [
-        {
-          "image": "Jordan_15.04.21_Floating_University_night",
-          "caption": "Site-specific pond installation with living ecosystem, robotic crab and neon drawing, printed on banner, Photo simulation by Emilia Urbanek"
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/548766181?autoplay=1#t=10s",
+        "caption": "Making Kin 2.1 (2020-2021), Site-specific pond installation with living ecosystem, robotic crab and neon drawing, printed on banner"
+      }
     },
     {
       "name": "Clemens Wilhelm",
@@ -56,12 +54,6 @@
       "title": "A Horse with Wheels (2017)",
       "metatag": "HD video, stereo sound, 29 min",
       "description": "_A Horse With Wheels_ is a filmic essay that attempts to reconnect us with the maker of mankind&#39;s first piece of art, it&#39;s first known &quot;useless tool&quot;. Carved in the last Ice Age ­– 13.000 years ago – out of a mammoth tusk, the almost unknown object &quot;The Swimming Reindeer&quot; shines a light on an outstanding step in human development: the arrival of art and the modern brain. The film shows the place where the sculpture was found, in a cave in France, all the way to its origins in northern Norway, where the Sámi live alongside large herds of reindeer.\n\r\n\rIn the film the artist narrates the story of a journey and a seemingly impossible quest: to discover more about our ancestor, who made the first art object. The sculpture, created during a time of global warming at the end of the last Ice Age, connects our forebear to the present of the renewed climate crisis. Wilhelm leads us through a monologue of questions: was this existential crisis of humanity a trigger for the emergence of art? What parallels are there to our present times? To what extent have we changed since the Ice Age? Is progress an illusion?\n\r\n\rFor Clemens Wilhelm, this sculpture reveals our relationships with the natural environment, the past and the present.\n\r\n\r**Clemens Wilhelm** (Berlin) explores in his work, between moving images and photography, the question of how memory arises in the form of stories and images.As a filmmaker whose practice ranges from film/video to photography and performance, he is concerned with visible and invisible boundaries and the associated culture of memory. Accompanied by hypnotic narrative voices or musical scores, his films address social upheavals, the culture of memory in everyday life and its effects on the individual and the group.",
-      "associations": [
-        {
-          "label": "Exhibition shots",
-          "path": "/exhibition/#Clemens_Wilhelm"
-        }
-      ],
       "video": {
         "url": "https://player.vimeo.com/video/260849191",
         "caption": "A Horse with Wheels (2017), video still, HD video, stereo sound, 29 min"
@@ -80,12 +72,10 @@
           "path": "/exhibition/#Folke_Koebberling"
         }
       ],
-      "captions": [
-        {
-          "image": "Pressebild_Folke",
-          "caption": "Test phase #5 in process, Raw wool in sludge (2021), 150 x 150 x 200 cm"
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/548768756?autoplay=1#t=10s",
+        "caption": "Test phase #5 in process - Raw wool in sludge, 2021"
+      }
     },
     {
       "name": "Han Seok Hyun",
@@ -141,8 +131,8 @@
         }
       ],
       "video": {
-        "url": "https://player.vimeo.com/video/372061141",
-        "caption": "The Egg (2019), kinetic sound sculpture, 75cm x 150 cm"
+        "url": "https://player.vimeo.com/video/548773590?autoplay=1#t=10s",
+        "caption": "The Egg, 2019-2021, kinetic sound sculpture, 75cm x 150 cm"
       }
     },
     {
@@ -187,8 +177,8 @@
         }
       ],
       "video": {
-        "url": "https://www.youtube.com/embed/rt6vz10OEus",
-        "caption": "Position exchange for two distinct, 30-meter volumes of earth (2005), video still, 23:55 min"
+        "url": "https://player.vimeo.com/video/548775881?autoplay=1#t=10s",
+        "caption": "Position exchange for two distinct, 30-meter volumes of earth (2005)"
       }
     },
     {
@@ -208,12 +198,10 @@
           "path": "/talk?id=1140_the_moment_before_the_explosion&time=11:40%20CEST"
         }
       ],
-      "captions": [
-        {
-          "image": "A_Dream",
-          "caption": "A Dream (2020), video still, 9:32 min."
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/548776617?autoplay=1#t=10s",
+        "caption": "A Dream, 2020"
+      }
     }
   ]
 }

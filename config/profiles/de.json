@@ -42,12 +42,10 @@
           "path": "/talk?id=1620_peace_canal_unrealised_artistic_project&time=16:20%20CEST"
         }
       ],
-      "captions": [
-        {
-          "image": "Jordan_15.04.21_Floating_University_night",
-          "caption": "Site-specific pond installation with living ecosystem, robotic crab and neon drawing, printed on banner, Photo simulation by Emilia Urbanek"
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/548766181?autoplay=1#t=10s",
+        "caption": "Making Kin 2.1 (2020-2021), Ortsspezifische Teichinstallation mit lebendem Ökosystem, Roboterkrabbe und Neonzeichnungen, gedruckt auf Bannern"
+      }
     },
     {
       "name": "Clemens Wilhelm",
@@ -56,12 +54,6 @@
       "title": "A Horse with Wheels (2017)",
       "metatag": "HD Video, Stereo Sound, 29 Min.",
       "description": "Der Film _A Horse with Wheels_ zeigt die Suche Clemens Wilhelms nach Spuren einer 13.000 Jahren alten Skulptur, die in einen Mammutstoßzahn geschnitzte schwimmende Rentiere zeigt. Der Künstler spürt der Skulptur nach - von ihrem Fundort, einer Höhle in Frankreich, bis nach Nord-Norwegen, wo noch heute Samen mit großen Rentierherden zusammen leben. In dem Video versucht der Künstler eine scheinbar unmögliche Annährung an den Vorfahren, der dieses Kunstwerk geschaffen hat. Die Skulptur, die zur Zeit einer globalen Erderwärmung am Ende der letzten Eiszeit entstand, bringt er mit der Gegenwart eines erneuten Klimawandels in Verbindung. Dabei stellt er in einem Monolog Fragen: War diese existenzielle Krise der Menschheit Auslöser für die Entstehung von Kunst? Welche Parallele gibt es zu unserer heutigen Zeit? Inwiefern haben wir uns seit der Eiszeit verändert? Ist der Fortschritt eine Täuschung? Für Clemens Wilhelm erinnert die Skulptur an die Menschheit in der Krise der letzten Erderwärmung und sie offenbart unsere Beziehungen zur Umwelt, zur Vergangenheit und zur Gegenwart.\n\r\n\rZwischen bewegtem Bild und Fotografie wirft **Clemens Wilhelm** (Berlin) in seinen Werken die Frage auf, wie Erinnerung in Form von Geschichten und Bildern gespeichert wird. Als Filmemacher, dessen Praxis Video, Fotografie und Performance umfasst, beschäftigt er sich mit den sichtbaren und unsichtbaren Grenzen und damit verbundenen Erinnerungskulturen. Mit hypnotischen Erzählstimmen und musikalischer Begleitung thematisiert er gesellschaftliche Umbrüche im Alltag und ihre Wirkung auf das Individuum und auf Gruppen.",
-      "associations": [
-        {
-          "label": "Austellungsbilder",
-          "path": "/exhibition/#Clemens_Wilhelm"
-        }
-      ],
       "video": {
         "url": "https://player.vimeo.com/video/260849191",
         "caption": "A Horse with Wheels (2017), video still, HD video, stereo sound, 29 min"
@@ -80,12 +72,10 @@
           "path": "/exhibition/#Folke_Koebberling"
         }
       ],
-      "captions": [
-        {
-          "image": "Pressebild_Folke",
-          "caption": "Test phase #5 in process, Raw wool in sewage sludge (2021), 150 x 150 x 200 cm"
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/548768756?autoplay=1#t=10s",
+        "caption": "Test phase #5 in process - Raw wool in sludge, 2021"
+      }
     },
     {
       "name": "Han Seok Hyun",
@@ -141,8 +131,8 @@
         }
       ],
       "video": {
-        "url": "https://player.vimeo.com/video/372061141",
-        "caption": "The Egg (2019), kinetic sound sculpture, 75cm x 150 cm"
+        "url": "https://player.vimeo.com/video/548773590?autoplay=1#t=10s",
+        "caption": "The Egg, 2019-2021, kinetic sound sculpture, 75cm x 150 cm"
       }
     },
     {
@@ -187,8 +177,8 @@
         }
       ],
       "video": {
-        "url": "https://www.youtube.com/embed/rt6vz10OEus",
-        "caption": "Position exchange for two distinct, 30-meter volumes of earth (2005), video still, 23:55 min"
+        "url": "https://player.vimeo.com/video/548775881?autoplay=1#t=10s",
+        "caption": "Position exchange for two distinct, 30-meter volumes of earth (2005)"
       }
     },
     {
@@ -208,12 +198,10 @@
           "path": "/talk?id=1140_the_moment_before_the_explosion&time=11:40%20CEST"
         }
       ],
-      "captions": [
-        {
-          "image": "A_Dream",
-          "caption": "A Dream (2020), video still, 9:32 min."
-        }
-      ]
+      "video": {
+        "url": "https://player.vimeo.com/video/548776617?autoplay=1#t=10s",
+        "caption": "A Dream, 2020"
+      }
     }
   ]
 }

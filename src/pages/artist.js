@@ -50,15 +50,16 @@ const ArtistPage = ({ location, data }) => {
             className="block md:h-24 md:inline mx-auto md:m-0 mb-2"
           />
           <div className="text-center md:text-left">
-            {profile.associations.map((internalLink) => (
-              <Link
-                className={clsx([CLASSES.link, CLASSES.highLightBG])}
-                to={internalLink.path}
-                key={internalLink.label}
-              >
-                {internalLink.label}
-              </Link>
-            ))}
+            {profile.associations &&
+              profile.associations?.map((internalLink) => (
+                <Link
+                  className={clsx([CLASSES.link, CLASSES.highLightBG])}
+                  to={internalLink.path}
+                  key={internalLink.label}
+                >
+                  {internalLink.label}
+                </Link>
+              ))}
           </div>
         </div>
 
@@ -135,7 +136,6 @@ const ArtistPage = ({ location, data }) => {
             image={preview}
             captions={profile.captions}
             onClose={() => {
-              console.log(" close close ");
               setPreview(undefined);
             }}
           />

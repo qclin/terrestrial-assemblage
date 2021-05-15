@@ -34,7 +34,7 @@ const PAGES = [
   { path: "artists", en: ArtistsSVG, de: DEArtistsSVG },
   { path: "program", en: ProgramSVG, de: DEProgramSVG },
   // { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
-  // { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
+  { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
 ];
 
 function Menu() {
@@ -82,7 +82,7 @@ function Menu() {
               gridArea: "1/1",
               height: "100vh",
             }}
-            className="grid relative place-items-center py-32"
+            className="grid relative place-items-center"
           >
             {PAGES.map((page) => {
               const Title = page[language];
