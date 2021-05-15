@@ -80,8 +80,9 @@ function Menu() {
           <nav
             style={{
               gridArea: "1/1",
+              height: "100vh",
             }}
-            className="grid relative place-items-center md:h-screen menu"
+            className="grid relative place-items-center md:h-screen py-14"
           >
             {PAGES.map((page) => {
               const Title = page[language];

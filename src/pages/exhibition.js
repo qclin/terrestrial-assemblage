@@ -98,7 +98,7 @@ const ExhibitionPage = ({ location, data }) => {
       <main
         onMouseMove={checkMousePosition}
         onClick={swipe}
-        className="pt-16 md:pt-24 w-full mb-10"
+        className="pt-16 md:pt-24 w-full mb-6"
         style={{
           gridArea: "1/1",
         }}
@@ -153,10 +153,7 @@ const ExhibitionPage = ({ location, data }) => {
         </BrowserView>
         <MobileView
           className="mx-7 overflow-scroll image-wrapper"
-          style={{ height: "70vh" }}
-          onScroll={(e) => {
-            console.log(" SCROLLED", e);
-          }}
+          style={{ height: "80vh" }}
         >
           {Object.keys(byArtist).map((artistKey) => {
             const tmpArtist = ARTISTS.find(
@@ -164,10 +161,10 @@ const ExhibitionPage = ({ location, data }) => {
             );
 
             return (
-              <section className="text-center align-center relative">
+              <section>
                 <Link to={`/artist?id=${tmpArtist.identifier}`}>
                   <div
-                    className="sticky top-16 z-10 mx-auto"
+                    className="sticky top-0 z-10 mx-auto"
                     style={{ width: "fit-content " }}
                   >
                     <div
@@ -194,7 +191,7 @@ const ExhibitionPage = ({ location, data }) => {
                     <img src={image.node.secure_url} alt={image.key} />
                   </figure>
                 ))}
-                {/* <div className="h-1/2 fixed left-0 bottom-0 filter grayscale w-full"></div> */}
+
                 <figcaption className="text-left text-white mb-4 mx-auto text-sm bg-button rounded-sm sticky bottom-0">
                   {tmpArtist.caption}
                 </figcaption>
