@@ -45,6 +45,9 @@ body {
   line-height: 25px;
 }
 
+figcaption {
+  font-family: "Stretch-Medium", serif;
+}
 .artist.description p {
   font-size: 14px;
   line-height: 17.5px;

@@ -5,12 +5,13 @@ import Slider from "react-slick";
 import { StaticImage } from "gatsby-plugin-image";
 import clsx from "clsx";
 import { Link } from "gatsby-plugin-react-i18next";
-
+import groupBy from "lodash/groupBy";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "../styles/exhibition.css"; //eslint-disable-line no-unused-vars
 import NameVector from "../components/nameVector";
 import { ARTISTS } from "../constants/constants";
+import { BrowserView, MobileView, isMobile } from "react-device-detect";
 
 const CLASSES = {
   linkOverlay: "w-full h-24 absolute filter blur-lg bg-button left-0",
@@ -26,7 +27,7 @@ const ExhibitionPage = ({ location, data }) => {
 
   const settings = {
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: isMobile ? 2 : 1,
     variableWidth: true,
     slidesToScroll: 1,
     centerMode: true,
@@ -82,6 +83,9 @@ const ExhibitionPage = ({ location, data }) => {
     }
   };
 
+  const byArtist = groupBy(clImages, (img) => img.node.public_id.split("/")[2]);
+
+  console.log(" group by ", byArtist);
   return (
     <Layout canGoBack>
       <div className="grid fixed inset-0 w-full h-full" style={{ zIndex: -20 }}>
@@ -100,15 +104,9 @@ const ExhibitionPage = ({ location, data }) => {
           gridArea: "1/1",
         }}
       >
-        <section className="text-center align-center">
-          <Link
-            className="relative float-item"
-            to={`/artist?id=${artist.identifier}`}
-          >
-            <div
-              className="float-item mx-auto"
-              style={{ width: "fit-content" }}
-            >
+        <BrowserView>
+          <section className="text-center align-center">
+            <Link className="relative" to={`/artist?id=${artist.identifier}`}>
               <div
                 className={CLASSES.linkOverlay}
                 style={{
@@ -123,33 +121,76 @@ const ExhibitionPage = ({ location, data }) => {
                 title
               />
               <div className="text-white uppercase mb-4">{artist.title}</div>
-            </div>
-          </Link>
-        </section>
-        <Slider
-          {...settings}
-          className={clsx([activeArrow, "h-full"])}
-          ref={sliderRef}
-        >
-          {clImages.map((image) => {
-            const ratio = image.node.width / image.node.height;
+            </Link>
+          </section>
+          <Slider
+            {...settings}
+            className={clsx([activeArrow, "h-full"])}
+            ref={sliderRef}
+          >
+            {clImages.map((image) => {
+              const ratio = image.node.width / image.node.height;
 
-            const width = ratio * 600;
+              const width = ratio * 600;
+
+              return (
+                <figure
+                  style={{ width: isMobile ? "100%" : width }}
+                  key={image.node.public_id}
+                  className="outline-none"
+                >
+                  <img
+                    className="md:mx-1 md:px-2 focus:outline-none"
+                    src={image.node.secure_url}
+                    alt={image.key}
+                  />
+                </figure>
+              );
+            })}
+          </Slider>
+          <figcaption className="text-white md:w-1/2 mb-4 mx-auto text-sm rounded-sm">
+            {artist.caption}
+          </figcaption>
+        </BrowserView>
+        <MobileView
+          className="mx-7 overflow-scroll"
+          style={{ height: "70vh" }}
+          onScroll={(e) => {
+            console.log(" SCROLLED", e);
+          }}
+        >
+          {Object.keys(byArtist).map((artistKey) => {
+            const tmpArtist = ARTISTS.find(
+              (artist) => artist.identifier === artistKey
+            );
 
             return (
-              <div style={{ width }} key={image.node.public_id.split("/")[2]}>
-                <img
-                  className="mx-1 px-2 focus:outline-none"
-                  src={image.node.secure_url}
-                  alt={image.key}
-                />
-              </div>
+              <section className="text-center align-center">
+                <Link to={`/artist?id=${tmpArtist.identifier}`}>
+                  <div className="sticky top-0">
+                    <NameVector
+                      identifier={tmpArtist.identifier}
+                      className="block h-10 md:h-16 md:inline mx-auto md:mx-0"
+                      title
+                    />
+                    <div className="text-white uppercase mb-4">
+                      {artist.title}
+                    </div>
+                  </div>
+                </Link>
+
+                {byArtist[artistKey].map((image) => (
+                  <figure key={image.node.public_id} className="mb-4">
+                    <img src={image.node.secure_url} alt={image.key} />
+                  </figure>
+                ))}
+                <figcaption className="text-white mb-4 mx-auto text-sm bg-button rounded-sm sticky bottom-0">
+                  {tmpArtist.caption}
+                </figcaption>
+              </section>
             );
           })}
-        </Slider>
-        <div className="text-white md:w-1/2 mb-4 mx-auto text-sm">
-          {artist.caption}
-        </div>
+        </MobileView>
       </main>
     </Layout>
   );
