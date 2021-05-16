@@ -98,7 +98,7 @@ const ExhibitionPage = ({ location, data }) => {
       <main
         onMouseMove={checkMousePosition}
         onClick={swipe}
-        className="mt-24 md:pt-24 w-full mb-6"
+        className="pt-24 w-full mb-6"
         style={{
           gridArea: "1/1",
         }}
