@@ -165,7 +165,7 @@ const ExhibitionPage = ({ location, data }) => {
                 <Link to={`/artist?id=${tmpArtist.identifier}`}>
                   <div
                     className="sticky top-0 z-10 mx-auto"
-                    style={{ width: "fit-content " }}
+                    style={{ width: "fit-content", position: "-webkit-sticky" }}
                   >
                     <div
                       className={CLASSES.linkOverlay}
