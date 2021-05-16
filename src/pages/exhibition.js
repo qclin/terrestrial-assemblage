@@ -98,7 +98,7 @@ const ExhibitionPage = ({ location, data }) => {
       <main
         onMouseMove={checkMousePosition}
         onClick={swipe}
-        className="pt-16 md:pt-24 w-full mb-6"
+        className="mt-24 md:pt-24 w-full mb-6"
         style={{
           gridArea: "1/1",
         }}
@@ -161,7 +161,7 @@ const ExhibitionPage = ({ location, data }) => {
             );
 
             return (
-              <section>
+              <section id={artistKey}>
                 <Link to={`/artist?id=${tmpArtist.identifier}`}>
                   <div
                     className="sticky top-0 z-10 mx-auto"
@@ -177,7 +177,7 @@ const ExhibitionPage = ({ location, data }) => {
                     ></div>
                     <NameVector
                       identifier={tmpArtist.identifier}
-                      className="block h-10 md:h-16 md:inline mx-auto md:mx-0"
+                      className="sticky top-0 block h-10 md:h-16 md:inline mx-auto md:mx-0"
                       title
                     />
                     <div className="text-white uppercase mb-4">
@@ -186,8 +186,13 @@ const ExhibitionPage = ({ location, data }) => {
                   </div>
                 </Link>
 
-                {byArtist[artistKey].map((image) => (
-                  <figure key={image.node.public_id} className="mb-4">
+                {byArtist[artistKey].map((image, idx) => (
+                  <figure
+                    key={image.node.public_id}
+                    className={clsx(
+                      idx !== byArtist[artistKey].length - 1 && "mb-4"
+                    )}
+                  >
                     <img src={image.node.secure_url} alt={image.key} />
                   </figure>
                 ))}

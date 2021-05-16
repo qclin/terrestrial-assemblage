@@ -8,16 +8,19 @@
     auto;
 }
 
-.slick-slide {
-  outline: none;
-  filter: blur(6px);
+@media (min-width: 768px) {
+  .slick-slide {
+    outline: none;
+    filter: blur(6px);
+  }
 }
 
 .slick-slide div {
   outline: none;
 }
 
-.slick-slide img:hover {
+.slick-slide img:hover,
+.image-wrapper img:hover {
   filter: none;
 }
 
