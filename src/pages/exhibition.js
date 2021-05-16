@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import * as styles from "../styles/exhibition.css"; //eslint-disable-line no-unused-vars
 import NameVector from "../components/nameVector";
 import { ARTISTS } from "../constants/constants";
-import { BrowserView, MobileView, isMobile } from "react-device-detect";
+import { BrowserView, MobileView } from "react-device-detect";
 
 const CLASSES = {
   linkOverlay: "w-full h-24 absolute filter blur-lg bg-button left-0",
@@ -27,7 +27,7 @@ const ExhibitionPage = ({ location, data }) => {
 
   const settings = {
     infinite: true,
-    slidesToShow: isMobile ? 2 : 1,
+    slidesToShow: 1,
     variableWidth: true,
     slidesToScroll: 1,
     centerMode: true,
@@ -129,12 +129,10 @@ const ExhibitionPage = ({ location, data }) => {
           >
             {clImages.map((image) => {
               const ratio = image.node.width / image.node.height;
-
               const width = ratio * 600;
-
               return (
                 <figure
-                  style={{ width: isMobile ? "100%" : width }}
+                  style={{ width }}
                   key={image.node.public_id}
                   className="outline-none"
                 >
