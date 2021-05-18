@@ -3,19 +3,18 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import BackgroundImage from "../components/background/bgAbout";
 import Video from "../components/video";
+import { LIVESTREAM_URL } from "../constants/constants";
 
 const LivestreamPage = () => {
   return (
     <Layout>
       <BackgroundImage />
-
       <Video
         style={{ height: "75vh" }}
-        className="mx-auto md:mt-24 p-2 md:p-7 bg-white-tint shadow-2xl shadow-whiteTint rounded-md w-4/5"
-        videoSrcURL=""
+        className="mx-auto mt-24 p-2 md:p-7 bg-white-tint shadow-2xl shadow-whiteTint rounded-md w-4/5"
+        videoSrcURL={LIVESTREAM_URL}
         videoTitle="livestream of the symposium"
       />
-      <main></main>
     </Layout>
   );
 };

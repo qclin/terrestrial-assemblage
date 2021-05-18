@@ -26,7 +26,13 @@ const TalkRow = ({ talk }) => {
     return [
       <div className={CLASSES.time}>{localTimeString}</div>,
       <div className={clsx([CLASSES.text, CLASSES.textColumn])}>
-        {talk.title}
+        {talk.id && (
+          <NameVector
+            identifier={talk.id}
+            className="h-14 md:h-24 w-auto max-w-full"
+          />
+        )}
+        <div>{talk.title}</div>
       </div>,
     ];
   }

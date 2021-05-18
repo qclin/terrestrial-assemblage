@@ -33,7 +33,7 @@ const PAGES = [
   { path: BOOKING_URL, en: VisitSVG, de: DEVisitSVG, external: true },
   { path: "artists", en: ArtistsSVG, de: DEArtistsSVG },
   { path: "program", en: ProgramSVG, de: DEProgramSVG },
-  // { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
+  { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
   { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
 ];
 

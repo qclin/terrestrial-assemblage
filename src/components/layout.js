@@ -6,6 +6,8 @@ import LanguageToggle from "./languageToggle";
 import Menu from "./menu";
 import Footer from "./footer";
 import BackIcon from "../assets/svgs/icons/back.svg";
+import Video from "./video";
+import isWithinInterval from "date-fns/isWithinInterval";
 
 export default function Layout({ children, canGoBack }) {
   const [mousePosition, setMousePosition] = useState({
@@ -18,7 +20,13 @@ export default function Layout({ children, canGoBack }) {
       top: event.clientY,
     });
   };
+  const timeNow = new Date();
+  const conferenceTime = {
+    start: new Date("2021-05-18T09:00:00.000+02:00"),
+    end: new Date("2021-05-18T19:00:00.000+02:00"),
+  };
 
+  const isStreaming = isWithinInterval(timeNow, { start: conferenceTime });
   return (
     <div onMouseMove={handleMoveMove}>
       <Menu />
@@ -32,6 +40,7 @@ export default function Layout({ children, canGoBack }) {
         </button>
       )}
       {children}
+
       <MouseOverlay mousePosition={mousePosition} />
       <div className="md:mt-52 mx-3">
         <Footer />
