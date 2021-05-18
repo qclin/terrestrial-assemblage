@@ -23,5 +23,5 @@
 
 .float-item {
   transform: translatey(0px);
-  animation: float 15s ease-in-out infinite;
+  animation: float 30s ease-in-out infinite;
 }
