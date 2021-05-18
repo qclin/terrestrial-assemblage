@@ -22,7 +22,7 @@ const TalkPage = ({ location, data }) => {
 
   if (!talkNode) return <div>Talk not found</div>;
   return (
-    <Layout canGoBack>
+    <Layout canGoBack showLivestream>
       <BackgroundImage />
       <main className="m-7 pt-16 md:ml-32 md:pt-24">
         <section className="mb-8 text-center md:text-left text-white">
@@ -33,6 +33,7 @@ const TalkPage = ({ location, data }) => {
               className="h-14 md:h-24 mx-auto md:mx-0 mb-4"
             />
           )}
+
           <div className="max-w-xl">
             {talkNode.organization && [talkNode.organization, <br />]}
 
