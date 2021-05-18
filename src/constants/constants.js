@@ -81,4 +81,5 @@ export const ARTISTS = [
 export const BOOKING_URL =
   "https://www.eventbrite.com/e/terrestrial-assemblage-tickets-152194617197";
 
-export const LIVESTREAM_URL = "https://www.youtube.com/embed/BNxjC3DCBjk";
+export const LIVESTREAM_URL =
+  "https://www.youtube.com/embed/BNxjC3DCBjk?channel=TerrestrialAssemblage&autoplay=1";

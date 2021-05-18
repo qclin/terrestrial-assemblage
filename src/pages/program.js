@@ -8,6 +8,9 @@ import BackgroundImage from "../components/background/bgProgram";
 import clsx from "clsx";
 import TitleSVG from "../assets/svgs/headers/symposium-title.svg";
 import MobileTitleSVG from "../assets/svgs/headers/symposium-title-mobile.svg";
+import Video from "../components/video";
+import { LIVESTREAM_URL } from "../constants/constants";
+import { Link } from "gatsby-plugin-react-i18next";
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9",
@@ -37,6 +40,17 @@ const ProgramPage = ({ data }) => {
           <TitleSVG className="max-w-full hidden md:block" />
           <MobileTitleSVG className="block md:hidden" />
         </div>
+        <Link
+          to="/livestream"
+          className="float-item fixed bottom-20 right-20 hidden md:block"
+        >
+          <Video
+            style={{ height: "300px", width: "500px" }}
+            className="mx-auto mt-24 p-2 md:p-2 bg-algea-tint shadow-sm shadow-tintAlgea rounded-sm"
+            videoSrcURL={LIVESTREAM_URL + "&controls=0"}
+            videoTitle="livestream of the symposium"
+          />
+        </Link>
         <div className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textBlock, CLASSES.textColumn])}>
             <div
