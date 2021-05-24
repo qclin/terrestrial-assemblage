@@ -13,6 +13,7 @@ const sourceCloudinary = {
     resourceType: `image`,
     prefix: `terrestrial-assemblage/`,
     maxResults: 500,
+    context: true
   },
 };
 
