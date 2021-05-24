@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "../styles/exhibition.css"; //eslint-disable-line no-unused-vars
 import NameVector from "../components/nameVector";
-import InstallationShot from "../components/InstallationShot";
+import InstallationShot from "../components/installationShot";
 import { ARTISTS } from "../constants/constants";
 import { BrowserView, MobileView } from "react-device-detect";
 
