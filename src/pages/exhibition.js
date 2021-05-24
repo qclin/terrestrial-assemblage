@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "../styles/exhibition.css"; //eslint-disable-line no-unused-vars
 import NameVector from "../components/nameVector";
+import InstallationShot from "../components/InstallationShot";
 import { ARTISTS } from "../constants/constants";
 import { BrowserView, MobileView } from "react-device-detect";
 
@@ -85,6 +86,7 @@ const ExhibitionPage = ({ location, data }) => {
 
   const byArtist = groupBy(clImages, (img) => img.node.public_id.split("/")[2]);
 
+  
   return (
     <Layout canGoBack>
       <div className="grid fixed inset-0 w-full h-full" style={{ zIndex: -20 }}>
@@ -146,61 +148,17 @@ const ExhibitionPage = ({ location, data }) => {
             })}
           </Slider>
           <figcaption className="text-white md:w-1/2 mb-4 mx-auto text-sm rounded-sm">
-            {artist.caption}
+            {clImages[activeIndex].node.context.custom.alt}
           </figcaption>
         </BrowserView>
         <MobileView
           className="mx-7 overflow-scroll image-wrapper"
           style={{ height: "80vh" }}
         >
-          {Object.keys(byArtist).map((artistKey) => {
-            const tmpArtist = ARTISTS.find(
-              (artist) => artist.identifier === artistKey
-            );
-
-            return (
-              <section id={artistKey}>
-                <Link to={`/artist?id=${tmpArtist.identifier}`}>
-                  <div
-                    className="sticky top-0 z-10 mx-auto"
-                    style={{ width: "fit-content", position: "-webkit-sticky" }}
-                  >
-                    <div
-                      className={CLASSES.linkOverlay}
-                      style={{
-                        mixBlendMode: "color",
-                        borderRadius: "6px",
-                        filter: "blur(16px)",
-                      }}
-                    ></div>
-                    <NameVector
-                      identifier={tmpArtist.identifier}
-                      className="sticky top-0 block h-10 md:h-16 md:inline mx-auto md:mx-0"
-                      title
-                    />
-                    <div className="text-white uppercase mb-4">
-                      {artist.title}
-                    </div>
-                  </div>
-                </Link>
-
-                {byArtist[artistKey].map((image, idx) => (
-                  <figure
-                    key={image.node.public_id}
-                    className={clsx(
-                      idx !== byArtist[artistKey].length - 1 && "mb-4"
-                    )}
-                  >
-                    <img src={image.node.secure_url} alt={image.key} />
-                  </figure>
-                ))}
-
-                <figcaption className="text-left text-white mb-4 mx-auto text-sm bg-button rounded-sm sticky bottom-0">
-                  {tmpArtist.caption}
-                </figcaption>
-              </section>
-            );
-          })}
+          {Object.keys(byArtist).map((artistKey) => (
+            <InstallationShot key={artistKey} artistKey={artistKey} artist={ARTISTS.find(
+              (a) => a.identifier === artistKey)} images={byArtist[artistKey]} />
+          ))}
         </MobileView>
       </main>
     </Layout>
@@ -231,6 +189,11 @@ export const query = graphql`
           public_id
           width
           height
+          context {
+            custom {
+              alt
+            }
+          }
         }
       }
     }
