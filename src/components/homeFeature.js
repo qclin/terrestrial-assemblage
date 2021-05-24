@@ -24,7 +24,7 @@ const HomeFeature = ({ featureJson, clImages }) => {
       clImage.public_id.includes(item.key)
     );
     setFeature(tmp);
-  }, [clImages]);
+  }, [clImages, featureJson]);
 
   if (!feature || !image) return null;
   return (

@@ -7,9 +7,10 @@ import clsx from "clsx";
 import BackgroundImage from "../components/background/bgTalk";
 import { Remarkable } from "remarkable";
 import NameVector from "../components/nameVector";
+import Video from "../components/video";
 
 const CLASSES = {
-  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4",
+  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 md:mt-10",
   textColumn: "md:col-span-2 lg:col-span-4 lg:col-start-1 p-2 mb-10 md:px-8",
   textBlock: "bg-white rounded-md shadow-md shadow-white",
 };
@@ -22,9 +23,9 @@ const TalkPage = ({ location, data }) => {
 
   if (!talkNode) return <div>Talk not found</div>;
   return (
-    <Layout canGoBack showLivestream>
+    <Layout canGoBack>
       <BackgroundImage />
-      <main className="m-7 pt-16 md:ml-32 md:pt-24">
+      <main className="m-7 pt-16 md:ml-32 md:pt-12">
         <section className="mb-8 text-center md:text-left text-white">
           <span className="text-base w-36 inline">{time}</span>
           {talkNode.speaker && (
@@ -40,6 +41,15 @@ const TalkPage = ({ location, data }) => {
             <span>⟶ {talkNode.title}</span>
           </div>
         </section>
+        {talkNode.video && (
+          <section className="md:mr-24 mb-5">
+            <Video
+              videoSrcURL={talkNode.video}
+              className="mx-auto"
+              id="video"
+            />
+          </section>
+        )}
         <section className={CLASSES.textGrid}>
           <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
             <div
@@ -100,6 +110,7 @@ export const query = graphql`
         time
         title
         website
+        video
       }
     }
   }

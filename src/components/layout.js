@@ -21,13 +21,7 @@ export default function Layout({ children, canGoBack, showLivestream }) {
       top: event.clientY,
     });
   };
-  // const timeNow = new Date();
-  // const conferenceTime = {
-  //   start: new Date("2021-05-18T09:00:00.000+02:00"),
-  //   end: new Date("2021-05-18T19:00:00.000+02:00"),
-  // };
 
-  // const isStreaming = isWithinInterval(timeNow, { start: conferenceTime });
   return (
     <div onMouseMove={handleMoveMove}>
       <Menu />

@@ -8,9 +8,7 @@ import BackgroundImage from "../components/background/bgProgram";
 import clsx from "clsx";
 import TitleSVG from "../assets/svgs/headers/symposium-title.svg";
 import MobileTitleSVG from "../assets/svgs/headers/symposium-title-mobile.svg";
-import Video from "../components/video";
-import { LIVESTREAM_URL } from "../constants/constants";
-import { Link } from "gatsby-plugin-react-i18next";
+
 
 const CLASSES = {
   textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9",
@@ -29,10 +27,9 @@ const ProgramPage = ({ data }) => {
       <BackgroundImage />
 
       <section
-        className="grid relative m-7 pt-16 md:ml-32 md:pt-24 overflow-auto"
+        className="grid m-7 pt-16 md:ml-32 md:pt-24"
         style={{
           gridArea: "1/1",
-          height: "100vh",
           scrollbarWidth: "thin",
         }}
       >
@@ -50,12 +47,12 @@ const ProgramPage = ({ data }) => {
             />
           </div>
         </div>
-        <div className={clsx([CLASSES.textGrid, "my-8 md:my-24 pb-28"])}>
+      </section>
+      <section className="m-7 md:ml-32  pb-28">
           {program.talks.map((talk, index) => (
             <TalkRow talk={talk} key={`talk.${index}`} />
           ))}
-        </div>
-      </section>
+        </section>
     </Layout>
   );
 };
@@ -92,6 +89,7 @@ export const query = graphql`
         time
         title
         website
+        video
       }
     }
   }

@@ -4,7 +4,11 @@ import { utcToZonedTime, format } from "date-fns-tz";
 import enGB from "date-fns/locale/en-GB";
 import { Link } from "gatsby-plugin-react-i18next";
 import NameVector from "./nameVector";
+import Video from "./video";
+
+
 const CLASSES = {
+  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9",
   time: "text-base w-36 text-white md:col-start-1 mt-10 md:mt-0",
   text: "text-white backdrop-filter backdrop-blur-sm",
   textColumn: "md:col-span-2 lg:col-span-6",
@@ -24,7 +28,8 @@ const TalkRow = ({ talk }) => {
 
   if (!talk.description) {
     return [
-      <div className={CLASSES.time}>{localTimeString}</div>,
+    <div className={clsx([CLASSES.textGrid, talk.video ? "mt-8" : "my-8 md:my-24"])} >
+      <div className={CLASSES.time}>{localTimeString}</div>
       <div className={clsx([CLASSES.text, CLASSES.textColumn])}>
         {talk.id && (
           <NameVector
@@ -33,12 +38,20 @@ const TalkRow = ({ talk }) => {
           />
         )}
         <div>{talk.title}</div>
-      </div>,
+      </div>
+      </div>,  
+      talk.video && (
+          <Video
+            videoSrcURL={talk.video}
+            style={{ maxWidth: "800px",  height: "400px"}}
+            className="mt-8 mb-8"
+          />
+      )
     ];
   }
 
-  return [
-    <div className={CLASSES.time}>{localTimeString}</div>,
+  return <div className={clsx([CLASSES.textGrid, "my-8 md:my-24"])}>
+    <div className={CLASSES.time}>{localTimeString}</div>
     <Link
       to={`/talk?id=${talk.id}&time=${localTimeString}`}
       className={clsx([CLASSES.textColumn, CLASSES.text, "max-w-xl"])}
@@ -61,8 +74,9 @@ const TalkRow = ({ talk }) => {
         {talk.organization}
         <div className="hover:underline">⟶ {talk.title}</div>
       </div>
-    </Link>,
-  ];
+    </Link>
+    </div>
+  ;
 };
 
 export default TalkRow;
