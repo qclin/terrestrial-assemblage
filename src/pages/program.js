@@ -23,7 +23,7 @@ const ProgramPage = ({ data }) => {
   const program = data.program;
 
   return (
-    <Layout showLivestream>
+    <Layout>
       <BackgroundImage />
 
       <section

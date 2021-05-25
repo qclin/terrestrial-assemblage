@@ -6,14 +6,12 @@ import clsx from "clsx";
 import AboutSVG from "../assets/svgs/headers/en/menu/about.svg";
 import ArtistsSVG from "../assets/svgs/headers/en/menu/artists.svg";
 import ExhibitionSVG from "../assets/svgs/headers/en/menu/exhibition.svg";
-import LivestreamSVG from "../assets/svgs/headers/en/menu/livestream.svg";
 import ProgramSVG from "../assets/svgs/headers/en/menu/program.svg";
 import VisitSVG from "../assets/svgs/headers/en/menu/visit.svg";
 
 import DEAboutSVG from "../assets/svgs/headers/de/menu/about.svg";
 import DEArtistsSVG from "../assets/svgs/headers/de/menu/artists.svg";
 import DEExhibitionSVG from "../assets/svgs/headers/de/menu/exhibition.svg";
-import DElivestreamSVG from "../assets/svgs/headers/de/menu/livestream.svg";
 import DEProgramSVG from "../assets/svgs/headers/de/menu/program.svg";
 import DEVisitSVG from "../assets/svgs/headers/de/menu/visit.svg";
 import { BOOKING_URL } from "../constants/constants";
@@ -33,7 +31,6 @@ const PAGES = [
   { path: BOOKING_URL, en: VisitSVG, de: DEVisitSVG, external: true },
   { path: "artists", en: ArtistsSVG, de: DEArtistsSVG },
   { path: "program", en: ProgramSVG, de: DEProgramSVG },
-  { path: "livestream", en: LivestreamSVG, de: DElivestreamSVG },
   { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
 ];
 
