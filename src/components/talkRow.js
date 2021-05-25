@@ -52,7 +52,7 @@ const TalkRow = ({ talk }) => {
       {talk.speaker && (
         <NameVector
           identifier={talk.speaker.name}
-          className="h-14 md:h-24 w-auto max-w-full"
+          className="h-14 md:h-24 w-auto max-w-full md:max-w-none"
         />
       )}
       <div className="relative" style={{ height: "fit-content" }}>
