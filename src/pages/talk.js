@@ -51,6 +51,7 @@ const TalkPage = ({ location, data }) => {
           </section>
         )}
         <section className={CLASSES.textGrid}>
+          {talkNode.description && 
           <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
             <div
               className="description"
@@ -58,8 +59,8 @@ const TalkPage = ({ location, data }) => {
                 __html: md.render(talkNode.description),
               }}
             />
-          </div>
-          <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
+          </div>}
+         {talkNode.speaker &&  <div className={clsx([CLASSES.textColumn, CLASSES.textBlock])}>
             <div
               className="description"
               dangerouslySetInnerHTML={{
@@ -76,7 +77,7 @@ const TalkPage = ({ location, data }) => {
                 website
               </a>
             )}
-          </div>
+          </div>}
         </section>
       </main>
     </Layout>

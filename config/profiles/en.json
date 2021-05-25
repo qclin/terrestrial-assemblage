@@ -57,7 +57,13 @@
       "video": {
         "url": "https://player.vimeo.com/video/260849191",
         "caption": "A Horse with Wheels (2017), video still, HD video, stereo sound, 29 min"
-      }
+      },
+      "associations": [
+        {
+          "label": "Symposium screening",
+          "path": "/talk?id=Clemens_Joakim&time=13:00%20CEST"
+        }
+      ]
     },
     {
       "name": "Folke Köbberling",

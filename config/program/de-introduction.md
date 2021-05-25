@@ -3,5 +3,3 @@ Künstler\*innen, Umweltaktivist\*innen und Wissenschaftler\*innen stellen ihre 
 Das Symposium wird ermöglicht durch die freundliche Unterstützung durch das Koreanische Kulturzentrum Berlin, die Hanns Seidel Stiftung sowie den Bund für Umwelt und Naturschutz Deutschland e.V. (BUND).
 
 Livestream hier und im Auditorium der [Floating ~~University~~ Berlin](http://www.floatinguniversity.org/)
-
-**Moderation: [Carola Uehlken](https://www.carolauehlken.com/)**

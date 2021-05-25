@@ -2,9 +2,15 @@
   "language": "de",
   "talks": [
     {
+      "id": "introduction",
       "time": "2021-05-18T10:10:00.000+02:00",
-      "title": "Einführung", 
-      "video": "https://www.youtube.com/embed/mJaZ1BISh2o?autoplay=1&rel=0&modestbranding=1"
+      "title": "Einführung \n\r moderation: Carola Uehlken",
+      "video": "https://www.youtube.com/embed/mJaZ1BISh2o?autoplay=1&rel=0&modestbranding=1",
+      "speaker": {
+        "name": "Carola Uehlken",
+        "biography": "Carola Uehlken (Berlin) ist Kuratorin, Autorin und bildende Künstlerin und lebt in Berlin. Derzeit interessiert sie sich für globale Transportmechanismen und die Zirkulation von Waren; mikrobiotische Systeme und die Art und Weise, wie sie menschliches Verhalten und Wohlbefinden beeinflussen; biomimetische Architektur sowie Mantarochen. Sie schreibt Artikel für Kataloge und unabhängige Publikationsplattformen."
+      },
+      "website": "https://www.carolauehlken.com/"
     },
     {
       "id": "1015_going_north_from_the_dmz",
@@ -15,9 +21,8 @@
       },
       "organization": "Hanns Seidel Stiftung Büro Seoul",
       "description": "Die Natur überwindet menschgemachte Grenzen. Dies wird besonders deutlich, wenn Zugvögel die Grenze in der entmilitarisierten Zone zwischen der Republik Korea im Süden und der Demokratischen Volksrepublik Korea im Norden überqueren. Die koreanische Halbinsel ist aufgrund ihrer zentralen Lage auf dem East-Asian Australasian Flyway von großer Bedeutung für die Artenvielfalt in der Region. Das Land nördlich der entmilitarisierten Zone ist aber auch eines der isoliertesten Länder der Erde. Während die Globalisierung Brücken zwischen vielen Orten geschlagen hat - oft auch zwischen ehemals verfeindeten Staaten - blieb die DVR Korea isoliert. In diesem Zusammenhang wird zum Beispiel die Idee eines Friedensparks in der entmilitarisierten Zone seit langer Zeit diskutiert (Kim 1997, Brady 2008; Park 2013), aber die praktischen Initiativen gehen schon jetzt darüber hinaus. Die Hanns-Seidel-Stiftung hat sich seit 2015 dafür engagiert, um die Akteure in Nordkorea, insbesondere das Ministry of Land and Environment Protection, mit Vertretern internationaler Organisationen und nationaler Regierungen zusammenzubringen. Dr. Bernhard Seliger, der Repräsentant der Hanns-Seidel-Stiftung Korea präsentiert die Projekte von letzten zwei Jahrzehnten sowohl in Nordkorea, als auch im Grenzgebiet in Südkorea, in dem die Tragödie der Teilung zugleich die biologische Vielfalt koexistiert. ",
-      "time": "2021-05-18T10:15:00.000+02:00", 
+      "time": "2021-05-18T10:15:00.000+02:00",
       "video": "https://www.youtube.com/embed/bqNAa1i4ylU?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1045_santiago_sierra",
@@ -30,7 +35,6 @@
       "time": "2021-05-18T10:45:00.000+02:00",
       "website": "https://www.santiago-sierra.com",
       "video": "https://www.youtube.com/embed/vSMWh-iRigE?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1115_the_demilitarized_zone_as_a_tool_for_peace",
@@ -41,9 +45,8 @@
       },
       "organization": "Direktor, DMZ Forschungsinstitut für Ökologie",
       "description": "Die Demilitarisierte Zone (DMZ) wurde im Zuge der Nachkriegsordnung eingerichtet und ist zu einem „magischen Werkzeug“ geworden, um kriegerische Auseinandersetzung zu verhindern. Sie ist gleichzeitig ein Code, mit dem die moderne koreanische Geschichte gelesen werden kann. Die DMZ auf der Koreanischen Halbinsel unterscheidet sich in ihrem Charakter stark von Demilitarisierten Zonen in anderen Ländern. Sie ist da, den Frieden zu sichern, und dabei weltweit der Ort mit den meisten Waffen. Sie prägt die koreanische Gegenwart, sie ist brutal und bizarr und jederzeit in der Lage die internationalen Beziehungen von einem Augenblick in den anderen ins Chaos zu stürzen. Das Ökosystem der DMZ gehört dabei zu den drei ökologischen „Zentralachsen“ auf der Koreanischen Halbinsel, die zusammen mit dem Baekdudaegan-Gebirge und den Küstenfeuchtgebieten den Osten und Westen miteinander verbindet. Dieser ökologische Raum zeichnet sich durch eine große Artenvielfalt aus, die in unterschiedlichen, sich überschneidenden topografischen Zonen existiert. Kim Seung Ho, Direktor des DMZ Ecology Research Institute, präsentiert den ökologischen Wert der DMZ als gemeinsames Gut der beiden Koreas, erklärt den Leitfaden der bisherigen DMZ-Politik der südkoreanischen Regierung und ihre Auswirkungen auf das Ökosystem und beschreibt abschließend wie aus seiner Sicht die DMZ als Werkzeug für den Frieden genutzt werden könnte.",
-      "time": "2021-05-18T11:15:00.000+02:00", 
+      "time": "2021-05-18T11:15:00.000+02:00",
       "video": "https://www.youtube.com/embed/8ODvxdb-m-Y?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1140_the_moment_before_the_explosion",
@@ -54,9 +57,8 @@
       },
       "description": "Wie alle Traumata können auch Kriegstraumata als eine Reihe von Narben gesehen werden, die von Erinnerung, Angst, Identität und Politik erzählen [Judith Herman, m.d., 2015]. Das Wahrnehmen dieser Narben kann nicht nur offenbaren, wie ihre Intensität im Diskurs wirkt, sondern wirft auch ein Licht darauf, wie die Mechanismen von Wissen, Identität und Bedeutung geschaffen werden [Foucault, 1972]. Sie verkörpern die Erinnerung, aber auch die Amnesie und das Trauma des Krieges. In verschiedenen Formen und wechselnden Mustern schaffen sie fluide Atmosphären. Die Wirkung eines Traumas ist das Gegenteil von linearer Zeit. Die Vergangenheit wird in die Zukunft projiziert und kommt zurück, um die Gegenwart zu erschaffen, wodurch eine fließende Umgebung entsteht, die es dem lebendigen Trauma erlaubt, Gestalt anzunehmen und zu zirkulieren [Pierre Klossowski, 1970] [Christina Sharpe, 2016]. Wachmann fokussiert dabei auf den Moment vor dem Trauma als Begriff, um Zeit und Ereignis auf eine andere Weise zu bearbeiten als rein linear. Sie stellt die Frage, ob der Moment vor dem Trauma nicht nur zur Explosion führt, sondern auch die Fähigkeit besitzt, die Form oder sogar die Art und Weise des Ereignisses zu verändern.",
       "time": "2021-05-18T11:40:00.000+02:00",
-      "website": "http://www.shirawachsmann.com", 
+      "website": "http://www.shirawachsmann.com",
       "video": "https://www.youtube.com/embed/y3FHNWOKQx8?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1200_liberty_of_movement_as_artistic_practice",
@@ -67,10 +69,8 @@
       },
       "description": "[Mischa Leinkauf](/de/artist?id=Mischa_Leinkauf) befasst sich mit den Limitierungen von Räumen durch Grenzen, Regeln und Barrieren. Dabei sucht er meist den physischen Zugang zu politischen und architektonischen Grenzräumen, um sie temporär außer Kraft zu setzen. Sei es wie in der Ausstellung zu sehen überwachte Staatsgrenzen oder wie am Beispiel der Arbeit „White American Flags“ die Aneignung von nicht-öffentlichem Stadtraum auf den Türmen der Brooklyn Bridge in New York. Für das Symposium stellt Mischa Leinkauf ausgewählte Arbeiten vor, die hinterfragen wie vorformatiert und zweckorientiert unsere öffentlichen Räume heutzutage sind.",
       "time": "2021-05-18T12:00:00.000+02:00",
-      "website": "https://alexanderlevy.de/artist/mischa-leinkauf",       
+      "website": "https://alexanderlevy.de/artist/mischa-leinkauf",
       "video": "https://www.youtube.com/embed/PWiB4VkXtQY?autoplay=1&rel=0&modestbranding=1"
-
-
     },
     {
       "title": "Fragen und Antworten, Diskussionsrunde",
@@ -80,7 +80,8 @@
       "id": "Clemens_Joakim",
       "title": "Streaming Live: Die Linie, 2019",
       "time": "2021-05-18T13:00:00.000+02:00",
-      "video": "https://player.vimeo.com/video/332007754"
+      "video": "https://player.vimeo.com/video/332007754",
+      "description": "[Clemens Wilhelm](/de/artist?id=Clemens_Wilhelm) wandert die komplette ehemalige deutsch-deutsche Grenze entlang. Er folgt dabei mit seiner Kamera dem früheren Todesstreifen, dem heutigen Naturschutzgebiet “Das Grüne Band”. Der Weg von 1.400 km führt ihn dabei in zwei Monaten von Tschechien bis and die Ostsee.\n\rJeweils nach 15 min Wanderung hält [Clemens Wilhelm](/de/artist?id=Clemens_Wilhelm) an, um ein Foto aufzunehmen: der Westen links im Bild, der Osten rechts, in der Bildmitte der ehemalige Grenzweg. In 975 Einzelbildern und 67 min reist der Betrachter dieses immersiven und hypnotischen Films selbst einmal durch Deutschland, entlang der gesamten ehemaligen Grenze.\n\r\n\rEin Soundtrack von [Joakim Blattmann](https://jblattmann.com/), der aus einer musikalischen Komposition aus bearbeiteten Originaltonaufnahmen von der Grenze besteht, begleitet die Bilder des Films.\n\r\n\rDie deutsch-deutsche Grenze ist ein faszinierender Nicht-Ort. Kaum jemand kennt sie aus eigener Erfahrung oder hat sie bereist, aber fast alle Deutschen haben sie einmal überquert. Sie exisitiert im kollektiven Gedächtnis und in der kollektiven Vorstellung der Deutschen weiter.\n\r\n\rDie deutsche Wiedervereinigung ist auch nach fast 30 Jahren ein nicht abgeschlossener Prozess. Auch global sind Mauern als politisches Mittel nicht ein Relikt der Vergangenheit und des Kalten Kriegs, sondern weiter im Bereich des politisch Möglichen: Die EU zäunt sich ein, Großbritannien grenzt sich ab, und der US-Präsident plant, eine Mauer zu Mexiko zu bauen etc.\n\r\n\r(Die Produktion von DIE LINIE wurde unterstützt durch ein Einjähriges Arbeitsstipendium der Stiftung Kunstfonds)"
     },
     {
       "id": "1400_green_belt-from_iron_curtain_to_lifeline",
@@ -91,9 +92,8 @@
       },
       "organization": "Leiterin der BUND-Abteilung Grünes Band",
       "description": "Das Grüne Band bildet einen über 12.500 Kilometer langen Lebensraumverbund durch ganz Europa, der entlang des einstigen Eisernen Vorhangs vom Eismeer im hohen Norden bis in den mediterranen Süden Europas an die Adria und das Schwarze Meer reicht. Das Grüne Band Europa weist eine außergewöhnliche Vielfalt an Tieren und Pflanzen auf. Es stellt aber auch eine einmalige Erinnerungslandschaft an die Überwindung des Kalten Krieges dar. Von den 24 Anrainerstaaten haben sich bereits 20 durch politische Absichtserklärungen offiziell zum Schutz und zur Weiterentwicklung dieses bedeutenden ökologischen Korridors bekannt. Dr. Liana Geidezis, die Leiterin vom BUND-Abteilung Grünes Band, stellt den Verwandlungsprozess des ehemaligen Grenzstreifens entlang des einstigen Eisernen Vorhangs nach dem Mauerfall in den Lebensraumverbund, sowie das Engagement vom BUND für die Nominierung des Grünen Bandes Europa als UNESCO-Welterbe anläßlich des 30-jährigen Jubiläums der Öffnung des Eisernen Vorhangs in 2019. Basis dafür ist ein Forschungsvorhaben von 2014 im Auftrag des BfN, in dem Nominierungsszenarien für das Grüne Band Europa anhand der UNESCO-Kriterien untersucht wurden. Die Studie empfiehlt eine Nominierung als „gemischte Stätte“, also Natur- und Kulturerbe Stätte, und eine grenzübergreifende serielle Ausweisung mit einem Nominierungsprozess in mehreren Phasen. Es ist davon auszugehen, dass der Prozess der Nominierung mehrere Jahre in Anspruch nehmen und eine enge Zusammenarbeit von Naturschutz- und Kulturvertretern, Historikern und Denkmalschützern erfordern wird.",
-      "time": "2021-05-18T14:00:00.000+02:00", 
+      "time": "2021-05-18T14:00:00.000+02:00",
       "video": "https://www.youtube.com/embed/Fgm-UdjgyMU?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1400_green_belt-memorial_landscape",
@@ -106,7 +106,6 @@
       "description": "Das Grüne Band muss im Dreiklang Natur-Kultur-Geschichte verstanden werden. Erst die gesamthafte Betrachtung rechtfertigt die Ausweisung als Nationales Naturmonument, die Forderung, es als UNESCO-Welterbe zu nominieren, erklärt seine Bedeutung, seine hohe Wertschätzung in der Öffentlichkeit und seine auch nach 30 Jahren ungebrochene mediale Präsenz. Die innerdeutsche Grenze forderte zahlreiche Todesopfer und verursachte darüber hinaus viel persönliches Leid, z. B. durch das Schleifen von Ortschaften und die Zwangsumsiedlung Tausender Menschen. In der Euphorie des Mauerfalls wurde kaum an Denkmalschutz gedacht, so dass bereits wenige Tage nach der Wende ungeordnet Grenzanlagen abgebaut wurden. Das 1.393 km lange Grüne Band in Deutschland ist eine sichtbare und nachvollziehbare Struktur in der Landschaft, die die räumliche Ausdehnung der Grenzanlagen - und an den meisten Stellen auch noch deren charakteristischen Aufbau - nachvollziehen lässt und einzelne Gedenkorte und Relikte miteinander verknüpft. Da durch die menschenverachtenden Grenzanlagen paradoxerweise die Natur überleben konnte, schließt somit die Erhaltung des Grünen Bandes untrennbar auch jene der Grenzrelikte mit ein. Melanie Kreuz, BUND-Abteilung Grünes Band präsentiert die zunehmende Bedeutung des Grünes Bandes als Erinnerungslandschaft, die Erlebbarkeit des Grünes Bands für Einheimischen und Touristen , sowie das Engagement vom BUND, um Gedenkorte im Grünen Band kontinuierlich sichtbar zu machen.",
       "time": "2021-05-18T14:00:00.000+02:00",
       "video": "https://www.youtube.com/embed/Fgm-UdjgyMU?autoplay=1&rel=0&modestbranding=1t=19m18s"
-
     },
     {
       "id": "1430_my_own_dmz_story:_landscape_research_and_art_projects_along_the_borderline",
@@ -117,9 +116,8 @@
       },
       "organization": "Professor für Landschaftsarchitektur und Dekan des Instituts für Umweltstudien an der Nationalen Universität in Seoul sowie Präsident des Koreanischen Instituts der Landschaftsarchitekten",
       "description": "Kyung Jin Zoh stellt seine persönlichen Erfahrungen und Erinnerungen im Zusammenhang mit der Demilitarisierten Zone vor. Seine Beziehung zur DMZ begann, als er die Gründung der sogenannten Friedensstadt in Cheorwon koordinierte. Dabei handelte es sich um ein Gemeinschaftsdesignprojekt zum Bau eines Zentrums für Zugvögel. Dadurch entwickelte Zoh ein tiefergehendes Interesse für die DMZ und die Grenzgebiete. Er unternahm mehrere Landschaftsforschungen in Bezug auf Cheorwon, die ihn dazu brachten, sich in Kunstprojekten mit der DMZ zu beschäftigen. In seinem Vortrag erläutert er die Hintergründe seiner Kunstprojekten, unter ihnen das Observatoriumsprojekt, eine künstlerische Forschung über die Grenze, in der er verborgene Ruinenlandschaften des Kalten Krieges entdeckte. Neben diesem Projekt zeigt Zoh weitere kuratorische Arbeiten und möchte abschließend Fragen zu möglichen Zukunftsplänen in Bezug auf die DMZ aufwerfen.",
-      "time": "2021-05-18T14:30:00.000+02:00", 
+      "time": "2021-05-18T14:30:00.000+02:00",
       "video": "https://www.youtube.com/embed/D7stiGDIyb8?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "title": "Fragen und Antworten, Diskussionsrunde",
@@ -134,9 +132,8 @@
       },
       "description": "Die ökologische Zerstörung durch den Bergbau im venezolanischen Amazonasgebiet hat eine Auswirkung, die über die eigene Geographie hinausgeht und eine existenzielle über die eigene Geographie hinaus und erreicht eine existenzielle planetarische Dimension. _We are satellites_ zielt darauf ab, verschiedene Arten der Annäherung an ein kritisches und weit entferntes Territorium durch technologische, wissenschaftliche, künstlerische und spekulative Mittel. Neue Grenzen werden für die Bergbaukonzessionsblöcke in der Region geschaffen, und diese Grenzen überschneiden sich mit älteren, die große Gebiete von außerordentlichem ökologischem und wissenschaftlichem Wert schützen. Es scheint, dass der Amazonas immer noch als eine ressourcenreiche Region angesehen wird, die ausgebeutet werden muss, oder als eine unberührte Umwelt, die geschützt werden muss. eine unberührte Umwelt, die geschützt werden muss, ein Garten Eden, der unter Glas gehalten werden muss. Aber der Amazonas ist weder ein leeres Land, noch ein unbewohntes. Es ist ein Gebiet, das von Städten und Dörfern geprägt ist, von verschiedenen Völkern mit ihren eigenen Kulturen und Ökonomien. Daher hat jede Grenze, die geschaffen und ihnen auferlegt wird, Auswirkungen auf ihr Leben. Wie kann man die Auswirkungen einer räuberischen Logik entschlüsseln und überdenken, die sich in der Verletzung von Menschenrechten, der Zerstörung von indigenen Völkern und Kulturen, dem Verlust von Biodiversität und Ökosystemen in Schutzgebieten zeigt. In diesem Zusammenhang wird das Vorstellen und Diskutieren alternativer Zukünfte zu eine wichtige Aufgabe, denn wenn bestimmte Weltanschauungen tief in einer Gesellschaft verwurzelt sind, können sie zu Grenzen werden, aus denen es schwierig sein kann, herauszukommen.",
       "time": "2021-05-18T15:15:00.000+02:00",
-      "website": "http://www.anaalenso.com", 
+      "website": "http://www.anaalenso.com",
       "video": "https://www.youtube.com/embed/kgDcMMiIgRQ?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1550_green_blue_deal_for_the_middle_east",
@@ -148,9 +145,8 @@
       "organization": "Wasserbeauftragter, EcoPeace Middle East",
       "description": "Die Klimakrise wird oft als Bedrohungsmultiplikator beschrieben, der die schwache Anpassungsfähigkeit eines Staates oder einer Region beschreibt, mit den negativen Auswirkungen des Klimawandels umzugehen, so dass Stabilität und nationale Sicherheitsinteressen bedroht sind. Im Nahen Osten ist das Versäumnis, die Herausforderungen der Wasserknappheit zu lösen, ein nationales Sicherheitsproblem, das sich unter den Bedingungen des Klimawandels potenzieren wird. Allerdings kann der Klimawandel auch als Multiplikator von Chancen gesehen werden, über bisherige Politiken nachzudenken, um grenzüberschreitend zu arbeiten. So könnten nicht nur Herausforderungen bewältigt, sondern auch nachhaltigere und gerechtere Ergebnisse erzielt werden. Die Präsentation von Nadav Tal soll die Überlegungen der israelischen, jordanischen und palästinensischen Entscheidungsträger und die Bemühungen internationaler Interessenvertreter vorstellen, die Herausforderungen des Klimawandels im Nahen Osten zu bewältigen. Ein 'Middle East Green Blue Deal' - einer, der die besondere Bedeutung von Wasser und Wasserknappheit in der Region zusätzlich betont - ist ein praktischer, realisierbarer und effektiver politischer Ansatz für eine drängende Herausforderung. Er kann dazu dienen, Konfliktträger zu adressieren, eine Zweistaatenlösung auf der Grundlage der Grenzen von 1967 anzustreben sowie Vertrauensbildung und Kooperation in einer konfliktreichen Region zu fördern.",
       "time": "2021-05-18T15:50:00.000+02:00",
-      "website": "https://ecopeaceme.org", 
+      "website": "https://ecopeaceme.org",
       "video": "https://www.youtube.com/embed/7kFYIJHP7dg?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "id": "1620_peace_canal_unrealised_artistic_project",
@@ -161,9 +157,8 @@
       },
       "description": "Anne Duk Hee Jordan begann mit 13 Jahren zu tauchen. In ihrer künstlerischen Praxis sucht sie oft nach Antworten für vom Menschen verursachte Probleme aus der Perspektive des Meereslebens. Im Nahen Osten, an der Grenze zwischen Israel, dem Westjordanland und Jordanien, befindet sich das seltsamste und faszinierendste Meer der Erde: das Tote Meer. Es ist 300 Meter tief und liegt etwa 430 m unter dem Meeresspiegel. Dieses Meer ist zehnmal salziger als der Ozean und hat eine viel höhere Dichte als normales Meerwasser. Kleine Bakterienblüten kommen ebenso vor wie salzliebende Rotalgen. Das Interesse der Künstlerin gilt den unsichtbaren Grenzen Israels, des Westjordanlandes und Jordaniens sowie der ökologischen Tragödie, die dem Toten Meer droht. Umweltschützer warnen, dass das Tote Meer in 50 Jahren nicht mehr existieren wird, weil es austrocknet. \n\r\n\rIm Jahr 2013 unterzeichneten daher Jordanien, Israel und Palästina ein Abkommen zum Bau einer Pipeline, die jährlich 80 Millionen Kubikmeter Wasser vom Roten Meer zu einer Entsalzungsanlage und 120 Millionen Kubikmeter Wasser zum Toten Meer transportieren soll. Da diese gemeinsame Initiative aus Sicht der Befürworter auch ein wichtiger Schritt zur Zusammenarbeit im Nahen Osten ist, nennen sie die Pipeline PEACE CANAL. Über ihn will Jordan einen Dokumentarfilm erstellen, an dem Fachleute aus der Region beteiligt sind.",
       "time": "2021-05-18T16:20:00.000+02:00",
-      "website": "https://dukhee.de", 
+      "website": "https://dukhee.de",
       "video": "https://www.youtube.com/embed/bKPaeGFHUr0?autoplay=1&rel=0&modestbranding=1"
-
     },
     {
       "title": "Fragen und Antworten, Diskussionsrunde",

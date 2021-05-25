@@ -3,5 +3,3 @@ Artists\* and scientists\* present their interdisciplinary projects on the envir
 The symposium is made possible by the kind support of the Korean Cultural Center Berlin, the Hanns Seidel Foundation and the Bund für Umwelt und Naturschutz Deutschland e.V. (BUND).
 
 Livestream online and in the auditorium of the [Floating ~~University~~ Berlin](http://www.floatinguniversity.org/)
-
-**Moderation by [Carola Uehlken](https://www.carolauehlken.com/)**

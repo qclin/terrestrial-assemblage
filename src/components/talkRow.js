@@ -8,7 +8,7 @@ import Video from "./video";
 
 
 const CLASSES = {
-  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9",
+  textGrid: "md:grid md:grid-cols-3 lg:grid-cols-10 gap-4 gap-y-9 my-8 md:my-24",
   time: "text-base w-36 text-white md:col-start-1 mt-10 md:mt-0",
   text: "text-white backdrop-filter backdrop-blur-sm",
   textColumn: "md:col-span-2 lg:col-span-6",
@@ -26,9 +26,9 @@ const TalkRow = ({ talk }) => {
     locale: enGB,
   });
 
-  if (!talk.description) {
-    return [
-    <div className={clsx([CLASSES.textGrid, talk.video ? "mt-8" : "my-8 md:my-24"])} >
+  if (!talk.video) {
+    return (
+    <div className={CLASSES.textGrid} >
       <div className={CLASSES.time}>{localTimeString}</div>
       <div className={clsx([CLASSES.text, CLASSES.textColumn])}>
         {talk.id && (
@@ -39,18 +39,11 @@ const TalkRow = ({ talk }) => {
         )}
         <div>{talk.title}</div>
       </div>
-      </div>,  
-      talk.video && (
-          <Video
-            videoSrcURL={talk.video}
-            style={{ maxWidth: "800px",  height: "400px"}}
-            className="mt-8 mb-8"
-          />
-      )
-    ];
+      </div>
+    );
   }
 
-  return <div className={clsx([CLASSES.textGrid, "my-8 md:my-24"])}>
+  return <div className={CLASSES.textGrid}>
     <div className={CLASSES.time}>{localTimeString}</div>
     <Link
       to={`/talk?id=${talk.id}&time=${localTimeString}`}
