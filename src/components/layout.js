@@ -39,7 +39,7 @@ export default function Layout({ children, canGoBack }) {
         <Footer onVisit={() => setShowAnnouncement(true)}/>
       </div>
       {showAnnouncement && 
-      <div className="fixed inset-10  p-4 overflow-scroll md:inset-32 md:bottom-auto z-50 bg-white md:w-1/2 mx-auto md:py-14 md:px-10 rounded-lg shadow-whiteTint shadow-md bg-white-tint h-min">
+      <div className="fixed inset-10  p-4 overflow-scroll md:overflow-hidden md:inset-32 md:bottom-auto z-50 bg-white md:w-1/2 mx-auto md:py-14 md:px-10 rounded-lg shadow-whiteTint shadow-md bg-white-tint h-min">
         <button className="float-right md:-mt-7 md:-mr-4 text-2xl" onClick={() => setShowAnnouncement(false)}>&#x2715;</button>
         Dear Friends of Terrestrial Assemblage,  
         <br/> <br/>
