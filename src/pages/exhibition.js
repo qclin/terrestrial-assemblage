@@ -147,7 +147,7 @@ const ExhibitionPage = ({ location, data }) => {
               );
             })}
           </Slider>
-          <figcaption className="text-white md:w-1/2 mb-4 mx-auto text-sm rounded-sm">
+          <figcaption className="text-white md:w-1/2 mb-4 mx-auto text-sm rounded-sm text-center">
             {clImages[activeIndex].node.context.custom.alt}
           </figcaption>
         </BrowserView>
