@@ -23,7 +23,7 @@ const CLASSES = {
     "bg-button hover:bg-button-hover rounded-sm px-2 pb-0 pt-1 focus:outline-none text-white uppercase",
   link: "block rounded-md ",
   linkOverlay: "w-full absolute filter blur-lg hover:bg-button left-0",
-  linkHeight: "h-16 md:h-32",
+  linkHeight: "h-16 md:h-32 max-w-full",
 };
 
 const PAGES = [
@@ -101,7 +101,7 @@ function Menu() {
                       {overlay()}
                     </Link>
                   )}
-                  <Title className={CLASSES.linkHeight} />
+                  <Title className={CLASSES.linkHeight}/>
                 </div>
               );
             })}
