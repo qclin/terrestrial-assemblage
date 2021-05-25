@@ -34,7 +34,7 @@ const PAGES = [
   { path: "exhibition", en: ExhibitionSVG, de: DEExhibitionSVG },
 ];
 
-function Menu() {
+function Menu({onVisit}) {
   const { language } = useI18next();
 
   const [visible, setVisible] = React.useState(false);
@@ -87,9 +87,12 @@ function Menu() {
               return (
                 <div className="relative " key={page.path}>
                   {page.external ? (
-                    <a href={page.path} target="_blank" rel="noreferrer">
+                    // <a href={page.path} target="_blank" rel="noreferrer">
+                    //   {overlay()}
+                    // </a>
+                    <button onClick={onVisit} className="focus:outline-none">
                       {overlay()}
-                    </a>
+                    </button>
                   ) : (
                     <Link
                       key={page}

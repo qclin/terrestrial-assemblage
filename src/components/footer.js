@@ -4,12 +4,13 @@ import DEPressRelease from "../assets/pdfs/Terrestrial Assemblage_Pressemitteilu
 import ENPRessRelease from "../assets/pdfs/Terrestrial Assemblage_pressrelease.pdf";
 import { BOOKING_URL } from "../constants/constants";
 import Partners from "./partners";
+import clsx from "clsx";
 
 const CLASSES = {
   link:
     "text-sm md:text-lg uppercase mr-2 md:mr-4 px-1 pb-7 mt-2 text-white bg-button hover:bg-button-hover rounded-sm whitespace-nowrap",
 };
-const Footer = () => {
+const Footer = ({onVisit}) => {
   const { language } = useI18next();
   const isGerman = language === "de";
 
@@ -24,14 +25,20 @@ const Footer = () => {
           >
             <Trans>Press PDF</Trans>
           </a>
-          <a
+          {/* <a
             href={BOOKING_URL}
             target="_blank"
             className={CLASSES.link}
             rel="noreferrer"
           >
             <Trans>Book Visit</Trans>
-          </a>
+          </a> */}
+          <button onClick={onVisit}
+            className={clsx(["focus:outline-none", CLASSES.link])}
+            style={{paddingBottom:0}}
+          >
+            <Trans>Book Visit</Trans>
+          </button>
           <Link to={`/imprint`} className={CLASSES.link}>
             <Trans>Imprint</Trans>
           </Link>
